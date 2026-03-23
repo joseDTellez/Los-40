@@ -53,7 +53,7 @@ public class ObjectController : MonoBehaviour
 
         if (!_isGazingAtObject && !_isGazingAtPanel && _interactionTriggered)
         {
-            if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 2f);
+            if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 5f);
         }
         else
         {
@@ -63,16 +63,16 @@ public class ObjectController : MonoBehaviour
 
     private void ShowInformation()
     {
+        if (_outline != null) _outline.enabled = false;
+
         if (textToShow != null)
         {
-            if (_outline != null) _outline.enabled = false;
             textToShow.SetActive(true);
+        }
 
-            // REPRODUCIR SONIDO DE ENTRADA
-            if (audioSource != null && openClip != null)
-            {
-                audioSource.PlayOneShot(openClip);
-            }
+        if (audioSource != null && openClip != null)
+        {
+            audioSource.PlayOneShot(openClip);
         }
     }
 
@@ -94,7 +94,8 @@ public class ObjectController : MonoBehaviour
         }
     }
 
-    public void OnPointerEnter() { _isGazingAtObject = true; CancelInvoke("ClosePanel"); if (_outline != null && !_interactionTriggered) _outline.enabled = true; }
+    public void OnPointerEnter() { _isGazingAtObject = true; CancelInvoke("ClosePanel"); if (_outline != null && !_interactionTriggered) _outline.enabled = true; 
+    }
     public void OnPointerExit() { _isGazingAtObject = false; if (_outline != null) _outline.enabled = false; }
     public void OnPanelEnter() { _isGazingAtPanel = true; CancelInvoke("ClosePanel"); }
     public void OnPanelExit() { _isGazingAtPanel = false; }
