@@ -34,6 +34,7 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public Material GazedAtMaterial;
 
+<<<<<<< Updated upstream
     // The objects are about 1 meter in radius, so the min/max target distance are
     // set so that the objects are always within the room (which is about 5 meters
     // across).
@@ -41,6 +42,16 @@ public class ObjectController : MonoBehaviour
     private const float _maxObjectDistance = 3.5f;
     private const float _minObjectHeight = 0.5f;
     private const float _maxObjectHeight = 3.5f;
+=======
+    [Header("Door Settings")]
+    public DoorController doorController;
+
+    private Outline _outline;
+    private bool _isGazingAtObject = false;
+    private bool _isGazingAtPanel = false;
+    private float _gazeTimer = 0f;
+    private bool _interactionTriggered = false;
+>>>>>>> Stashed changes
 
     private Renderer _myRenderer;
     private Vector3 _startingPosition;
@@ -86,7 +97,27 @@ public class ObjectController : MonoBehaviour
     /// </summary>
     public void OnPointerEnter()
     {
+<<<<<<< Updated upstream
         SetMaterial(true);
+=======
+        if (_outline != null) _outline.enabled = false;
+
+        if (textToShow != null)
+        {
+            textToShow.SetActive(true);
+        }
+
+        if (audioSource != null && openClip != null)
+        {
+            audioSource.PlayOneShot(openClip);
+        }
+
+        if (doorController != null)
+        {
+            Debug.Log("Abriendo puerta"); // para probar
+            doorController.OpenDoor();
+        }
+>>>>>>> Stashed changes
     }
 
     /// <summary>
