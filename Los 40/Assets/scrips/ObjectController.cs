@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class ObjectController : MonoBehaviour
 {
     [Header("Gaze Interaction Settings")]
@@ -13,6 +14,9 @@ public class ObjectController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip openClip;   // Sonido al abrir (entrada)
     public AudioClip closeClip;  // Sonido al cerrar (salida)
+
+    [Header("Door Settings")]
+    public DoorController doorController;
 
     private Outline _outline;
     private bool _isGazingAtObject = false;
@@ -74,6 +78,11 @@ public class ObjectController : MonoBehaviour
         {
             audioSource.PlayOneShot(openClip);
         }
+        if (doorController != null)
+        {
+            Debug.Log("Abriendo puerta"); // para probar
+            doorController.OpenDoor();
+        }
     }
 
     private void ClosePanel()
@@ -94,9 +103,16 @@ public class ObjectController : MonoBehaviour
         }
     }
 
-    public void OnPointerEnter() { _isGazingAtObject = true; CancelInvoke("ClosePanel"); if (_outline != null && !_interactionTriggered) _outline.enabled = true; 
+    public void OnPointerEnter() { 
+        _isGazingAtObject = true; CancelInvoke("ClosePanel"); 
+        if (_outline != null && !_interactionTriggered) _outline.enabled = true; 
     }
-    public void OnPointerExit() { _isGazingAtObject = false; if (_outline != null) _outline.enabled = false; }
-    public void OnPanelEnter() { _isGazingAtPanel = true; CancelInvoke("ClosePanel"); }
-    public void OnPanelExit() { _isGazingAtPanel = false; }
+    public void OnPointerExit() { _isGazingAtObject = false; 
+        if (_outline != null) _outline.enabled = false; 
+    }
+    public void OnPanelEnter() { _isGazingAtPanel = true; 
+        CancelInvoke("ClosePanel"); 
+    }
+    public void OnPanelExit() { _isGazingAtPanel = false; 
+    }
 }
