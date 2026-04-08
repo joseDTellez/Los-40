@@ -833,7 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e4854d42a94cccbb16cf9736c37576, type: 3}
   m_Name: OpenXRLifeCycleFeature Standalone
   m_EditorClassIdentifier: Unity.XR.AndroidOpenXR::UnityEngine.XR.OpenXR.Features.Android.OpenXRLifeCycleFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: 
   version: 0.1.0
   featureIdInternal: AndroidXR-OpenXRLifeCycle
@@ -877,7 +877,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d22659b3b811f4067998fde27d63f4c4, type: 3}
   m_Name: ARAnchorFeature Standalone
   m_EditorClassIdentifier: Unity.XR.AndroidOpenXR::UnityEngine.XR.OpenXR.Features.Android.ARAnchorFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: 'Android XR: AR Anchor'
   version: 0.1.0
   featureIdInternal: com.unity.openxr.feature.arfoundation-androidxr-anchor
@@ -965,7 +965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b775c5dcb9e3cf46b2c4064f97b02e1, type: 3}
   m_Name: AROcclusionFeature Standalone
   m_EditorClassIdentifier: Unity.XR.AndroidOpenXR::UnityEngine.XR.OpenXR.Features.Android.AROcclusionFeature
-  m_enabled: 0
+  m_enabled: 1
   nameUi: 'Android XR: AR Occlusion'
   version: 0.1.0
   featureIdInternal: com.unity.openxr.feature.arfoundation-androidxr-occlusion

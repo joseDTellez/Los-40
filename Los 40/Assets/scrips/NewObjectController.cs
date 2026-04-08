@@ -9,6 +9,8 @@ public class NewObjectController : MonoBehaviour
     public float gazeTimeToInteract = 1.5f;
     public Image loadingCircle;
     public Transform cameraTransform;
+    [Tooltip("Tiempo que perdonamos si el sensor parpadea (segundos)")]
+    public float graceTime = 0.2f;
 
     [Header("Ajustes de Inspección")]
     public float distanceInFront = 0.7f;
@@ -29,6 +31,9 @@ public class NewObjectController : MonoBehaviour
     private Vector3 _inspectPos;
     private Quaternion _inspectRot;
 
+    // Corrutina para manejar el buffer de salida
+    private Coroutine _exitRoutine;
+
     void Start()
     {
         _outline = GetComponent<Outline>();
@@ -38,29 +43,28 @@ public class NewObjectController : MonoBehaviour
         _origRot = transform.rotation;
 
         if (cameraTransform == null) cameraTransform = Camera.main.transform;
+        if (loadingCircle != null) loadingCircle.fillAmount = 0f;
     }
 
     void Update()
     {
         MoverObjeto();
 
+        // Solo sumamos al progreso si estamos mirando el objeto
         if (_isGazing)
         {
             _gazeTimer += Time.deltaTime;
             if (loadingCircle != null)
-                loadingCircle.fillAmount = _gazeTimer / gazeTimeToInteract;
+                loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
 
             if (_gazeTimer >= gazeTimeToInteract)
             {
                 AlternarInspeccion();
                 _gazeTimer = 0f;
+                if (loadingCircle != null) loadingCircle.fillAmount = 0f;
             }
         }
-        else
-        {
-            _gazeTimer = 0f;
-            if (loadingCircle != null) loadingCircle.fillAmount = 0f;
-        }
+        // Eliminamos el 'else' que reseteaba el timer a 0 para que lo maneje la corrutina
     }
 
     private void AlternarInspeccion()
@@ -70,8 +74,7 @@ public class NewObjectController : MonoBehaviour
             // 1. Calculamos la posición frente a la cámara
             _inspectPos = cameraTransform.position + (cameraTransform.forward * distanceInFront);
 
-            // 2. SOLUCIÓN: Hacemos que el objeto mire a la cámara
-            // Esto hará que el eje Z (azul) del periódico apunte a tus ojos
+            // 2. Hacemos que el objeto mire a la cámara
             _inspectRot = Quaternion.LookRotation(cameraTransform.position - _inspectPos);
 
             _isNear = true;
@@ -94,29 +97,49 @@ public class NewObjectController : MonoBehaviour
         }
     }
 
+    // --- MÉTODOS DE PUNTERO CORREGIDOS ---
+
     public void OnPointerEnter()
     {
         _isGazing = true;
         if (_outline) _outline.enabled = true;
+
+        // Si el usuario vuelve antes de que expire el tiempo de gracia, cancelamos el reset
+        if (_exitRoutine != null) StopCoroutine(_exitRoutine);
     }
 
     public void OnPointerExit()
     {
         _isGazing = false;
-        StartCoroutine(EsperaRegreso());
+
+        // Iniciamos la espera antes de resetear el progreso y alejar el objeto
+        if (_exitRoutine != null) StopCoroutine(_exitRoutine);
+        _exitRoutine = StartCoroutine(GracePeriodExitRoutine());
     }
 
-    private IEnumerator EsperaRegreso()
+    private IEnumerator GracePeriodExitRoutine()
     {
-        yield return new WaitForSeconds(0.1f);
+        // 1. Tiempo de gracia para ignorar parpadeos del sensor
+        yield return new WaitForSeconds(graceTime);
+
         if (!_isGazing)
         {
-            if (_isNear)
+            // Si después de la espera seguimos sin mirar, limpiamos el círculo
+            _gazeTimer = 0f;
+            if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+
+            // 2. Un pequeño retraso extra antes de devolver el objeto a su sitio original
+            yield return new WaitForSeconds(0.2f);
+
+            if (!_isGazing)
             {
-                _isNear = false;
-                PlaySound(soundExit);
+                if (_isNear)
+                {
+                    _isNear = false;
+                    PlaySound(soundExit);
+                }
+                if (_outline) _outline.enabled = false;
             }
-            if (_outline) _outline.enabled = false;
         }
     }
 }

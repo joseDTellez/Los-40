@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PrototipoFuncional 1.unity
+    guid: fd9cedaa62cb40b45a3fc7a57fc438f9
+  - enabled: 0
     path: Assets/Scenes/Headtraking.unity
     guid: 436523229cbcfa74ab90f493e0789fe7
   - enabled: 0
@@ -15,6 +18,7 @@ EditorBuildSettings:
     path: Assets/Samples/Google Cardboard XR Plugin for Unity/1.32.0/Hello Cardboard/Scenes/HelloCardboard.unity
     guid: 03c48c5e809944fa4afcae9973709f26
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 4602356e6634f864b94491bfce0fa994, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: a266e27e1d482b044929496c604a55d6, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 653c686fcde703046b9c34ff8817e148, type: 2}
