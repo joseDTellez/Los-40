@@ -1212,10 +1212,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.ARFoundation.Editor.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.XR.Cardboard.Editor">
-      <HintPath>Library\ScriptAssemblies\Google.XR.Cardboard.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.UnifiedRayTracing.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.UnifiedRayTracing.Runtime.dll</HintPath>
       <Private>False</Private>
@@ -1480,10 +1476,6 @@
       <HintPath>Library\ScriptAssemblies\Unity.XR.AndroidOpenXR.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Google.XR.Cardboard">
-      <HintPath>Library\ScriptAssemblies\Google.XR.Cardboard.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Unity.XR.Interaction.Toolkit">
       <HintPath>Library\ScriptAssemblies\Unity.XR.Interaction.Toolkit.dll</HintPath>
       <Private>False</Private>
@@ -1534,6 +1526,10 @@
       <Project>{33B1D368-50CB-D7E6-E317-E235D3AF3594}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="Google.XR.Cardboard.Editor.csproj">
+      <Project>{7F857F23-EDE2-2917-514C-8479CAC87E4A}</Project>
+      <Name>Google.XR.Cardboard.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.InteractionSimulator.Editor.csproj">
       <Project>{E35CB259-0044-9D34-25DE-91A92911E23F}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.InteractionSimulator.Editor</Name>
@@ -1545,6 +1541,10 @@
     <ProjectReference Include="Unity.XR.Interaction.Toolkit.Samples.StarterAssets.csproj">
       <Project>{1982C89C-9396-AB06-9F31-D91A11D2CDC7}</Project>
       <Name>Unity.XR.Interaction.Toolkit.Samples.StarterAssets</Name>
+    </ProjectReference>
+    <ProjectReference Include="Google.XR.Cardboard.csproj">
+      <Project>{01E62CF3-80EB-270D-A61B-A53C3C71B486}</Project>
+      <Name>Google.XR.Cardboard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
