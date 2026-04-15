@@ -10,6 +10,7 @@
 [Ll]ogs/
 UserSettings/
 MemoryCaptures/
+Logs/
 
 ############################
 # Asset import pipeline cache
@@ -37,6 +38,7 @@ SourceAssetDB
 *.mdb
 *.opendb
 *.VC.db
+*.log
 
 .vs/
 .idea/

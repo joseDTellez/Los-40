@@ -8,17 +8,25 @@ public class ObjectController : MonoBehaviour
     public float gazeTimeToInteract = 2f;
     public Image loadingCircle;
     public GameObject textToShow;
+    [Tooltip("Tiempo de gracia para evitar parpadeos del sensor")]
+    public float graceTime = 0.2f;
 
     [Header("Audio Settings")]
     public AudioSource audioSource;
-    public AudioClip openClip;   // Sonido al abrir (entrada)
-    public AudioClip closeClip;  // Sonido al cerrar (salida)
+    public AudioClip openClip;
+    public AudioClip closeClip;
+
+    [Header("Door Settings")]
+    public DoorController doorController;
 
     private Outline _outline;
     private bool _isGazingAtObject = false;
     private bool _isGazingAtPanel = false;
     private float _gazeTimer = 0f;
     private bool _interactionTriggered = false;
+
+    // Corrutina para manejar el buffer de salida
+    private Coroutine _resetRoutine;
 
     void Start()
     {
@@ -33,56 +41,60 @@ public class ObjectController : MonoBehaviour
 
     void Update()
     {
+        // GESTIÓN DE LA CARGA
         if (_isGazingAtObject && !_interactionTriggered)
         {
             _gazeTimer += Time.deltaTime;
             if (loadingCircle != null)
-                loadingCircle.fillAmount = _gazeTimer / gazeTimeToInteract;
+                loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
 
             if (_gazeTimer >= gazeTimeToInteract)
             {
                 _interactionTriggered = true;
                 ShowInformation();
+                _gazeTimer = 0f;
+                if (loadingCircle != null) loadingCircle.fillAmount = 0f;
             }
         }
-        else if (!_isGazingAtObject && !_interactionTriggered)
-        {
-            _gazeTimer = 0f;
-            if (loadingCircle != null) loadingCircle.fillAmount = 0f;
-        }
 
+        // GESTIÓN DEL CIERRE AUTOMÁTICO (Invoke)
+        // Si no estamos mirando nada y ya se activó la información
         if (!_isGazingAtObject && !_isGazingAtPanel && _interactionTriggered)
         {
-            if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 2f);
+            if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 5f);
         }
         else
         {
+            // Si volvemos a mirar, cancelamos el cierre
             CancelInvoke("ClosePanel");
         }
     }
 
     private void ShowInformation()
     {
-        if (textToShow != null)
-        {
-            if (_outline != null) _outline.enabled = false;
-            textToShow.SetActive(true);
+        if (_outline != null) _outline.enabled = false;
 
-            // REPRODUCIR SONIDO DE ENTRADA
-            if (audioSource != null && openClip != null)
-            {
-                audioSource.PlayOneShot(openClip);
-            }
+        if (textToShow != null) textToShow.SetActive(true);
+
+        if (audioSource != null && openClip != null)
+        {
+            audioSource.PlayOneShot(openClip);
+        }
+
+        if (doorController != null)
+        {
+            Debug.Log("Abriendo puerta");
+            doorController.OpenDoor();
         }
     }
 
     private void ClosePanel()
     {
+        // Doble verificación de que realmente no estamos mirando antes de cerrar
         if (!_isGazingAtObject && !_isGazingAtPanel)
         {
             if (textToShow != null) textToShow.SetActive(false);
 
-            // REPRODUCIR SONIDO DE SALIDA
             if (audioSource != null && closeClip != null)
             {
                 audioSource.PlayOneShot(closeClip);
@@ -94,8 +106,53 @@ public class ObjectController : MonoBehaviour
         }
     }
 
-    public void OnPointerEnter() { _isGazingAtObject = true; CancelInvoke("ClosePanel"); if (_outline != null && !_interactionTriggered) _outline.enabled = true; }
-    public void OnPointerExit() { _isGazingAtObject = false; if (_outline != null) _outline.enabled = false; }
-    public void OnPanelEnter() { _isGazingAtPanel = true; CancelInvoke("ClosePanel"); }
-    public void OnPanelExit() { _isGazingAtPanel = false; }
+    // --- MÉTODOS DE ENTRADA CORREGIDOS ---
+
+    public void OnPointerEnter()
+    {
+        _isGazingAtObject = true;
+        CancelInvoke("ClosePanel");
+
+        // Cancelamos el reset por parpadeo
+        if (_resetRoutine != null) StopCoroutine(_resetRoutine);
+
+        if (_outline != null && !_interactionTriggered) _outline.enabled = true;
+    }
+
+    public void OnPointerExit()
+    {
+        _isGazingAtObject = false;
+
+        // En lugar de resetear a 0, iniciamos el tiempo de gracia
+        if (_resetRoutine != null) StopCoroutine(_resetRoutine);
+        _resetRoutine = StartCoroutine(GracePeriodRoutine());
+    }
+
+    public void OnPanelEnter()
+    {
+        _isGazingAtPanel = true;
+        CancelInvoke("ClosePanel");
+    }
+
+    public void OnPanelExit()
+    {
+        _isGazingAtPanel = false;
+    }
+
+    // --- RUTINA DE ESTABILIDAD ---
+    private IEnumerator GracePeriodRoutine()
+    {
+        yield return new WaitForSeconds(graceTime);
+
+        // Solo si después del tiempo de gracia seguimos sin mirar, reseteamos el progreso
+        if (!_isGazingAtObject)
+        {
+            if (!_interactionTriggered)
+            {
+                _gazeTimer = 0f;
+                if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+                if (_outline != null) _outline.enabled = false;
+            }
+        }
+    }
 }
