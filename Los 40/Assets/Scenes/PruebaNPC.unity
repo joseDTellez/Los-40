@@ -846,10 +846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007abb5ee2f6834bac4ccbdf4d61476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::NewObjectController
-  gazeTimeToInteract: 1.5
   loadingCircle: {fileID: 1168889720}
   cameraTransform: {fileID: 545944544}
-  graceTime: 0.2
   distanceInFront: 0.7
   transitionSpeed: 5
   audioSource: {fileID: 0}
@@ -1392,7 +1390,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472086, guid: 28190f546d005d748a9ba8914eb1c1da, type: 3}
       propertyPath: AllowMouseInteraction
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3900108755196472086, guid: 28190f546d005d748a9ba8914eb1c1da, type: 3}
       propertyPath: BackgroundImageSliced
@@ -2143,12 +2141,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 8
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":242,"yPos":146},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Si","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":243,"yPos":343},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Bieeen","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":472,"yPos":145},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"No","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":474,"yPos":345},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"mal","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":true,"xPos":363,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Lorem
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":343.5,"yPos":146},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Si","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":344.5,"yPos":343},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Bieeen","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":573.5,"yPos":145},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"No","parentUIDs":[0],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":575.5,"yPos":345},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"mal","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":true,"xPos":464.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Lorem
     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
     ut labore et dolore magna aliqua. ","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Test
-    NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":236,"yPos":227},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Buena
+    NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":337.5,"yPos":227},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Buena
     actitud.","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Test
-    NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":479,"yPos":228},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Mala
+    NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":580.5,"yPos":228},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Mala
     actitud.","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Test
     NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -2452,7 +2450,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -2972,6 +2982,7 @@ GameObject:
   - component: {fileID: 615953843}
   - component: {fileID: 615953842}
   - component: {fileID: 615953841}
+  - component: {fileID: 615953846}
   m_Layer: 0
   m_Name: ConversationTrigger
   m_TagString: Untagged
@@ -3087,6 +3098,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 849419897}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &615953846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615953840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7caa723e9d7dd94b99d56bf828d431a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueInputController
 --- !u!1 &634220024
 GameObject:
   m_ObjectHideFlags: 0
@@ -5099,7 +5122,7 @@ Transform:
   m_GameObject: {fileID: 1156987389}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -5.3}
+  m_LocalPosition: {x: 9.17, y: 2, z: -7.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5115,7 +5138,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156987389}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c813724f6d3bc08418f86a709843eff0, type: 3}
   m_Name: 
@@ -5581,10 +5604,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1007abb5ee2f6834bac4ccbdf4d61476, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::NewObjectController
-  gazeTimeToInteract: 1.5
   loadingCircle: {fileID: 0}
   cameraTransform: {fileID: 545944544}
-  graceTime: 0.2
   distanceInFront: 0.7
   transitionSpeed: 5
   audioSource: {fileID: 0}
@@ -10088,8 +10109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adde68de01cd82d4f80bb78a86922b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::RadioController
-  gazeTimeToInteract: 2
-  loadingCircle: {fileID: 0}
   cameraTransform: {fileID: 0}
   graceTime: 0.2
   leftKnob: {fileID: 1782309851}

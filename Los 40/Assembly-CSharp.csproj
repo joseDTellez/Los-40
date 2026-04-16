@@ -69,6 +69,8 @@
     <Compile Include="Assets\DialogueEditor\Example\ExampleInputManager.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\NodeEventHolder.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableNode.cs" />
+    <Compile Include="Assets\DialogueEditor\Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\ConversationSelector.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\UI\ConversationManager.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableCondition.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableSetParamAction.cs" />

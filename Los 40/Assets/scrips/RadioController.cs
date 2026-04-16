@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class RadioController : MonoBehaviour
 {
     [Header("Gaze Interaction")]
-    public float gazeTimeToInteract = 1.5f;
-    public Image loadingCircle;
+    //public float gazeTimeToInteract = 1.5f;
+    //public Image loadingCircle;
     public Transform cameraTransform;
     [Tooltip("Tiempo que perdonamos si el sensor parpadea (segundos)")]
     public float graceTime = 0.2f;
@@ -56,25 +57,40 @@ public class RadioController : MonoBehaviour
 
         if (cameraTransform == null) cameraTransform = Camera.main.transform;
 
-        if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+        //if (loadingCircle != null) loadingCircle.fillAmount = 0f;
     }
 
     void Update()
     {
         MoverRadio();
 
-        // Solo sumamos al timer si efectivamente estamos mirando el objeto
+        //// Solo sumamos al timer si efectivamente estamos mirando el objeto
+        //if (_isGazing)
+        //{
+        //    _gazeTimer += Time.deltaTime;
+        //    if (loadingCircle != null)
+        //        loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
+
+        //    if (_gazeTimer >= gazeTimeToInteract)
+        //    {
+        //        Interactuar();
+        //        _gazeTimer = 0f;
+        //        if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+        //    }
+        //}
         if (_isGazing)
         {
-            _gazeTimer += Time.deltaTime;
-            if (loadingCircle != null)
-                loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
+            //Entrada por teclado para pruebas
+            if (Keyboard.current.kKey.wasPressedThisFrame)
+            {
+                Debug.Log("Se presionó k");
+                Interactuar();
+            }
 
-            if (_gazeTimer >= gazeTimeToInteract)
+            // GAMEPAD (gatillo / botón)
+            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
             {
                 Interactuar();
-                _gazeTimer = 0f;
-                if (loadingCircle != null) loadingCircle.fillAmount = 0f;
             }
         }
     }
@@ -181,7 +197,7 @@ public class RadioController : MonoBehaviour
         {
             // Si después del tiempo de gracia sigue sin mirar, reseteamos el círculo
             _gazeTimer = 0f;
-            if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+            //if (loadingCircle != null) loadingCircle.fillAmount = 0f;
 
             // 2. Esperamos un poco más para decidir si alejamos la radio del usuario
             yield return new WaitForSeconds(0.3f);
