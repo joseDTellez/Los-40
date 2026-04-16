@@ -10,18 +10,18 @@ public class Outline : MonoBehaviour
 
     public enum Mode
     {
-        OutlineAll,
-        OutlineVisible,
-        OutlineHidden,
-        OutlineAndSilhouette,
-        SilhouetteOnly
+        OutlineAll,           // Siempre visible (atraviesa paredes)
+        OutlineVisible,       // Solo lo que la cámara ve directamente
+        OutlineHidden,        // Solo lo que está detrás de algo
+        OutlineAndSilhouette, // Outline normal + silueta tras objetos
+        SilhouetteOnly        // Solo silueta tras objetos
     }
 
     public enum InteractionState
     {
-        Idle,       // Efecto respiración activo
-        Hover,      // Outline fijo y resaltado
-        Interacting // Desactivado o en uso
+        Idle,        // Efecto respiración activo
+        Hover,       // Outline fijo y resaltado
+        Interacting  // Desactivado o en uso (ancho 0)
     }
 
     [Header("Interaction Settings")]
@@ -37,7 +37,7 @@ public class Outline : MonoBehaviour
     private float hoverWidth = 7f;
 
     [Header("Base Settings")]
-    [SerializeField] private Mode outlineMode;
+    [SerializeField] private Mode outlineMode = Mode.OutlineAll; // Por defecto "Siempre visible"
     [SerializeField] private Color outlineColor = Color.white;
     [SerializeField, Range(0f, 10f)] private float outlineWidth = 2f;
 
@@ -67,8 +67,16 @@ public class Outline : MonoBehaviour
     void Awake()
     {
         renderers = GetComponentsInChildren<Renderer>();
+
+        // Carga de materiales desde la carpeta Resources
         outlineMaskMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineMask"));
         outlineFillMaterial = Instantiate(Resources.Load<Material>(@"Materials/OutlineFill"));
+
+        if (outlineMaskMaterial == null || outlineFillMaterial == null)
+        {
+            Debug.LogError("No se encontraron los materiales de Outline en Resources/Materials. Asegúrate de que existan.");
+            return;
+        }
 
         outlineMaskMaterial.name = "OutlineMask (Instance)";
         outlineFillMaterial.name = "OutlineFill (Instance)";
@@ -79,35 +87,42 @@ public class Outline : MonoBehaviour
 
     void OnEnable()
     {
+        if (renderers == null) return;
+
         foreach (var renderer in renderers)
         {
             var materials = renderer.sharedMaterials.ToList();
-            materials.Add(outlineMaskMaterial);
-            materials.Add(outlineFillMaterial);
+            if (!materials.Contains(outlineMaskMaterial)) materials.Add(outlineMaskMaterial);
+            if (!materials.Contains(outlineFillMaterial)) materials.Add(outlineFillMaterial);
             renderer.materials = materials.ToArray();
         }
+        needsUpdate = true;
     }
 
     void Update()
     {
+        // Si hay cambios pendientes (como el modo o el color), los aplicamos
+        if (needsUpdate)
+        {
+            UpdateMaterialProperties();
+            needsUpdate = false;
+        }
+
+        // Lógica de animación si está en IDLE
         if (currentState == InteractionState.Idle)
         {
-            // Lógica de respiración orgánica (Seno)
             float lerp = (Mathf.Sin(Time.time * pulseSpeed) + 1f) / 2f;
             float currentWidth = Mathf.Lerp(minPulseWidth, maxPulseWidth, lerp);
 
             outlineFillMaterial.SetFloat("_OutlineWidth", currentWidth);
             outlineFillMaterial.SetColor("_OutlineColor", outlineColor);
         }
-        else if (needsUpdate)
-        {
-            UpdateMaterialProperties();
-            needsUpdate = false;
-        }
     }
 
     void OnDisable()
     {
+        if (renderers == null) return;
+
         foreach (var renderer in renderers)
         {
             var materials = renderer.sharedMaterials.ToList();
@@ -119,8 +134,8 @@ public class Outline : MonoBehaviour
 
     void OnDestroy()
     {
-        Destroy(outlineMaskMaterial);
-        Destroy(outlineFillMaterial);
+        if (outlineMaskMaterial != null) Destroy(outlineMaskMaterial);
+        if (outlineFillMaterial != null) Destroy(outlineFillMaterial);
     }
 
     void OnValidate()
@@ -139,12 +154,15 @@ public class Outline : MonoBehaviour
 
     void UpdateMaterialProperties()
     {
+        if (outlineFillMaterial == null || outlineMaskMaterial == null) return;
+
         outlineFillMaterial.SetColor("_OutlineColor", outlineColor);
 
         float targetWidth = outlineWidth;
         if (currentState == InteractionState.Interacting) targetWidth = 0f;
         else if (currentState == InteractionState.Hover) targetWidth = hoverWidth;
 
+        // Configuración de la visibilidad a través de ZTest
         switch (outlineMode)
         {
             case Mode.OutlineAll:
@@ -170,10 +188,14 @@ public class Outline : MonoBehaviour
                 break;
         }
 
-        outlineFillMaterial.SetFloat("_OutlineWidth", targetWidth);
+        // Si no es Idle, aplicamos el ancho fijo (Hover o Default)
+        if (currentState != InteractionState.Idle)
+        {
+            outlineFillMaterial.SetFloat("_OutlineWidth", targetWidth);
+        }
     }
 
-    // --- MÉTODOS DE PROCESAMIENTO ---
+    // --- MÉTODOS DE PROCESAMIENTO DE MALLA ---
 
     void Bake()
     {

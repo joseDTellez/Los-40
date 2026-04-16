@@ -577,7 +577,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 634220025}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &184182373
 BoxCollider:
@@ -865,6 +867,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::Outline
+  currentState: 0
+  pulseSpeed: 1.5
+  minPulseWidth: 1.5
+  maxPulseWidth: 4
+  hoverWidth: 7
   outlineMode: 0
   outlineColor: {r: 1, g: 0.50728744, b: 0, a: 1}
   outlineWidth: 10
@@ -3003,7 +3010,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 433343116}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 1156987392}
+  playerRigidbody: {fileID: 1156987393}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &615953842
 BoxCollider:
@@ -3274,7 +3283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1530848153}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &735465577
 BoxCollider:
@@ -3807,83 +3818,6 @@ Transform:
   - {fileID: 858911441}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &798111786
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_TranslateXSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_TranslateYSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_TranslateZSpeed
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_RotateXSensitivity
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_RotateYSensitivity
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_Name
-      value: XR Interaction Simulator
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.9494401
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.41474
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -2.72426
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
 --- !u!1 &798808379
 GameObject:
   m_ObjectHideFlags: 0
@@ -4044,6 +3978,7 @@ GameObject:
   - component: {fileID: 849419896}
   - component: {fileID: 849419895}
   - component: {fileID: 849419894}
+  - component: {fileID: 849419898}
   m_Layer: 0
   m_Name: NPC_test
   m_TagString: Untagged
@@ -4147,6 +4082,29 @@ Transform:
   - {fileID: 615953845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &849419898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849419892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CardboardSamples::Outline
+  currentState: 0
+  pulseSpeed: 1.5
+  minPulseWidth: 1.5
+  maxPulseWidth: 10
+  hoverWidth: 6.9955
+  outlineMode: 0
+  outlineColor: {r: 1, g: 0.50048995, b: 0, a: 1}
+  outlineWidth: 10
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1 &856447548
 GameObject:
   m_ObjectHideFlags: 0
@@ -4195,7 +4153,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1550613437}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &856447551
 BoxCollider:
@@ -4516,67 +4476,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881615529}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &929109165
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1192457776346243976, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_ProvidesContacts
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -527
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -443
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4775366443186636440, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6057080157396022671, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
-      propertyPath: m_Name
-      value: Terrain_Entorno1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2952efca842c6574f95dd347aa0a197a, type: 3}
 --- !u!1 &941940556
 GameObject:
   m_ObjectHideFlags: 0
@@ -5108,7 +5007,7 @@ GameObject:
   - component: {fileID: 1156987393}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5121,8 +5020,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156987389}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.17, y: 2, z: -7.88}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 7.2, y: 2, z: -5.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5130,7 +5029,7 @@ Transform:
   - {fileID: 1972914955}
   - {fileID: 521145380}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1156987392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5385,7 +5284,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 766737584}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &1212071816
 BoxCollider:
@@ -5487,6 +5388,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::Outline
+  currentState: 0
+  pulseSpeed: 1.5
+  minPulseWidth: 1.5
+  maxPulseWidth: 4
+  hoverWidth: 7
   outlineMode: 0
   outlineColor: {r: 1, g: 0.6897995, b: 0.19339621, a: 1}
   outlineWidth: 2
@@ -5545,6 +5451,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::Outline
+  currentState: 0
+  pulseSpeed: 1.5
+  minPulseWidth: 1.5
+  maxPulseWidth: 4
+  hoverWidth: 7
   outlineMode: 0
   outlineColor: {r: 1, g: 0.888832, b: 0, a: 1}
   outlineWidth: 10
@@ -5889,7 +5800,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 146754579}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &1315946392
 BoxCollider:
@@ -7890,7 +7803,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1170140989}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &1754060105
 BoxCollider:
@@ -8121,6 +8036,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::Outline
+  currentState: 0
+  pulseSpeed: 1.5
+  minPulseWidth: 1.5
+  maxPulseWidth: 4
+  hoverWidth: 7
   outlineMode: 0
   outlineColor: {r: 1, g: 0.6901961, b: 0.19215687, a: 1}
   outlineWidth: 2
@@ -9019,7 +8939,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1532309595}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &1885885998
 BoxCollider:
@@ -9274,7 +9196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1474519125}
-  playerMovement: {fileID: 1972914956}
+  playerMovementScript: {fileID: 0}
+  playerRigidbody: {fileID: 0}
+  xrSimulator: {fileID: 0}
   interactKey: 26
 --- !u!65 &1915187057
 BoxCollider:
@@ -10091,8 +10015,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::Outline
+  currentState: 0
+  pulseSpeed: 1.5
+  minPulseWidth: 1.5
+  maxPulseWidth: 4
+  hoverWidth: 7
   outlineMode: 0
-  outlineColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
+  outlineColor: {r: 0.97264934, g: 1, b: 0, a: 1}
   outlineWidth: 10
   precomputeOutline: 0
   bakeKeys: []
@@ -10420,7 +10349,6 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 798111786}
   - {fileID: 54332683}
   - {fileID: 881615530}
   - {fileID: 1589787614}
@@ -10435,7 +10363,6 @@ SceneRoots:
   - {fileID: 133277750}
   - {fileID: 564886331}
   - {fileID: 825553599}
-  - {fileID: 929109165}
   - {fileID: 1780278524}
   - {fileID: 444719765}
   - {fileID: 849419897}
