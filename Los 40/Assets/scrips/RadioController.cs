@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
 
 public class RadioController : MonoBehaviour
 {
     [Header("Gaze Interaction")]
-    //public float gazeTimeToInteract = 1.5f;
-    //public Image loadingCircle;
     public Transform cameraTransform;
     [Tooltip("Tiempo que perdonamos si el sensor parpadea (segundos)")]
     public float graceTime = 0.2f;
@@ -26,9 +23,11 @@ public class RadioController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip soundON, soundOFF, station1, station2, station3;
 
-    private Outline _outline;
-    private Outline _leftOutline, _rightOutline;
-    private float _gazeTimer = 0f;
+    // --- REEMPLAZO REALIZADO: Ahora usa OutlineVR ---
+    private OutlineVR _outline;
+    private OutlineVR _leftOutline, _rightOutline;
+    // ------------------------------------------------
+
     private bool _isGazing = false;
     private string _partName = "";
 
@@ -41,54 +40,33 @@ public class RadioController : MonoBehaviour
     private int _stationIdx = 0;
     private int _volIdx = 1;
 
-    // Corrutina para manejar la salida y el reset del timer
     private Coroutine _exitRoutine;
 
     void Start()
     {
-        _outline = GetComponent<Outline>();
-        if (_outline != null) _outline.enabled = false;
+        // Buscamos el componente OutlineVR
+        _outline = GetComponent<OutlineVR>();
 
-        if (leftKnob) _leftOutline = leftKnob.GetComponent<Outline>();
-        if (rightKnob) _rightOutline = rightKnob.GetComponent<Outline>();
+        if (leftKnob) _leftOutline = leftKnob.GetComponent<OutlineVR>();
+        if (rightKnob) _rightOutline = rightKnob.GetComponent<OutlineVR>();
+
+        // Al inicio desactivamos los brillos por rendimiento en móvil
+        SetOutlinesEnabled(false);
 
         _origPos = transform.position;
         _origRot = transform.rotation;
 
         if (cameraTransform == null) cameraTransform = Camera.main.transform;
-
-        //if (loadingCircle != null) loadingCircle.fillAmount = 0f;
     }
 
     void Update()
     {
         MoverRadio();
 
-        //// Solo sumamos al timer si efectivamente estamos mirando el objeto
-        //if (_isGazing)
-        //{
-        //    _gazeTimer += Time.deltaTime;
-        //    if (loadingCircle != null)
-        //        loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
-
-        //    if (_gazeTimer >= gazeTimeToInteract)
-        //    {
-        //        Interactuar();
-        //        _gazeTimer = 0f;
-        //        if (loadingCircle != null) loadingCircle.fillAmount = 0f;
-        //    }
-        //}
         if (_isGazing)
         {
-            //Entrada por teclado para pruebas
-            if (Keyboard.current.kKey.wasPressedThisFrame)
-            {
-                Debug.Log("Se presionó k");
-                Interactuar();
-            }
-
-            // GAMEPAD (gatillo / botón)
-            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+            // Entrada por teclado (K) o Botón Sur del Gamepad (A en Xbox / X en PS)
+            if (Keyboard.current.kKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
             {
                 Interactuar();
             }
@@ -120,29 +98,8 @@ public class RadioController : MonoBehaviour
             {
                 audioSource.volume = (_volIdx == 0) ? 0.2f : (_volIdx == 1) ? 0.6f : 1.0f;
             }
-            // Opcional: Animar giro perilla derecha
             if (rightKnob) StartCoroutine(AnimarGiroPerillaOffset(rightKnob, 30f));
         }
-    }
-
-    private IEnumerator AnimarGiroPerillaOffset(Transform perilla, float angulo)
-    {
-        Quaternion rotInicialLocal = perilla.localRotation;
-        Vector3 posCentroVisual = perilla.parent.InverseTransformPoint(perilla.position);
-        Quaternion rotObjetivoLocal = rotInicialLocal * Quaternion.Euler(0, 0, angulo);
-
-        float tiempo = 0f;
-        float duracion = angulo / knobRotationSpeed;
-
-        while (tiempo < duracion)
-        {
-            tiempo += Time.deltaTime;
-            float t = tiempo / duracion;
-            perilla.localPosition = perilla.parent.InverseTransformPoint(perilla.parent.TransformPoint(posCentroVisual));
-            perilla.localRotation = Quaternion.Slerp(rotInicialLocal, rotObjetivoLocal, t);
-            yield return null;
-        }
-        perilla.localRotation = rotObjetivoLocal;
     }
 
     private void MoverRadio()
@@ -150,58 +107,71 @@ public class RadioController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, _isNear ? _inspectPos : _origPos, Time.deltaTime * transitionSpeed);
         transform.rotation = Quaternion.Slerp(transform.rotation, _isNear ? _inspectRot : _origRot, Time.deltaTime * transitionSpeed);
 
+        // Activamos los brillos solo si la radio está cerca para no gastar batería
         if (_isNear)
         {
-            if (Vector3.Distance(transform.position, _inspectPos) < 0.1f)
-            {
-                if (_leftOutline) _leftOutline.enabled = true;
-                if (_rightOutline) _rightOutline.enabled = true;
-            }
+            SetOutlinesEnabled(true);
         }
         else
         {
-            if (_leftOutline) _leftOutline.enabled = false;
-            if (_rightOutline) _rightOutline.enabled = false;
+            SetOutlinesEnabled(false);
         }
+    }
+
+    private void SetOutlinesEnabled(bool state)
+    {
+        // Solo habilitamos el componente, el modo (Idle/Hover) lo maneja el Gaze
+        if (_leftOutline) _leftOutline.enabled = state;
+        if (_rightOutline) _rightOutline.enabled = state;
     }
 
     private void Play(AudioClip c) { if (audioSource && c) { audioSource.clip = c; audioSource.Play(); } }
 
-    // --- MÉTODOS DE ENTRADA ---
-    public void OnPointerEnter() { StartGazing("Radio"); if (_outline) _outline.enabled = true; }
-    public void OnPointerEnterLeft() { StartGazing("Left"); }
-    public void OnPointerEnterRight() { StartGazing("Right"); }
+    // --- MÉTODOS PARA CARDBOARD ---
+    public void OnPointerEnter()
+    {
+        StartGazing("Radio");
+        if (_outline) { _outline.enabled = true; _outline.SetState(OutlineVR.InteractionState.Hover); }
+    }
+
+    public void OnPointerEnterLeft()
+    {
+        StartGazing("Left");
+        if (_leftOutline) _leftOutline.SetState(OutlineVR.InteractionState.Hover);
+    }
+
+    public void OnPointerEnterRight()
+    {
+        StartGazing("Right");
+        if (_rightOutline) _rightOutline.SetState(OutlineVR.InteractionState.Hover);
+    }
+
+    public void OnPointerExit()
+    {
+        _isGazing = false;
+
+        // Al quitar la mirada, regresamos al modo "Respirar" (Idle)
+        if (_leftOutline) _leftOutline.SetState(OutlineVR.InteractionState.Idle);
+        if (_rightOutline) _rightOutline.SetState(OutlineVR.InteractionState.Idle);
+        if (_outline) _outline.SetState(OutlineVR.InteractionState.Idle);
+
+        if (_exitRoutine != null) StopCoroutine(_exitRoutine);
+        _exitRoutine = StartCoroutine(GracePeriodExitRoutine());
+    }
 
     private void StartGazing(string part)
     {
         _isGazing = true;
         _partName = part;
-        // Si el usuario vuelve a mirar antes de que expire el tiempo de gracia, cancelamos el reset
         if (_exitRoutine != null) StopCoroutine(_exitRoutine);
-    }
-
-    // --- MÉTODO DE SALIDA CON BUFFER ---
-    public void OnPointerExit()
-    {
-        _isGazing = false;
-        if (_exitRoutine != null) StopCoroutine(_exitRoutine);
-        _exitRoutine = StartCoroutine(GracePeriodExitRoutine());
     }
 
     private IEnumerator GracePeriodExitRoutine()
     {
-        // 1. Esperamos el tiempo de gracia para ver si el usuario vuelve a mirar (evita el parpadeo)
         yield return new WaitForSeconds(graceTime);
-
         if (!_isGazing)
         {
-            // Si después del tiempo de gracia sigue sin mirar, reseteamos el círculo
-            _gazeTimer = 0f;
-            //if (loadingCircle != null) loadingCircle.fillAmount = 0f;
-
-            // 2. Esperamos un poco más para decidir si alejamos la radio del usuario
             yield return new WaitForSeconds(0.3f);
-
             if (!_isGazing)
             {
                 if (_isNear) { _isNear = false; Play(soundOFF); }
@@ -209,5 +179,21 @@ public class RadioController : MonoBehaviour
                 if (_outline) _outline.enabled = false;
             }
         }
+    }
+
+    private IEnumerator AnimarGiroPerillaOffset(Transform perilla, float angulo)
+    {
+        Quaternion rotInicialLocal = perilla.localRotation;
+        Quaternion rotObjetivoLocal = rotInicialLocal * Quaternion.Euler(0, 0, angulo);
+        float tiempo = 0f;
+        float duracion = angulo / knobRotationSpeed;
+
+        while (tiempo < duracion)
+        {
+            tiempo += Time.deltaTime;
+            perilla.localRotation = Quaternion.Slerp(rotInicialLocal, rotObjetivoLocal, tiempo / duracion);
+            yield return null;
+        }
+        perilla.localRotation = rotObjetivoLocal;
     }
 }
