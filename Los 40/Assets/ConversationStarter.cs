@@ -43,7 +43,7 @@ public class ConversationStarter : MonoBehaviour
             Debug.Log("Jugador FUERA del trigger");
         }
     }
-
+    //Click con el Gaze para comenzar conversación
     private void Update()
     {
         if (!playerInside || isInConversation) return;
@@ -56,7 +56,7 @@ public class ConversationStarter : MonoBehaviour
 
     private void StartDialogue()
     {
-        Debug.Log("🟢 Iniciando conversación");
+        Debug.Log("Iniciando conversación");
 
         if (playerMovement != null)
             playerMovement.enabled = false;
@@ -68,7 +68,7 @@ public class ConversationStarter : MonoBehaviour
 
     private void OnConversationEnded()
     {
-        Debug.Log("🔴 Finalizó conversación");
+        Debug.Log("Finalizó conversación");
 
         if (playerMovement != null)
             playerMovement.enabled = true;

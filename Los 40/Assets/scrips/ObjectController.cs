@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class ObjectController : MonoBehaviour
 {
@@ -41,35 +42,52 @@ public class ObjectController : MonoBehaviour
 
     void Update()
     {
-        // GESTIÓN DE LA CARGA
-        if (_isGazingAtObject && !_interactionTriggered)
-        {
-            _gazeTimer += Time.deltaTime;
-            if (loadingCircle != null)
-                loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
+        //// GESTIÓN DE LA CARGA
+        //if (_isGazingAtObject && !_interactionTriggered)
+        //{
+        //    _gazeTimer += Time.deltaTime;
+        //    if (loadingCircle != null)
+        //        loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
 
-            if (_gazeTimer >= gazeTimeToInteract)
+        //    if (_gazeTimer >= gazeTimeToInteract)
+        //    {
+        //        _interactionTriggered = true;
+        //        ShowInformation();
+        //        _gazeTimer = 0f;
+        //        if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+        //    }
+        //}
+
+        //// GESTIÓN DEL CIERRE AUTOMÁTICO (Invoke)
+        //// Si no estamos mirando nada y ya se activó la información
+        //if (!_isGazingAtObject && !_isGazingAtPanel && _interactionTriggered)
+        //{
+        //    if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 5f);
+        //}
+        //else
+        //{
+        //    // Si volvemos a mirar, cancelamos el cierre
+        //    CancelInvoke("ClosePanel");
+        //}
+
+        if (_isGazingAtObject)
+        {
+            //Entrada por teclado para pruebas
+            if (Keyboard.current.kKey.wasPressedThisFrame)
             {
-                _interactionTriggered = true;
+                Debug.Log("Se presionó k");
                 ShowInformation();
-                _gazeTimer = 0f;
-                if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+            }
+
+            // GAMEPAD (gatillo / botón)
+            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+            {
+                ShowInformation();
             }
         }
 
-        // GESTIÓN DEL CIERRE AUTOMÁTICO (Invoke)
-        // Si no estamos mirando nada y ya se activó la información
-        if (!_isGazingAtObject && !_isGazingAtPanel && _interactionTriggered)
-        {
-            if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 5f);
-        }
-        else
-        {
-            // Si volvemos a mirar, cancelamos el cierre
-            CancelInvoke("ClosePanel");
-        }
     }
-
+    //Debug de abrir la puerta
     private void ShowInformation()
     {
         if (_outline != null) _outline.enabled = false;

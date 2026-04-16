@@ -1,16 +1,15 @@
-using System.Collections;
+    using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(BoxCollider))]
 public class NewObjectController : MonoBehaviour
 {
     [Header("Gaze Interaction")]
-    public float gazeTimeToInteract = 1.5f;
+    //public float gazeTimeToInteract = 1.5f;
     public Image loadingCircle;
     public Transform cameraTransform;
-    [Tooltip("Tiempo que perdonamos si el sensor parpadea (segundos)")]
-    public float graceTime = 0.2f;
 
     [Header("Ajustes de Inspección")]
     public float distanceInFront = 0.7f;
@@ -31,37 +30,53 @@ public class NewObjectController : MonoBehaviour
     private Vector3 _inspectPos;
     private Quaternion _inspectRot;
 
-    // Corrutina para manejar el buffer de salida
-    private Coroutine _exitRoutine;
-
     void Start()
     {
         _outline = GetComponent<Outline>();
-        // Iniciamos en estado Idle para que el objeto respire
-        if (_outline != null) _outline.SetState(Outline.InteractionState.Idle);
+        if (_outline != null) _outline.enabled = false;
 
         _origPos = transform.position;
         _origRot = transform.rotation;
 
         if (cameraTransform == null) cameraTransform = Camera.main.transform;
-        if (loadingCircle != null) loadingCircle.fillAmount = 0f;
     }
 
     void Update()
     {
         MoverObjeto();
 
+        // Gaze con uso de tiempo
+        //if (_isGazing)
+        //{
+        //    _gazeTimer += Time.deltaTime;
+        //    if (loadingCircle != null)
+        //        loadingCircle.fillAmount = _gazeTimer / gazeTimeToInteract;
+
+        //    if (_gazeTimer >= gazeTimeToInteract)
+        //    {
+        //        AlternarInspeccion();
+        //        _gazeTimer = 0f;
+        //    }
+        //}
+        //else
+        //{
+        //    _gazeTimer = 0f;
+        //    if (loadingCircle != null) loadingCircle.fillAmount = 0f;
+        //}
+
         if (_isGazing)
         {
-            _gazeTimer += Time.deltaTime;
-            if (loadingCircle != null)
-                loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
+            //Entrada por teclado para pruebas
+            if (Keyboard.current.kKey.wasPressedThisFrame)
+            {
+                Debug.Log("Se presionó k");
+                AlternarInspeccion();
+            }
 
-            if (_gazeTimer >= gazeTimeToInteract)
+            // GAMEPAD (gatillo / botón)
+            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
             {
                 AlternarInspeccion();
-                _gazeTimer = 0f;
-                if (loadingCircle != null) loadingCircle.fillAmount = 0f;
             }
         }
     }
@@ -70,15 +85,15 @@ public class NewObjectController : MonoBehaviour
     {
         if (!_isNear)
         {
+            // 1. Calculo la posición frente a la cámara
             _inspectPos = cameraTransform.position + (cameraTransform.forward * distanceInFront);
+
+            // 2. SOLUCIÓN: Hacer que el objeto mire a la cámara
+            // Esto hará que el eje Z (azul) del periódico apunte a la mirada
             _inspectRot = Quaternion.LookRotation(cameraTransform.position - _inspectPos);
 
             _isNear = true;
             PlaySound(soundEntry);
-
-            // Al estar en inspección, podemos poner el outline en Interacting (invisible)
-            // para que no tape la lectura del objeto (como el periódico)
-            if (_outline) _outline.SetState(Outline.InteractionState.Interacting);
         }
     }
 
@@ -97,48 +112,29 @@ public class NewObjectController : MonoBehaviour
         }
     }
 
-    // --- MÉTODOS DE PUNTERO CORREGIDOS ---
-
     public void OnPointerEnter()
     {
         _isGazing = true;
-
-        // Si no está cerca, ponemos el outline fijo (Hover)
-        if (_outline && !_isNear) _outline.SetState(Outline.InteractionState.Hover);
-
-        if (_exitRoutine != null) StopCoroutine(_exitRoutine);
+        if (_outline) _outline.enabled = true;
     }
 
     public void OnPointerExit()
     {
         _isGazing = false;
-
-        if (_exitRoutine != null) StopCoroutine(_exitRoutine);
-        _exitRoutine = StartCoroutine(GracePeriodExitRoutine());
+        StartCoroutine(EsperaRegreso());
     }
 
-    private IEnumerator GracePeriodExitRoutine()
+    private IEnumerator EsperaRegreso()
     {
-        yield return new WaitForSeconds(graceTime);
-
+        yield return new WaitForSeconds(0.1f);
         if (!_isGazing)
         {
-            _gazeTimer = 0f;
-            if (loadingCircle != null) loadingCircle.fillAmount = 0f;
-
-            yield return new WaitForSeconds(0.2f);
-
-            if (!_isGazing)
+            if (_isNear)
             {
-                if (_isNear)
-                {
-                    _isNear = false;
-                    PlaySound(soundExit);
-                }
-
-                // Al perder el foco, vuelve a respirar (Idle)
-                if (_outline) _outline.SetState(Outline.InteractionState.Idle);
+                _isNear = false;
+                PlaySound(soundExit);
             }
+            if (_outline) _outline.enabled = false;
         }
     }
 }
