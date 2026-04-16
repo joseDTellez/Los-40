@@ -46,7 +46,8 @@ public class RadioController : MonoBehaviour
     void Start()
     {
         _outline = GetComponent<Outline>();
-        if (_outline != null) _outline.enabled = false;
+        // IMPORTANTE: El Outline ahora se maneja por estados, no por .enabled
+        if (_outline != null) _outline.SetState(Outline.InteractionState.Idle);
 
         if (leftKnob) _leftOutline = leftKnob.GetComponent<Outline>();
         if (rightKnob) _rightOutline = rightKnob.GetComponent<Outline>();
@@ -63,7 +64,6 @@ public class RadioController : MonoBehaviour
     {
         MoverRadio();
 
-        // Solo sumamos al timer si efectivamente estamos mirando el objeto
         if (_isGazing)
         {
             _gazeTimer += Time.deltaTime;
@@ -87,6 +87,9 @@ public class RadioController : MonoBehaviour
             _inspectRot = Quaternion.LookRotation(cameraTransform.position - _inspectPos);
             _isNear = true;
             Play(soundON);
+
+            // Cambiamos a estado Interacting para que el outline no estorbe la vista de cerca
+            if (_outline) _outline.SetState(Outline.InteractionState.Interacting);
         }
         else if (_partName == "Left")
         {
@@ -104,7 +107,6 @@ public class RadioController : MonoBehaviour
             {
                 audioSource.volume = (_volIdx == 0) ? 0.2f : (_volIdx == 1) ? 0.6f : 1.0f;
             }
-            // Opcional: Animar giro perilla derecha
             if (rightKnob) StartCoroutine(AnimarGiroPerillaOffset(rightKnob, 30f));
         }
     }
@@ -134,63 +136,87 @@ public class RadioController : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, _isNear ? _inspectPos : _origPos, Time.deltaTime * transitionSpeed);
         transform.rotation = Quaternion.Slerp(transform.rotation, _isNear ? _inspectRot : _origRot, Time.deltaTime * transitionSpeed);
 
+        // Controlamos los outlines de las perillas solo cuando la radio está cerca
         if (_isNear)
         {
             if (Vector3.Distance(transform.position, _inspectPos) < 0.1f)
             {
-                if (_leftOutline) _leftOutline.enabled = true;
-                if (_rightOutline) _rightOutline.enabled = true;
+                // En modo inspección, las perillas "respiran" para indicar que puedes tocarlas
+                if (_leftOutline && _leftOutline.currentState == Outline.InteractionState.Interacting)
+                    _leftOutline.SetState(Outline.InteractionState.Idle);
+                if (_rightOutline && _rightOutline.currentState == Outline.InteractionState.Interacting)
+                    _rightOutline.SetState(Outline.InteractionState.Idle);
             }
         }
         else
         {
-            if (_leftOutline) _leftOutline.enabled = false;
-            if (_rightOutline) _rightOutline.enabled = false;
+            if (_leftOutline) _leftOutline.SetState(Outline.InteractionState.Interacting);
+            if (_rightOutline) _rightOutline.SetState(Outline.InteractionState.Interacting);
         }
     }
 
     private void Play(AudioClip c) { if (audioSource && c) { audioSource.clip = c; audioSource.Play(); } }
 
-    // --- MÉTODOS DE ENTRADA ---
-    public void OnPointerEnter() { StartGazing("Radio"); if (_outline) _outline.enabled = true; }
-    public void OnPointerEnterLeft() { StartGazing("Left"); }
-    public void OnPointerEnterRight() { StartGazing("Right"); }
+    // --- MÉTODOS DE ENTRADA CORREGIDOS ---
+    public void OnPointerEnter()
+    {
+        StartGazing("Radio");
+        // Si no estamos ya en modo inspección, ponemos el outline fijo
+        if (_outline && !_isNear) _outline.SetState(Outline.InteractionState.Hover);
+    }
+
+    public void OnPointerEnterLeft()
+    {
+        StartGazing("Left");
+        if (_leftOutline) _leftOutline.SetState(Outline.InteractionState.Hover);
+    }
+
+    public void OnPointerEnterRight()
+    {
+        StartGazing("Right");
+        if (_rightOutline) _rightOutline.SetState(Outline.InteractionState.Hover);
+    }
 
     private void StartGazing(string part)
     {
         _isGazing = true;
         _partName = part;
-        // Si el usuario vuelve a mirar antes de que expire el tiempo de gracia, cancelamos el reset
         if (_exitRoutine != null) StopCoroutine(_exitRoutine);
     }
 
-    // --- MÉTODO DE SALIDA CON BUFFER ---
     public void OnPointerExit()
     {
         _isGazing = false;
+
+        // Al salir del foco de una parte específica, regresamos su outline a Idle
+        if (_partName == "Left" && _leftOutline) _leftOutline.SetState(Outline.InteractionState.Idle);
+        if (_partName == "Right" && _rightOutline) _rightOutline.SetState(Outline.InteractionState.Idle);
+
         if (_exitRoutine != null) StopCoroutine(_exitRoutine);
         _exitRoutine = StartCoroutine(GracePeriodExitRoutine());
     }
 
     private IEnumerator GracePeriodExitRoutine()
     {
-        // 1. Esperamos el tiempo de gracia para ver si el usuario vuelve a mirar (evita el parpadeo)
         yield return new WaitForSeconds(graceTime);
 
         if (!_isGazing)
         {
-            // Si después del tiempo de gracia sigue sin mirar, reseteamos el círculo
             _gazeTimer = 0f;
             if (loadingCircle != null) loadingCircle.fillAmount = 0f;
 
-            // 2. Esperamos un poco más para decidir si alejamos la radio del usuario
             yield return new WaitForSeconds(0.3f);
 
             if (!_isGazing)
             {
-                if (_isNear) { _isNear = false; Play(soundOFF); }
+                if (_isNear)
+                {
+                    _isNear = false;
+                    Play(soundOFF);
+                }
                 _partName = "";
-                if (_outline) _outline.enabled = false;
+                // Al perder el foco total, la radio vuelve a "Respirar" (Idle)
+                if (_outline) _outline.SetState(Outline.InteractionState.Idle);
             }
         }
     }

@@ -37,7 +37,8 @@ public class NewObjectController : MonoBehaviour
     void Start()
     {
         _outline = GetComponent<Outline>();
-        if (_outline != null) _outline.enabled = false;
+        // Iniciamos en estado Idle para que el objeto respire
+        if (_outline != null) _outline.SetState(Outline.InteractionState.Idle);
 
         _origPos = transform.position;
         _origRot = transform.rotation;
@@ -50,7 +51,6 @@ public class NewObjectController : MonoBehaviour
     {
         MoverObjeto();
 
-        // Solo sumamos al progreso si estamos mirando el objeto
         if (_isGazing)
         {
             _gazeTimer += Time.deltaTime;
@@ -64,21 +64,21 @@ public class NewObjectController : MonoBehaviour
                 if (loadingCircle != null) loadingCircle.fillAmount = 0f;
             }
         }
-        // Eliminamos el 'else' que reseteaba el timer a 0 para que lo maneje la corrutina
     }
 
     private void AlternarInspeccion()
     {
         if (!_isNear)
         {
-            // 1. Calculamos la posición frente a la cámara
             _inspectPos = cameraTransform.position + (cameraTransform.forward * distanceInFront);
-
-            // 2. Hacemos que el objeto mire a la cámara
             _inspectRot = Quaternion.LookRotation(cameraTransform.position - _inspectPos);
 
             _isNear = true;
             PlaySound(soundEntry);
+
+            // Al estar en inspección, podemos poner el outline en Interacting (invisible)
+            // para que no tape la lectura del objeto (como el periódico)
+            if (_outline) _outline.SetState(Outline.InteractionState.Interacting);
         }
     }
 
@@ -102,9 +102,10 @@ public class NewObjectController : MonoBehaviour
     public void OnPointerEnter()
     {
         _isGazing = true;
-        if (_outline) _outline.enabled = true;
 
-        // Si el usuario vuelve antes de que expire el tiempo de gracia, cancelamos el reset
+        // Si no está cerca, ponemos el outline fijo (Hover)
+        if (_outline && !_isNear) _outline.SetState(Outline.InteractionState.Hover);
+
         if (_exitRoutine != null) StopCoroutine(_exitRoutine);
     }
 
@@ -112,23 +113,19 @@ public class NewObjectController : MonoBehaviour
     {
         _isGazing = false;
 
-        // Iniciamos la espera antes de resetear el progreso y alejar el objeto
         if (_exitRoutine != null) StopCoroutine(_exitRoutine);
         _exitRoutine = StartCoroutine(GracePeriodExitRoutine());
     }
 
     private IEnumerator GracePeriodExitRoutine()
     {
-        // 1. Tiempo de gracia para ignorar parpadeos del sensor
         yield return new WaitForSeconds(graceTime);
 
         if (!_isGazing)
         {
-            // Si después de la espera seguimos sin mirar, limpiamos el círculo
             _gazeTimer = 0f;
             if (loadingCircle != null) loadingCircle.fillAmount = 0f;
 
-            // 2. Un pequeño retraso extra antes de devolver el objeto a su sitio original
             yield return new WaitForSeconds(0.2f);
 
             if (!_isGazing)
@@ -138,7 +135,9 @@ public class NewObjectController : MonoBehaviour
                     _isNear = false;
                     PlaySound(soundExit);
                 }
-                if (_outline) _outline.enabled = false;
+
+                // Al perder el foco, vuelve a respirar (Idle)
+                if (_outline) _outline.SetState(Outline.InteractionState.Idle);
             }
         }
     }
