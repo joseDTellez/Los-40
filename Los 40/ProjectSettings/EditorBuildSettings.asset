@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/PruebaMenu.unity
+    guid: 4ecf062701018c549929f7091d240d6d
+  - enabled: 0
+    path: Assets/Scenes/PruebaMapaIndicadores.unity
+    guid: a30a2c5a63c6f0b478a180bddcba111d
+  - enabled: 0
     path: Assets/Scenes/PruebaNPC.unity
     guid: d213eb6fba1b6d8408466aa4ec7813be
   - enabled: 0
