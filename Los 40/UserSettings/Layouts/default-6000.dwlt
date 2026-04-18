@@ -929,10 +929,11 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: []
+      scrollPos: {x: 0, y: 633}
+      m_SelectedIDs:
+      - m_Data: -1820
       m_LastClickedID:
-        m_Data: 0
+        m_Data: -1820
       m_ExpandedIDs:
       - m_Data: -5732
       - m_Data: -5714
