@@ -332,7 +332,7 @@ MonoBehaviour:
   BackgroundImageSliced: 1
   OptionImage: {fileID: 21300000, guid: 5aad9e2c92c75844e93c62a93365ca65, type: 3}
   OptionImageSliced: 1
-  AllowMouseInteraction: 1
+  AllowMouseInteraction: 0
   DialoguePanel: {fileID: 3900108755395677323}
   OptionsPanel: {fileID: 3852935656990629450}
   DialogueBackground: {fileID: 3900108755395677320}
