@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
 namespace DialogueEditor
 {
     public class UIConversationButton : MonoBehaviour
     {
+        [SerializeField] private Sprite normalSprite;
+        [SerializeField] private Sprite hoverSprite;
         public enum eHoverState
         {
             idleOff,
@@ -129,9 +132,22 @@ namespace DialogueEditor
             if (!selected && (m_hoverState == eHoverState.animatingOff || m_hoverState == eHoverState.idleOff)) { return; }
 
             if (selected)
+            {
                 m_hoverState = eHoverState.animatingOn;
+
+                // 👉 CAMBIO DE SPRITE
+                if (hoverSprite != null)
+                    OptionBackgroundImage.sprite = hoverSprite;
+            }
             else
+            {
                 m_hoverState = eHoverState.animatingOff;
+
+                // 👉 VOLVER AL NORMAL
+                if (normalSprite != null)
+                    OptionBackgroundImage.sprite = normalSprite;
+            }
+
             m_hoverT = 0f;
         }
 
