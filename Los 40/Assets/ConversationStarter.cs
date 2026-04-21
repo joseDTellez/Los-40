@@ -14,7 +14,7 @@ public class ConversationStarter : MonoBehaviour
     [Header("Componentes del Jugador")]
     [Tooltip("Script VRBoxController que está en tu Player.")]
     [SerializeField] private VRBoxController playerMovementScript;
-    
+
     [Tooltip("Rigidbody del Player para evitar que deslice.")]
     [SerializeField] private Rigidbody playerRigidbody;
 
@@ -55,22 +55,14 @@ public class ConversationStarter : MonoBehaviour
             playerInside = false;
         }
     }
-    //Click con el Gaze para comenzar conversación
+
     private void Update()
     {
         // Si no estamos en el rango o ya estamos en medio de una charla, ignorar
         if (!playerInside || isInConversation) return;
 
-<<<<<<< HEAD
-        //if (Keyboard.current[interactKey].wasPressedThisFrame)
-        //{
-        //    StartDialogue();
-        //}
-        if (Gamepad.current != null && Gamepad.current.rightTrigger.wasPressedThisFrame)
-=======
         // 1. CONTROL POR TECLADO (L)
         if (Keyboard.current != null && Keyboard.current[interactKey].wasPressedThisFrame)
->>>>>>> Componentes_UI
         {
             StartDialogue();
         }
@@ -90,14 +82,7 @@ public class ConversationStarter : MonoBehaviour
     /// </summary>
     public void StartDialogue()
     {
-<<<<<<< HEAD
-        Debug.Log("Iniciando conversación");
-
-        if (playerMovement != null)
-            playerMovement.enabled = false;
-=======
         if (isInConversation) return;
->>>>>>> Componentes_UI
 
         Debug.Log("Iniciando Diálogo y bloqueando controles...");
         isInConversation = true;
@@ -111,7 +96,7 @@ public class ConversationStarter : MonoBehaviour
         {
             playerRigidbody.linearVelocity = Vector3.zero;
             playerRigidbody.angularVelocity = Vector3.zero;
-            playerRigidbody.isKinematic = true; 
+            playerRigidbody.isKinematic = true;
         }
 
         // Apagar simulador de XR (evita que el mouse mueva la cámara en PC)
@@ -126,15 +111,7 @@ public class ConversationStarter : MonoBehaviour
     /// </summary>
     private void OnConversationEnded()
     {
-<<<<<<< HEAD
-        Debug.Log("Finalizó conversación");
-
-        if (playerMovement != null)
-            playerMovement.enabled = true;
-
-=======
         Debug.Log("Fin del diálogo. Controles restaurados.");
->>>>>>> Componentes_UI
         isInConversation = false;
 
         if (playerMovementScript != null)
