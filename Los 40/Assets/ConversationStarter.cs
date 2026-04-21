@@ -48,7 +48,11 @@ public class ConversationStarter : MonoBehaviour
     {
         if (!playerInside || isInConversation) return;
 
-        if (Keyboard.current[interactKey].wasPressedThisFrame)
+        //if (Keyboard.current[interactKey].wasPressedThisFrame)
+        //{
+        //    StartDialogue();
+        //}
+        if (Gamepad.current != null && Gamepad.current.rightTrigger.wasPressedThisFrame)
         {
             StartDialogue();
         }
