@@ -55,7 +55,7 @@ public class VRMenuManager : MonoBehaviour
         }
 
         // Gamepad
-        if (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame)
+        if (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame || Gamepad.current.buttonNorth.wasPressedThisFrame)
         {
             ToggleMenu();
         }
