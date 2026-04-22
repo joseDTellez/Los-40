@@ -21,6 +21,7 @@ public class NewObjectController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip soundEntry;         // Sonido al acercar el objeto
     public AudioClip soundExit;          // Sonido al alejar el objeto
+    public AudioClip soundHover;         // NUEVO: Sonido al mirar el objeto (hover)
 
     [Header("Outline (hover visual)")]
     public Image loadingCircle;            // Reservado para uso futuro (gaze timer)
@@ -161,7 +162,11 @@ public class NewObjectController : MonoBehaviour
         if (_outline) _outline.enabled = true;
 
         // Solo mostrar hover si el objeto no está siendo inspeccionado
-        if (!_isNear) MostrarHover();
+        if (!_isNear)
+        {
+            MostrarHover();
+            PlayHoverSound(); // NUEVO: Dispara el sonido al mirar el objeto
+        }
     }
 
     public void OnPointerExit()
@@ -280,6 +285,15 @@ public class NewObjectController : MonoBehaviour
         {
             audioSource.clip = clip;
             audioSource.Play();
+        }
+    }
+
+    // NUEVO: Método para reproducir el sonido de hover usando PlayOneShot
+    private void PlayHoverSound()
+    {
+        if (audioSource != null && soundHover != null)
+        {
+            audioSource.PlayOneShot(soundHover);
         }
     }
 }

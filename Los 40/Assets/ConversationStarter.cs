@@ -70,7 +70,7 @@ public class ConversationStarter : MonoBehaviour
         // 2. CONTROL POR GAMEPAD (Gatillo Derecho e Izquierdo)
         if (Gamepad.current != null)
         {
-            if (Gamepad.current.rightTrigger.wasPressedThisFrame || Gamepad.current.leftTrigger.wasPressedThisFrame)
+            if (Gamepad.current.rightShoulder.wasPressedThisFrame || Gamepad.current.leftShoulder.wasPressedThisFrame)
             {
                 StartDialogue();
             }
@@ -78,7 +78,7 @@ public class ConversationStarter : MonoBehaviour
     }
 
     /// <summary>
-    /// Activa la conversación y congela al jugador por completo.
+    /// Activa la conversación y bloquea el input del jugador, pero mantiene el Head Tracking vivo.
     /// </summary>
     public void StartDialogue()
     {
@@ -87,16 +87,18 @@ public class ConversationStarter : MonoBehaviour
         Debug.Log("Iniciando Diálogo y bloqueando controles...");
         isInConversation = true;
 
-        // Desactivar movimiento de Joystick
+        // Cambiado: Desactivar variables de estado en lugar de apagar el script
         if (playerMovementScript != null)
-            playerMovementScript.enabled = false;
+        {
+            playerMovementScript.canMove = false;
+            playerMovementScript.canInteract = false;
+        }
 
-        // Congelar físicas para que no 'patine'
+        // Cambiado: Solo frenamos la velocidad para que no patine, pero NO activamos isKinematic
         if (playerRigidbody != null)
         {
             playerRigidbody.linearVelocity = Vector3.zero;
             playerRigidbody.angularVelocity = Vector3.zero;
-            playerRigidbody.isKinematic = true;
         }
 
         // Apagar simulador de XR (evita que el mouse mueva la cámara en PC)
@@ -114,11 +116,12 @@ public class ConversationStarter : MonoBehaviour
         Debug.Log("Fin del diálogo. Controles restaurados.");
         isInConversation = false;
 
+        // Cambiado: Reactivar variables de estado
         if (playerMovementScript != null)
-            playerMovementScript.enabled = true;
-
-        if (playerRigidbody != null)
-            playerRigidbody.isKinematic = false;
+        {
+            playerMovementScript.canMove = true;
+            playerMovementScript.canInteract = true;
+        }
 
         if (xrSimulator != null)
             xrSimulator.SetActive(true);

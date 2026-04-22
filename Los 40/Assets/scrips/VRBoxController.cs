@@ -3,6 +3,10 @@ using UnityEngine.InputSystem;
 
 public class VRBoxController : MonoBehaviour
 {
+    [Header("Estado")]
+    public bool canMove = true;      // Controla si el jugador puede caminar
+    public bool canInteract = true;  // Controla si el jugador puede usar el rayo
+
     [Header("Movimiento")]
     public float speed = 2f;
     public Transform cameraTransform;
@@ -15,8 +19,16 @@ public class VRBoxController : MonoBehaviour
     {
         if (Gamepad.current == null) return;
 
-        Move();
-        Interact();
+        // Solo ejecuta las funciones si los booleanos son verdaderos
+        if (canMove)
+        {
+            Move();
+        }
+
+        if (canInteract)
+        {
+            Interact();
+        }
     }
 
     void Move()
@@ -34,7 +46,7 @@ public class VRBoxController : MonoBehaviour
 
     void Interact()
     {
-        // Botón B (segón tu mapeo principal)
+        // Botón B (según tu mapeo principal)
         if (Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);

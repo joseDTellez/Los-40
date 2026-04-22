@@ -21,6 +21,7 @@ public class RadioController : MonoBehaviour
     [Header("Sonidos")]
     public AudioSource audioSource;
     public AudioClip soundON, soundOFF, station1, station2, station3;
+    public AudioClip soundHover; // NUEVO: Clip de audio para el hover
 
     private OutlineVR _outline;
     private OutlineVR _leftOutline, _rightOutline;
@@ -123,9 +124,34 @@ public class RadioController : MonoBehaviour
         if (_rightOutline) _rightOutline.enabled = state;
     }
 
+    // Este método reemplaza el clip principal (corta lo que esté sonando)
     private void Play(AudioClip c) { if (audioSource && c) { audioSource.clip = c; audioSource.Play(); } }
 
-    public void OnPointerEnter() { StartGazing("Radio"); if (_outline) { _outline.enabled = true; _outline.SetState(OutlineVR.InteractionState.Hover); } }
+    // NUEVO: Este método reproduce un sonido sin cortar el audio principal
+    private void PlayHoverSound()
+    {
+        if (audioSource && soundHover)
+        {
+            audioSource.PlayOneShot(soundHover);
+        }
+    }
+
+    public void OnPointerEnter()
+    {
+        StartGazing("Radio");
+        if (_outline)
+        {
+            _outline.enabled = true;
+            _outline.SetState(OutlineVR.InteractionState.Hover);
+        }
+
+        // NUEVO: Reproducimos el sonido de hover solo si la radio no está siendo inspeccionada
+        if (!_isNear)
+        {
+            PlayHoverSound();
+        }
+    }
+
     public void OnPointerEnterLeft() { StartGazing("Left"); if (_leftOutline) _leftOutline.SetState(OutlineVR.InteractionState.Hover); }
     public void OnPointerEnterRight() { StartGazing("Right"); if (_rightOutline) _rightOutline.SetState(OutlineVR.InteractionState.Hover); }
 

@@ -16,6 +16,7 @@ public class ObjectController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip openClip;
     public AudioClip closeClip;
+    public AudioClip soundHover; // NUEVO: Clip de audio para cuando se mira el objeto
 
     [Header("Door Settings")]
     public DoorController doorController;
@@ -124,6 +125,15 @@ public class ObjectController : MonoBehaviour
         }
     }
 
+    // NUEVO: Método para reproducir el sonido sin interrumpir los demás
+    private void PlayHoverSound()
+    {
+        if (audioSource != null && soundHover != null)
+        {
+            audioSource.PlayOneShot(soundHover);
+        }
+    }
+
     // --- MÉTODOS DE ENTRADA CORREGIDOS ---
 
     public void OnPointerEnter()
@@ -135,6 +145,12 @@ public class ObjectController : MonoBehaviour
         if (_resetRoutine != null) StopCoroutine(_resetRoutine);
 
         if (_outline != null && !_interactionTriggered) _outline.enabled = true;
+
+        // NUEVO: Reproducimos el sonido al mirar el objeto, solo si no está ya activo
+        if (!_interactionTriggered)
+        {
+            PlayHoverSound();
+        }
     }
 
     public void OnPointerExit()
