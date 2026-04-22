@@ -7,7 +7,7 @@ public class VRBoxController : MonoBehaviour
     public float speed = 2f;
     public Transform cameraTransform;
 
-    [Header("Interacci髇")]
+    [Header("Interacci贸n")]
     public float rayDistance = 10f;
     public LayerMask interactLayer;
 
@@ -25,7 +25,7 @@ public class VRBoxController : MonoBehaviour
 
         Vector3 direction = new Vector3(input.y, 0, -input.x); //Rotacion 90 grados del joystick
 
-        // Movimiento relativo a la c醡ara (importante en VR)
+        // Movimiento relativo a la c谩mara (importante en VR)
         direction = cameraTransform.TransformDirection(direction);
         direction.y = 0;
 
@@ -34,7 +34,7 @@ public class VRBoxController : MonoBehaviour
 
     void Interact()
     {
-        // Bot髇 B (seg鷑 tu mapeo principal)
+        // Bot贸n B (seg贸n tu mapeo principal)
         if (Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
@@ -44,7 +44,7 @@ public class VRBoxController : MonoBehaviour
             {
                 Debug.Log("Interactuando con: " + hit.collider.name);
 
-                // Si quieres interfaz tipo bot髇
+                // Si quieres interfaz tipo bot贸n
                 hit.collider.SendMessage("OnInteract", SendMessageOptions.DontRequireReceiver);
             }
         }

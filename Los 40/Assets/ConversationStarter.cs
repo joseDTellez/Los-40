@@ -14,7 +14,7 @@ public class ConversationStarter : MonoBehaviour
     [Header("Componentes del Jugador")]
     [Tooltip("Script VRBoxController que está en tu Player.")]
     [SerializeField] private VRBoxController playerMovementScript;
-    
+
     [Tooltip("Rigidbody del Player para evitar que deslice.")]
     [SerializeField] private Rigidbody playerRigidbody;
 
@@ -96,7 +96,7 @@ public class ConversationStarter : MonoBehaviour
         {
             playerRigidbody.linearVelocity = Vector3.zero;
             playerRigidbody.angularVelocity = Vector3.zero;
-            playerRigidbody.isKinematic = true; 
+            playerRigidbody.isKinematic = true;
         }
 
         // Apagar simulador de XR (evita que el mouse mueva la cámara en PC)

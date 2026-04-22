@@ -42,7 +42,7 @@ public class ObjectController : MonoBehaviour
 
     void Update()
     {
-        //// GESTIÓN DE LA CARGA
+        //// GESTIÃ“N DE LA CARGA
         //if (_isGazingAtObject && !_interactionTriggered)
         //{
         //    _gazeTimer += Time.deltaTime;
@@ -58,8 +58,8 @@ public class ObjectController : MonoBehaviour
         //    }
         //}
 
-        //// GESTIÓN DEL CIERRE AUTOMÁTICO (Invoke)
-        //// Si no estamos mirando nada y ya se activó la información
+        //// GESTIÃ“N DEL CIERRE AUTOMÃ“TICO (Invoke)
+        //// Si no estamos mirando nada y ya se activÃ³ la informaciÃ³n
         //if (!_isGazingAtObject && !_isGazingAtPanel && _interactionTriggered)
         //{
         //    if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 5f);
@@ -75,11 +75,11 @@ public class ObjectController : MonoBehaviour
             //Entrada por teclado para pruebas
             if (Keyboard.current.kKey.wasPressedThisFrame)
             {
-                Debug.Log("Se presionó k");
+                Debug.Log("Se presiona k");
                 ShowInformation();
             }
 
-            // GAMEPAD (gatillo / botón)
+            // GAMEPAD (gatillo / botÃ³n)
             if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
             {
                 ShowInformation();
@@ -108,7 +108,7 @@ public class ObjectController : MonoBehaviour
 
     private void ClosePanel()
     {
-        // Doble verificación de que realmente no estamos mirando antes de cerrar
+        // Doble verificaciÃ³n de que realmente no estamos mirando antes de cerrar
         if (!_isGazingAtObject && !_isGazingAtPanel)
         {
             if (textToShow != null) textToShow.SetActive(false);
@@ -124,7 +124,7 @@ public class ObjectController : MonoBehaviour
         }
     }
 
-    // --- MÉTODOS DE ENTRADA CORREGIDOS ---
+    // --- MÃ‰TODOS DE ENTRADA CORREGIDOS ---
 
     public void OnPointerEnter()
     {
@@ -162,7 +162,7 @@ public class ObjectController : MonoBehaviour
     {
         yield return new WaitForSeconds(graceTime);
 
-        // Solo si después del tiempo de gracia seguimos sin mirar, reseteamos el progreso
+        // Solo si despuÃ©s del tiempo de gracia seguimos sin mirar, reseteamos el progreso
         if (!_isGazingAtObject)
         {
             if (!_interactionTriggered)
