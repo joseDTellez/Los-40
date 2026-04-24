@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using DialogueEditor;
 
 public class VRMenuManager : MonoBehaviour
 {
@@ -48,6 +49,12 @@ public class VRMenuManager : MonoBehaviour
 
     void Update()
     {
+        if (ConversationManager.Instance != null &&
+        ConversationManager.Instance.IsConversationActive)
+        {
+            return;
+        }
+
         // Teclado
         if (Keyboard.current != null && Keyboard.current[menuKey].wasPressedThisFrame)
         {
@@ -210,5 +217,20 @@ public class VRMenuManager : MonoBehaviour
     {
         Debug.Log("Salir del juego");
         Application.Quit();
+    }
+    private void OnEnable()
+    {
+        ConversationManager.OnConversationStarted += OnConversationStart;
+    }
+
+    private void OnDisable()
+    {
+        ConversationManager.OnConversationStarted -= OnConversationStart;
+    }
+
+    private void OnConversationStart()
+    {
+        if (isMenuOpen)
+            CloseMenu();
     }
 }
