@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/NPCfluje.unity
     guid: 3dcee34b4502572469e11a8192359c98
   - enabled: 0
+    path: Assets/Scenes/NPCflujeWTerrain.unity
+    guid: 09f86ddb3529bcd479bbc94f6e27314f
+  - enabled: 0
     path: Assets/Scenes/PruebaMenu.unity
     guid: 4ecf062701018c549929f7091d240d6d
   - enabled: 0

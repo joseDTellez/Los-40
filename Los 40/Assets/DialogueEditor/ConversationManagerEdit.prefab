@@ -327,7 +327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScrollText: 1
-  ScrollSpeed: 1
+  ScrollSpeed: 0.5
   BackgroundImage: {fileID: 21300000, guid: 69065eb8a1edf6045a734655ed53ba2d, type: 3}
   BackgroundImageSliced: 1
   OptionImage: {fileID: 21300000, guid: 5aad9e2c92c75844e93c62a93365ca65, type: 3}
@@ -340,6 +340,8 @@ MonoBehaviour:
   NameText: {fileID: 6116449485086562217}
   DialogueText: {fileID: 3900108754347413305}
   AudioPlayer: {fileID: 3900108755062758274}
+  HoverSound: {fileID: 0}
+  SelectSound: {fileID: 0}
   ButtonPrefab: {fileID: 6120265339105655453, guid: 1d48feb1cf04aec499db38c5c2abd76c, type: 3}
   BlankSprite: {fileID: 21300000, guid: 70e433de46068504fa56fcf7f49b32b1, type: 3}
   m_targetScrollTextCount: 0
