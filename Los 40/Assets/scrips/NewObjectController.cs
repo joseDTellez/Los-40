@@ -14,28 +14,28 @@ public class NewObjectController : MonoBehaviour
     public Transform cameraTransform;
 
     [Header("Inspección")]
-    public float distanceInFront = 0.7f;   // Distancia frente a la cámara al inspeccionar
-    public float transitionSpeed = 5f;    // Velocidad de lerp al mover el objeto
+    public float distanceInFront = 0.7f;
+    public float transitionSpeed = 5f;
 
     [Header("Sonidos")]
     public AudioSource audioSource;
-    public AudioClip soundEntry;         // Sonido al acercar el objeto
-    public AudioClip soundExit;          // Sonido al alejar el objeto
-    public AudioClip soundHover;         // NUEVO: Sonido al mirar el objeto (hover)
+    public AudioClip soundEntry;
+    public AudioClip soundExit;
+    public AudioClip soundHover;
 
     [Header("Outline (hover visual)")]
-    public Image loadingCircle;            // Reservado para uso futuro (gaze timer)
+    public Image loadingCircle;
 
     [Header("UI — Hover")]
-    public GameObject hoverPanelRoot;      // Panel que aparece al mirar el objeto
+    public GameObject hoverPanelRoot;
 
     [Header("UI — Objetivo inicial")]
-    public GameObject objectivePanelRoot;  // Panel que aparece al interactuar por primera vez
-    public float fadeDuration = 0.8f;   // Duración del fade in/out
-    public float displayDuration = 3f;     // Tiempo visible antes del fade out
+    public GameObject objectivePanelRoot;
+    public float fadeDuration = 0.8f;
+    public float displayDuration = 3f;
 
     [Header("UI — Objetivo final")]
-    public GameObject objectiveFinalPanelRoot; // Panel que aparece al soltar el objeto
+    public GameObject objectiveFinalPanelRoot;
     public float fadeDurationFinal = 0.8f;
     public float displayDurationFinal = 3f;
 
@@ -43,33 +43,23 @@ public class NewObjectController : MonoBehaviour
     // PRIVADOS
     // ─────────────────────────────────────────────────────────────────────────
 
-    // Outline
+    private enum UIState { None, Hover, ObjectiveInitial, ObjectiveFinal }
+
+    private UIState _currentUIState = UIState.None;
+    private Coroutine _uiTransitionCoroutine;
+
     private Outline _outline;
-
-    // Estado del gaze
     private bool _isGazing = false;
-
-    // Estado de inspección
     private bool _isNear = false;
-    private bool _hasInteracted = false;   // Evita mostrar el objetivo inicial más de una vez
 
-    // Posición y rotación originales del objeto
     private Vector3 _origPos;
     private Quaternion _origRot;
-
-    // Posición y rotación de inspección (frente a la cámara)
     private Vector3 _inspectPos;
     private Quaternion _inspectRot;
 
-    // Canvas Groups para controlar alpha de cada panel
     private CanvasGroup _hoverCanvasGroup;
     private CanvasGroup _objectiveCanvasGroup;
     private CanvasGroup _objectiveFinalCanvasGroup;
-
-    // Referencias a coroutines activas para poder cancelarlas
-    private Coroutine _hoverCoroutine;
-    private Coroutine _fadeCoroutine;
-    private Coroutine _fadeFinalCoroutine;
 
     // ─────────────────────────────────────────────────────────────────────────
     // UNITY LIFECYCLE
@@ -77,19 +67,15 @@ public class NewObjectController : MonoBehaviour
 
     void Start()
     {
-        // Outline: desactivar al inicio
         _outline = GetComponent<Outline>();
         if (_outline != null) _outline.enabled = false;
 
-        // Guardar transform original del objeto
         _origPos = transform.position;
         _origRot = transform.rotation;
 
-        // Cámara principal como fallback
         if (cameraTransform == null)
             cameraTransform = Camera.main.transform;
 
-        // Inicializar los tres paneles UI
         InicializarPanel(hoverPanelRoot, ref _hoverCanvasGroup);
         InicializarPanel(objectivePanelRoot, ref _objectiveCanvasGroup);
         InicializarPanel(objectiveFinalPanelRoot, ref _objectiveFinalCanvasGroup);
@@ -109,38 +95,30 @@ public class NewObjectController : MonoBehaviour
     {
         if (!_isGazing) return;
 
-        // Teclado (pruebas en editor)
         if (Keyboard.current.kKey.wasPressedThisFrame)
             AlternarInspeccion();
 
-        // Gamepad
         if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
             AlternarInspeccion();
     }
 
     // ─────────────────────────────────────────────────────────────────────────
-    // INSPECCIÓN DEL OBJETO
+    // INSPECCIÓN
     // ─────────────────────────────────────────────────────────────────────────
 
     private void AlternarInspeccion()
     {
+        // Si ya está cerca, ignorar (la suelta ocurre en OnPointerExit)
         if (_isNear) return;
 
-        // Calcular posición y rotación frente a la cámara
         _inspectPos = cameraTransform.position + (cameraTransform.forward * distanceInFront);
         _inspectRot = Quaternion.LookRotation(cameraTransform.position - _inspectPos);
 
         _isNear = true;
         PlaySound(soundEntry);
-        OcultarHover();
 
-        // Mostrar objetivo inicial solo la primera vez
-        if (!_hasInteracted)
-        {
-            _hasInteracted = true;
-            MostrarPanel(objectivePanelRoot, _objectiveCanvasGroup,
-                         fadeDuration, displayDuration, ref _fadeCoroutine);
-        }
+        // Ocultar hover al agarrar y mostrar objetivo inicial
+        CambiarUIState(UIState.ObjectiveInitial);
     }
 
     private void MoverObjeto()
@@ -153,7 +131,7 @@ public class NewObjectController : MonoBehaviour
     }
 
     // ─────────────────────────────────────────────────────────────────────────
-    // EVENTOS DE GAZE (llamados desde el sistema de detección externa)
+    // EVENTOS DE GAZE
     // ─────────────────────────────────────────────────────────────────────────
 
     public void OnPointerEnter()
@@ -161,22 +139,25 @@ public class NewObjectController : MonoBehaviour
         _isGazing = true;
         if (_outline) _outline.enabled = true;
 
-        // Solo mostrar hover si el objeto no está siendo inspeccionado
-        if (!_isNear)
+        // Solo mostrar hover si el objeto está libre (no inspeccionado)
+        if (!_isNear && _currentUIState == UIState.None)
         {
-            MostrarHover();
-            PlayHoverSound(); // NUEVO: Dispara el sonido al mirar el objeto
+            CambiarUIState(UIState.Hover);
+            PlayHoverSound();
         }
     }
 
     public void OnPointerExit()
     {
         _isGazing = false;
-        if (!_isNear) OcultarHover();
+
+        // Si no está cerca, solo ocultar hover
+        if (!_isNear)
+            CambiarUIState(UIState.None);
+
         StartCoroutine(EsperaRegreso());
     }
 
-    // Pequeña espera para evitar flickers al salir del gaze
     private IEnumerator EsperaRegreso()
     {
         yield return new WaitForSeconds(0.1f);
@@ -185,12 +166,10 @@ public class NewObjectController : MonoBehaviour
         {
             if (_isNear)
             {
+                // Soltar el objeto → mostrar objetivo final
                 _isNear = false;
                 PlaySound(soundExit);
-
-                // Mostrar objetivo final al soltar el objeto
-                MostrarPanel(objectiveFinalPanelRoot, _objectiveFinalCanvasGroup,
-                             fadeDurationFinal, displayDurationFinal, ref _fadeFinalCoroutine);
+                CambiarUIState(UIState.ObjectiveFinal);
             }
 
             if (_outline) _outline.enabled = false;
@@ -198,53 +177,86 @@ public class NewObjectController : MonoBehaviour
     }
 
     // ─────────────────────────────────────────────────────────────────────────
-    // UI — HOVER
+    // SISTEMA DE UI CON ESTADOS
     // ─────────────────────────────────────────────────────────────────────────
 
-    private void MostrarHover()
+    private void CambiarUIState(UIState newState)
     {
-        if (_hoverCanvasGroup == null) return;
-        if (_hoverCoroutine != null) StopCoroutine(_hoverCoroutine);
-        _hoverCoroutine = StartCoroutine(FadeCanvasGroup(_hoverCanvasGroup, 0f, 1f, fadeDuration,
-                                                          hoverPanelRoot, desactivarAlFinal: false));
+        if (_currentUIState == newState) return;
+
+        if (_uiTransitionCoroutine != null)
+            StopCoroutine(_uiTransitionCoroutine);
+
+        _uiTransitionCoroutine = StartCoroutine(TransicionUI(_currentUIState, newState));
     }
 
-    private void OcultarHover()
+    private IEnumerator TransicionUI(UIState fromState, UIState toState)
     {
-        if (_hoverCanvasGroup == null) return;
-        if (_hoverCoroutine != null) StopCoroutine(_hoverCoroutine);
-        _hoverCoroutine = StartCoroutine(FadeCanvasGroup(_hoverCanvasGroup, 1f, 0f, fadeDuration,
-                                                          hoverPanelRoot, desactivarAlFinal: true));
+        // 1. Fade OUT del panel actualmente visible
+        yield return StartCoroutine(FadeOutSegunEstado(fromState));
+
+        // 2. Actualizar estado solo después del fade out
+        _currentUIState = toState;
+
+        // 3. Fade IN del nuevo panel
+        switch (toState)
+        {
+            case UIState.None:
+                break;
+
+            case UIState.Hover:
+                yield return StartCoroutine(FadeCanvasGroup(
+                    _hoverCanvasGroup, 0f, 1f, fadeDuration, hoverPanelRoot, false));
+                break;
+
+            case UIState.ObjectiveInitial:
+                yield return StartCoroutine(FadeCanvasGroup(
+                    _objectiveCanvasGroup, 0f, 1f, fadeDuration, objectivePanelRoot, false));
+                yield return new WaitForSeconds(displayDuration);
+                CambiarUIState(UIState.None);
+                break;
+
+            case UIState.ObjectiveFinal:
+                yield return StartCoroutine(FadeCanvasGroup(
+                    _objectiveFinalCanvasGroup, 0f, 1f, fadeDurationFinal, objectiveFinalPanelRoot, false));
+                yield return new WaitForSeconds(displayDurationFinal);
+                CambiarUIState(UIState.None);
+                break;
+        }
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
-    // UI — PANELES CON FADE (objetivo inicial y final)
-    // ─────────────────────────────────────────────────────────────────────────
-
-    // Método genérico para mostrar cualquier panel con fade in → espera → fade out
-    private void MostrarPanel(GameObject panel, CanvasGroup cg,
-                               float fadeDur, float displayDur, ref Coroutine coroutine)
+    private IEnumerator FadeOutSegunEstado(UIState state)
     {
-        if (cg == null) return;
-        if (coroutine != null) StopCoroutine(coroutine);
-        coroutine = StartCoroutine(FadePanelCompleto(panel, cg, fadeDur, displayDur));
-    }
+        switch (state)
+        {
+            case UIState.Hover:
+                yield return StartCoroutine(FadeCanvasGroup(
+                    _hoverCanvasGroup, _hoverCanvasGroup.alpha, 0f,
+                    fadeDuration, hoverPanelRoot, true));
+                break;
 
-    private IEnumerator FadePanelCompleto(GameObject panel, CanvasGroup cg,
-                                           float fadeDur, float displayDur)
-    {
-        panel.SetActive(true);
-        yield return StartCoroutine(FadeCanvasGroup(cg, 0f, 1f, fadeDur));
-        yield return new WaitForSeconds(displayDur);
-        yield return StartCoroutine(FadeCanvasGroup(cg, 1f, 0f, fadeDur));
-        panel.SetActive(false);
+            case UIState.ObjectiveInitial:
+                yield return StartCoroutine(FadeCanvasGroup(
+                    _objectiveCanvasGroup, _objectiveCanvasGroup.alpha, 0f,
+                    fadeDuration, objectivePanelRoot, true));
+                break;
+
+            case UIState.ObjectiveFinal:
+                yield return StartCoroutine(FadeCanvasGroup(
+                    _objectiveFinalCanvasGroup, _objectiveFinalCanvasGroup.alpha, 0f,
+                    fadeDurationFinal, objectiveFinalPanelRoot, true));
+                break;
+
+            case UIState.None:
+            default:
+                yield break;
+        }
     }
 
     // ─────────────────────────────────────────────────────────────────────────
     // UTILIDADES
     // ─────────────────────────────────────────────────────────────────────────
 
-    // Fade genérico de un CanvasGroup. El panel y desactivarAlFinal son opcionales.
     private IEnumerator FadeCanvasGroup(CanvasGroup cg, float from, float to, float duration,
                                          GameObject panel = null, bool desactivarAlFinal = false)
     {
@@ -266,7 +278,6 @@ public class NewObjectController : MonoBehaviour
             panel.SetActive(false);
     }
 
-    // Inicializa un panel: agrega CanvasGroup si no existe, alpha 0 y desactiva
     private void InicializarPanel(GameObject panel, ref CanvasGroup canvasGroup)
     {
         if (panel == null) return;
@@ -288,12 +299,9 @@ public class NewObjectController : MonoBehaviour
         }
     }
 
-    // NUEVO: Método para reproducir el sonido de hover usando PlayOneShot
     private void PlayHoverSound()
     {
         if (audioSource != null && soundHover != null)
-        {
             audioSource.PlayOneShot(soundHover);
-        }
     }
 }

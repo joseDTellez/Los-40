@@ -88,6 +88,7 @@
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Conversation.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Condition.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableParameter.cs" />
+    <Compile Include="Assets\AudioSettingsUI.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\SetParamAction.cs" />
   </ItemGroup>
   <ItemGroup>
