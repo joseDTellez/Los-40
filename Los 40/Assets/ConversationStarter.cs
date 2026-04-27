@@ -1,151 +1,147 @@
 ﻿using UnityEngine;
-using UnityEngine.InputSystem; // Necesario para Gamepad y Keyboard
+using UnityEngine.InputSystem;
 using DialogueEditor;
+using System.Collections;
 
-/// <summary>
-/// Controla el inicio de conversaciones mediante Teclado (L), Gatillos de Gamepad (L2/R2)
-/// e interacción por mirada (Gaze/Cardboard Trigger).
-/// </summary>
 public class ConversationStarter : MonoBehaviour
 {
+    public enum JoystickOrientation { Standard, Rotated90Degrees, RotatedMinus90Degrees }
+
     [Header("Configuración de Diálogo")]
     [SerializeField] private NPCConversation conversation;
 
     [Header("Componentes del Jugador")]
-    [Tooltip("Script VRBoxController que está en tu Player.")]
     [SerializeField] private VRBoxController playerMovementScript;
-
-    [Tooltip("Rigidbody del Player para evitar que deslice.")]
     [SerializeField] private Rigidbody playerRigidbody;
 
-    [Header("Simulador (Solo para pruebas en PC)")]
-    [Tooltip("Objeto 'XR Interaction Simulator' de tu jerarquía.")]
-    [SerializeField] private GameObject xrSimulator;
+    [Header("Ajuste de VR Box (Joystick Rotado)")]
+    [Tooltip("Standard: Y = Arriba/Abajo. Rotated: X = Arriba/Abajo.")]
+    public JoystickOrientation orientation = JoystickOrientation.Rotated90Degrees;
+
+    [Tooltip("Invertir si el joystick responde al revés de lo deseado")]
+    public bool invertSelection = false;
+
+    [Range(0.1f, 0.9f)]
+    public float deadzone = 0.5f;
+    public float scrollDelay = 0.3f;
 
     [Header("Input Manual")]
     [SerializeField] private Key interactKey = Key.L;
 
     private bool playerInside = false;
     private bool isInConversation = false;
+    private bool canScroll = true;
 
-    private void OnEnable()
-    {
-        ConversationManager.OnConversationEnded += OnConversationEnded;
-    }
-
-    private void OnDisable()
-    {
-        ConversationManager.OnConversationEnded -= OnConversationEnded;
-    }
+    private void OnEnable() => ConversationManager.OnConversationEnded += OnConversationEnded;
+    private void OnDisable() => ConversationManager.OnConversationEnded -= OnConversationEnded;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica que el Player tenga el Tag "Player"
-        if (other.CompareTag("Player"))
-        {
-            playerInside = true;
-            Debug.Log("Jugador cerca. Presiona L o Gatillos para hablar.");
-        }
+        if (other.CompareTag("Player")) playerInside = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            playerInside = false;
-        }
+        if (other.CompareTag("Player")) playerInside = false;
     }
 
     private void Update()
     {
-        // Si no estamos en el rango o ya estamos en medio de una charla, ignorar
-        if (!playerInside || isInConversation) return;
+        if (!playerInside) return;
 
-        // 1. CONTROL POR TECLADO (L)
-        if (Keyboard.current != null && Keyboard.current[interactKey].wasPressedThisFrame)
+        // Si estamos en conversación, procesamos la navegación corregida
+        if (isInConversation)
         {
-            StartDialogue();
+            HandleNavigation();
+            return;
         }
 
-        // 2. CONTROL POR GAMEPAD (Gatillo Derecho e Izquierdo)
-        if (Gamepad.current != null)
+        // Lógica de inicio (Teclado o Gamepad)
+        if (Keyboard.current != null && Keyboard.current[interactKey].wasPressedThisFrame)
+            StartDialogue();
+
+        if (Gamepad.current != null && (Gamepad.current.buttonSouth.wasPressedThisFrame || Gamepad.current.rightShoulder.wasPressedThisFrame))
+            StartDialogue();
+    }
+
+    private void HandleNavigation()
+    {
+        if (Gamepad.current == null || !canScroll) return;
+
+        Vector2 stick = Gamepad.current.leftStick.ReadValue();
+        float moveValue = 0;
+
+        // --- CORRECCIÓN DE ROTACIÓN ---
+        switch (orientation)
         {
-            if (Gamepad.current.rightShoulder.wasPressedThisFrame || Gamepad.current.leftShoulder.wasPressedThisFrame)
-            {
-                StartDialogue();
-            }
+            case JoystickOrientation.Standard:
+                moveValue = stick.y; // El estándar usa el eje vertical
+                break;
+            case JoystickOrientation.Rotated90Degrees:
+                moveValue = stick.x; // Si derecha es arriba, usamos el eje horizontal
+                break;
+            case JoystickOrientation.RotatedMinus90Degrees:
+                moveValue = -stick.x;
+                break;
+        }
+
+        if (invertSelection) moveValue *= -1;
+
+        // Ejecutar selección
+        if (Mathf.Abs(moveValue) > deadzone)
+        {
+            if (moveValue > 0)
+                ConversationManager.Instance.SelectPreviousOption(); // Sube en la lista
+            else
+                ConversationManager.Instance.SelectNextOption();     // Baja en la lista
+
+            StartCoroutine(ScrollCooldown());
         }
     }
 
-    /// <summary>
-    /// Activa la conversación y bloquea el input del jugador, pero mantiene el Head Tracking vivo.
-    /// </summary>
+    private IEnumerator ScrollCooldown()
+    {
+        canScroll = false;
+        yield return new WaitForSecondsRealtime(scrollDelay);
+        canScroll = true;
+    }
+
     public void StartDialogue()
     {
         if (isInConversation) return;
-
-        Debug.Log("Iniciando Diálogo y bloqueando controles...");
         isInConversation = true;
 
-        // Cambiado: Desactivar variables de estado en lugar de apagar el script
         if (playerMovementScript != null)
         {
             playerMovementScript.canMove = false;
             playerMovementScript.canInteract = false;
         }
 
-        // Cambiado: Solo frenamos la velocidad para que no patine, pero NO activamos isKinematic
         if (playerRigidbody != null)
         {
             playerRigidbody.linearVelocity = Vector3.zero;
             playerRigidbody.angularVelocity = Vector3.zero;
         }
 
-        // Apagar simulador de XR (evita que el mouse mueva la cámara en PC)
-        if (xrSimulator != null)
-            xrSimulator.SetActive(false);
+        if (xrSimulator != null) xrSimulator.SetActive(false);
 
         ConversationManager.Instance.StartConversation(conversation);
     }
 
-    /// <summary>
-    /// Restaura el control cuando el Dialogue Editor termina la charla.
-    /// </summary>
     private void OnConversationEnded()
     {
-        Debug.Log("Fin del diálogo. Controles restaurados.");
         isInConversation = false;
-
-        // Cambiado: Reactivar variables de estado
         if (playerMovementScript != null)
         {
             playerMovementScript.canMove = true;
             playerMovementScript.canInteract = true;
         }
-
-        if (xrSimulator != null)
-            xrSimulator.SetActive(true);
-
-        Time.timeScale = 1f; // Asegurar que el tiempo no quede en 0
+        if (xrSimulator != null) xrSimulator.SetActive(true);
     }
 
-    // ========================================================
-    // COMPATIBILIDAD CON CARDBOARD Y VRBOXCONTROLLER
-    // ========================================================
+    [Header("Simulador PC")]
+    [SerializeField] private GameObject xrSimulator;
 
-    // Se activa con el Botón B de tu VRBoxController actual
-    public void OnInteract()
-    {
-        StartDialogue();
-    }
-
-    // Se activa cuando haces "click" (tap en pantalla o botón magnético) mirando al NPC
-    public void OnPointerClick()
-    {
-        StartDialogue();
-    }
-
-    // Funciones vacías para evitar errores de consola cuando el puntero mira al NPC
-    public void OnPointerEnter() { }
-    public void OnPointerExit() { }
+    public void OnInteract() => StartDialogue();
+    public void OnPointerClick() => StartDialogue();
 }
