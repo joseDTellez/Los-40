@@ -19,7 +19,7 @@ namespace DialogueEditor
             NONE,
         }
 
-        private const float TRANSITION_TIME = 0.2f; // Transition time for fades
+        private const float TRANSITION_TIME = 0.5f; // Transition time for fades
 
         public static ConversationManager Instance { get; private set; }
 
@@ -32,7 +32,7 @@ namespace DialogueEditor
         // User-Facing options
         // Drawn by custom inspector
         public bool ScrollText;
-        public float ScrollSpeed = 1;
+        public float ScrollSpeed = 0.5f;
         public Sprite BackgroundImage;
         public bool BackgroundImageSliced;
         public Sprite OptionImage;

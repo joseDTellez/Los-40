@@ -135,13 +135,14 @@ public class NPCIndicatorSystem : MonoBehaviour
     // LÓGICA
     // ════════════════════════════════════════════════════════
 
-    private void EvaluateGazeUI()
-    {
-        bool show = _playerInTrigger && _isGazing;
+private void EvaluateGazeUI()
+{
+    // Input icon → SOLO proximidad
+    SetInputIconVisible(_playerInTrigger);
 
-        SetInputIconVisible(show);
-        SetInteractionIconVisible(show);
-    }
+    // Interaction icon → proximidad + mirada
+    SetInteractionIconVisible(_playerInTrigger && _isGazing);
+}
 
     private void SetInputIconVisible(bool visible)
     {
