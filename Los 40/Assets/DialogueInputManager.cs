@@ -49,7 +49,7 @@ public class DialogueInputManager : MonoBehaviour
                  Gamepad.current.leftStick.down.wasPressedThisFrame)
             ConversationManager.Instance.SelectNextOption();
         else if (Gamepad.current.buttonSouth.wasPressedThisFrame ||
-                 Gamepad.current.rightTrigger.wasPressedThisFrame)
+                 Gamepad.current.rightShoulder.wasPressedThisFrame)
             ConversationManager.Instance.PressSelectedOption();
     }
 }

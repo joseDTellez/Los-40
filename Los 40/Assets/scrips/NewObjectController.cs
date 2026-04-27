@@ -205,8 +205,11 @@ public class NewObjectController : MonoBehaviour
                 break;
 
             case UIState.Hover:
-                yield return StartCoroutine(FadeCanvasGroup(
-                    _hoverCanvasGroup, 0f, 1f, fadeDuration, hoverPanelRoot, false));
+                if (_hoverCanvasGroup != null)
+                {
+                    yield return StartCoroutine(FadeCanvasGroup(
+                        _hoverCanvasGroup, 0f, 1f, fadeDuration, hoverPanelRoot, false));
+                }
                 break;
 
             case UIState.ObjectiveInitial:
@@ -230,9 +233,12 @@ public class NewObjectController : MonoBehaviour
         switch (state)
         {
             case UIState.Hover:
-                yield return StartCoroutine(FadeCanvasGroup(
-                    _hoverCanvasGroup, _hoverCanvasGroup.alpha, 0f,
-                    fadeDuration, hoverPanelRoot, true));
+                if (_hoverCanvasGroup != null)
+                {
+                    yield return StartCoroutine(FadeCanvasGroup(
+                        _hoverCanvasGroup, _hoverCanvasGroup.alpha, 0f,
+                        fadeDuration, hoverPanelRoot, true));
+                }
                 break;
 
             case UIState.ObjectiveInitial:
@@ -260,6 +266,8 @@ public class NewObjectController : MonoBehaviour
     private IEnumerator FadeCanvasGroup(CanvasGroup cg, float from, float to, float duration,
                                          GameObject panel = null, bool desactivarAlFinal = false)
     {
+        if (cg == null) yield break; // 🔥 ESTA LÍNEA TE SALVA TODO
+
         if (panel != null) panel.SetActive(true);
 
         float elapsed = 0f;
@@ -280,7 +288,11 @@ public class NewObjectController : MonoBehaviour
 
     private void InicializarPanel(GameObject panel, ref CanvasGroup canvasGroup)
     {
-        if (panel == null) return;
+        if (panel == null)
+        {
+            canvasGroup = null;
+            return;
+        }
 
         canvasGroup = panel.GetComponent<CanvasGroup>();
         if (canvasGroup == null)
