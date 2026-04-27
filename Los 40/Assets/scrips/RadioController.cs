@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,52 +7,63 @@ public class RadioController : MonoBehaviour
 {
     [Header("Gaze Interaction")]
     public Transform cameraTransform;
-    public float graceTime = 0.2f;
+    public float graceTime = 0.25f;
 
-    [Header("Perillas (Arrastra los Pivotes aqu�)")]
-    public Transform leftKnob;
-    public Transform rightKnob;
-
-    [Header("Ajustes de Inspecci�n")]
-    public float distanceInFront = 0.7f;
+    [Header("Ajustes de Inspección")]
     public float transitionSpeed = 5f;
-    public float knobRotationSpeed = 200f;
+    public float distanceInFront = 0.7f;
 
-    [Header("Sonidos")]
-    public AudioSource audioSource;
-    public AudioClip soundON, soundOFF, station1, station2, station3;
+    [Header("Perillas (Solo el Mesh)")]
+    public Transform leftKnobMesh;  // Perilla On/Off
+    public Transform rightKnobMesh; // Perilla Volumen
+    public float knobSmoothSpeed = 10f;
 
-    private OutlineVR _outline;
-    private OutlineVR _leftOutline, _rightOutline;
+    [Header("Audio")]
+    public AudioSource[] stationSources;
+    public AudioSource commonAudioSource;
+    public AudioClip soundON, soundOFF, soundHover;
+
+    // Estados internos
     private bool _isGazing = false;
-    private string _partName = "";
-    private Vector3 _origPos;
-    private Quaternion _origRot;
+    private bool _isExiting = false;
     private bool _isNear = false;
-    private Vector3 _inspectPos;
-    private Quaternion _inspectRot;
-    private int _stationIdx = 0;
-    private int _volIdx = 1;
+    private bool _radioIsOn = false;
+    private string _gazedPart = "Radio";
+
+    private Vector3 _origPos, _inspectPos;
+    private Quaternion _origRot, _inspectRot;
+
+    private int _currentStation = 0;
+    private int _currentVolumeIndex = 0;
+    private float[] _volumeLevels = { 1.0f, 0.6f, 0.4f };
+
+    // Variables de rotación para perillas
+    private float _leftTargetAngle = 0f;
+    private float _rightTargetAngle = 0f;
     private Coroutine _exitRoutine;
 
     void Start()
     {
-        _outline = GetComponent<OutlineVR>();
-        if (leftKnob) _leftOutline = leftKnob.GetComponent<OutlineVR>();
-        if (rightKnob) _rightOutline = rightKnob.GetComponent<OutlineVR>();
-
-        SetOutlinesEnabled(false);
         _origPos = transform.position;
         _origRot = transform.rotation;
         if (cameraTransform == null) cameraTransform = Camera.main.transform;
+
+        _radioIsOn = false;
+        ActualizarEmisoras();
     }
 
     void Update()
     {
-        MoverRadio();
+        MoverRadioHaciaCamara();
+        ActualizarRotacionFisicaPerillas();
+
+        // Interacción por Teclado o Gamepad
         if (_isGazing)
         {
-            if (Keyboard.current.kKey.wasPressedThisFrame || (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame))
+            bool interactPressed = (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame) ||
+                                   (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
+
+            if (interactPressed)
             {
                 Interactuar();
             }
@@ -63,91 +74,125 @@ public class RadioController : MonoBehaviour
     {
         if (!_isNear)
         {
+            // Acercar la radio para inspección
             _inspectPos = cameraTransform.position + (cameraTransform.forward * distanceInFront);
             _inspectRot = Quaternion.LookRotation(cameraTransform.position - _inspectPos);
             _isNear = true;
-            Play(soundON);
+
+            // Opcional: Encender al agarrar
+            if (!_radioIsOn) AlternarOnOff();
         }
-        else if (_partName == "Left")
+        else
         {
-            _stationIdx = (_stationIdx % 3) + 1;
-            if (leftKnob) StartCoroutine(AnimarGiroPerilla(leftKnob, 60f));
-            PlayStationSound();
-        }
-        else if (_partName == "Right")
-        {
-            _volIdx = (_volIdx + 1) % 3;
-            if (audioSource) audioSource.volume = (_volIdx == 0) ? 0.2f : (_volIdx == 1) ? 0.6f : 1.0f;
-            // Aqu� giramos la perilla derecha sobre su propio eje
-            if (rightKnob) StartCoroutine(AnimarGiroPerilla(rightKnob, 30f));
+            // Si ya está cerca, interactuamos con las partes específicas
+            if (_gazedPart == "Left") AlternarOnOff();
+            else if (_gazedPart == "Right") CambiarVolumen();
         }
     }
 
-    private IEnumerator AnimarGiroPerilla(Transform perilla, float angulo)
+    private void AlternarOnOff()
     {
-        Quaternion startRot = perilla.localRotation;
+        _radioIsOn = !_radioIsOn;
+        if (commonAudioSource) commonAudioSource.PlayOneShot(_radioIsOn ? soundON : soundOFF);
 
-        // NOTA: Si gira hacia donde no es, cambia (0, 0, angulo) por (0, angulo, 0)
-        Quaternion endRot = startRot * Quaternion.Euler(0, 0, angulo);
+        // Rotación: 0 grados si OFF, 60 grados si ON
+        _leftTargetAngle = _radioIsOn ? 60f : 0f;
 
-        float duration = Mathf.Abs(angulo) / knobRotationSpeed;
-        float elapsed = 0f;
-
-        while (elapsed < duration)
-        {
-            elapsed += Time.deltaTime;
-            // Solo rotamos, NO tocamos la posici�n
-            perilla.localRotation = Quaternion.Slerp(startRot, endRot, elapsed / duration);
-            yield return null;
-        }
-        perilla.localRotation = endRot;
+        ActualizarEmisoras();
     }
 
-    private void PlayStationSound()
+    private void CambiarVolumen()
     {
-        if (_stationIdx == 1) Play(station1);
-        else if (_stationIdx == 2) Play(station2);
-        else if (_stationIdx == 3) Play(station3);
+        if (!_radioIsOn) return;
+
+        _currentVolumeIndex = (_currentVolumeIndex + 1) % _volumeLevels.Length;
+
+        // Gira -45 grados por cada nivel de volumen
+        _rightTargetAngle -= 45f;
+
+        if (commonAudioSource && soundHover) commonAudioSource.PlayOneShot(soundHover);
+        ActualizarEmisoras();
     }
 
-    private void MoverRadio()
+    private void ActualizarEmisoras()
+    {
+        if (stationSources == null) return;
+        for (int i = 0; i < stationSources.Length; i++)
+        {
+            if (stationSources[i] != null)
+            {
+                float targetVol = (_radioIsOn && i == _currentStation) ? _volumeLevels[_currentVolumeIndex] : 0f;
+                stationSources[i].volume = targetVol;
+
+                if (_radioIsOn && !stationSources[i].isPlaying) stationSources[i].Play();
+            }
+        }
+    }
+
+    private void MoverRadioHaciaCamara()
     {
         transform.position = Vector3.Lerp(transform.position, _isNear ? _inspectPos : _origPos, Time.deltaTime * transitionSpeed);
         transform.rotation = Quaternion.Slerp(transform.rotation, _isNear ? _inspectRot : _origRot, Time.deltaTime * transitionSpeed);
-        SetOutlinesEnabled(_isNear);
     }
 
-    private void SetOutlinesEnabled(bool state)
+    private void ActualizarRotacionFisicaPerillas()
     {
-        if (_leftOutline) _leftOutline.enabled = state;
-        if (_rightOutline) _rightOutline.enabled = state;
+        // IMPORTANTE: Si la perilla gira en el eje equivocado, cambia el eje en Euler(0, 0, ángulo)
+
+        if (leftKnobMesh)
+        {
+            Quaternion targetRot = Quaternion.Euler(0, 0, _leftTargetAngle);
+            leftKnobMesh.localRotation = Quaternion.Slerp(leftKnobMesh.localRotation, targetRot, Time.deltaTime * knobSmoothSpeed);
+        }
+
+        if (rightKnobMesh)
+        {
+            Quaternion targetRot = Quaternion.Euler(0, 0, _rightTargetAngle);
+            rightKnobMesh.localRotation = Quaternion.Slerp(rightKnobMesh.localRotation, targetRot, Time.deltaTime * knobSmoothSpeed);
+        }
     }
 
-    private void Play(AudioClip c) { if (audioSource && c) { audioSource.clip = c; audioSource.Play(); } }
+    // --- Métodos de Gaze ---
+    public void OnPointerEnter() => IniciarGaze("Radio");
+    public void OnPointerEnterLeft() => IniciarGaze("Left");
+    public void OnPointerEnterRight() => IniciarGaze("Right");
 
-    public void OnPointerEnter() { StartGazing("Radio"); if (_outline) { _outline.enabled = true; _outline.SetState(OutlineVR.InteractionState.Hover); } }
-    public void OnPointerEnterLeft() { StartGazing("Left"); if (_leftOutline) _leftOutline.SetState(OutlineVR.InteractionState.Hover); }
-    public void OnPointerEnterRight() { StartGazing("Right"); if (_rightOutline) _rightOutline.SetState(OutlineVR.InteractionState.Hover); }
+    private void IniciarGaze(string part)
+    {
+        _gazedPart = part;
+        if (_isExiting)
+        {
+            if (_exitRoutine != null) StopCoroutine(_exitRoutine);
+            _isExiting = false;
+        }
+        if (!_isGazing)
+        {
+            _isGazing = true;
+            if (!_isNear && commonAudioSource) commonAudioSource.PlayOneShot(soundHover);
+        }
+    }
 
     public void OnPointerExit()
     {
-        _isGazing = false;
-        if (_leftOutline) _leftOutline.SetState(OutlineVR.InteractionState.Idle);
-        if (_rightOutline) _rightOutline.SetState(OutlineVR.InteractionState.Idle);
-        if (_outline) _outline.SetState(OutlineVR.InteractionState.Idle);
+        if (!gameObject.activeInHierarchy || !_isGazing) return;
         if (_exitRoutine != null) StopCoroutine(_exitRoutine);
-        _exitRoutine = StartCoroutine(GracePeriodExitRoutine());
+        _exitRoutine = StartCoroutine(RutinaSalidaGracia());
     }
 
-    private void StartGazing(string part) { _isGazing = true; _partName = part; if (_exitRoutine != null) StopCoroutine(_exitRoutine); }
-
-    private IEnumerator GracePeriodExitRoutine()
+    private IEnumerator RutinaSalidaGracia()
     {
+        _isExiting = true;
         yield return new WaitForSeconds(graceTime);
-        if (!_isGazing)
+        _isExiting = false;
+        _isGazing = false;
+        if (_isNear)
         {
-            yield return new WaitForSeconds(0.3f);
-            if (!_isGazing && _isNear) { _isNear = false; Play(soundOFF); if (_outline) _outline.enabled = false; }
+            yield return new WaitForSeconds(0.5f);
+            if (!_isGazing)
+            {
+                _isNear = false;
+                if (commonAudioSource) commonAudioSource.PlayOneShot(soundOFF);
+            }
         }
     }
 }

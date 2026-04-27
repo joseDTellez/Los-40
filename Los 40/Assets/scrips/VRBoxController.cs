@@ -3,11 +3,15 @@ using UnityEngine.InputSystem;
 
 public class VRBoxController : MonoBehaviour
 {
+    [Header("Estado")]
+    public bool canMove = true;      // Controla si el jugador puede caminar
+    public bool canInteract = true;  // Controla si el jugador puede usar el rayo
+
     [Header("Movimiento")]
     public float speed = 2f;
     public Transform cameraTransform;
 
-    [Header("Interacción")]
+    [Header("InteracciÃ³n")]
     public float rayDistance = 10f;
     public LayerMask interactLayer;
 
@@ -15,8 +19,16 @@ public class VRBoxController : MonoBehaviour
     {
         if (Gamepad.current == null) return;
 
-        Move();
-        Interact();
+        // Solo ejecuta las funciones si los booleanos son verdaderos
+        if (canMove)
+        {
+            Move();
+        }
+
+        if (canInteract)
+        {
+            Interact();
+        }
     }
 
     void Move()
@@ -25,7 +37,7 @@ public class VRBoxController : MonoBehaviour
 
         Vector3 direction = new Vector3(input.y, 0, -input.x); //Rotacion 90 grados del joystick
 
-        // Movimiento relativo a la cámara (importante en VR)
+        // Movimiento relativo a la cÃ¡mara (importante en VR)
         direction = cameraTransform.TransformDirection(direction);
         direction.y = 0;
 
@@ -34,7 +46,7 @@ public class VRBoxController : MonoBehaviour
 
     void Interact()
     {
-        // Botón B (según tu mapeo principal)
+        // BotÃ³n B (segÃºn tu mapeo principal)
         if (Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
             Ray ray = new Ray(cameraTransform.position, cameraTransform.forward);
@@ -44,7 +56,7 @@ public class VRBoxController : MonoBehaviour
             {
                 Debug.Log("Interactuando con: " + hit.collider.name);
 
-                // Si quieres interfaz tipo botón
+                // Si quieres interfaz tipo botÃ³n
                 hit.collider.SendMessage("OnInteract", SendMessageOptions.DontRequireReceiver);
             }
         }

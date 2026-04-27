@@ -19,7 +19,7 @@ namespace DialogueEditor
             NONE,
         }
 
-        private const float TRANSITION_TIME = 0.2f; // Transition time for fades
+        private const float TRANSITION_TIME = 0.5f; // Transition time for fades
 
         public static ConversationManager Instance { get; private set; }
 
@@ -32,7 +32,7 @@ namespace DialogueEditor
         // User-Facing options
         // Drawn by custom inspector
         public bool ScrollText;
-        public float ScrollSpeed = 1;
+        public float ScrollSpeed = 0.5f;
         public Sprite BackgroundImage;
         public bool BackgroundImageSliced;
         public Sprite OptionImage;
@@ -52,6 +52,11 @@ namespace DialogueEditor
         public TMPro.TextMeshProUGUI DialogueText;
         // Components
         public AudioSource AudioPlayer;
+
+        [Header("UI Sounds")] // NUEVO: Encabezado para organizar en el inspector
+        public AudioClip HoverSound;  // NUEVO: Sonido al pasar el ratón o cambiar de opción
+        public AudioClip SelectSound; // NUEVO: Sonido al hacer clic o elegir la opción
+
         // Prefabs
         public UIConversationButton ButtonPrefab;
         // Default values
@@ -72,7 +77,7 @@ namespace DialogueEditor
         public int m_targetScrollTextCount;
         private eState m_state;
         private float m_stateTime;
-        
+
         private Conversation m_conversation;
         private SpeechNode m_currentSpeech;
         private OptionNode m_selectedOption;
@@ -218,7 +223,7 @@ namespace DialogueEditor
                 LogWarning("parameter \'" + paramName + "\' does not exist.");
             }
         }
-        
+
         public void SetBool(string paramName, bool value)
         {
             eParamStatus status;
@@ -547,7 +552,7 @@ namespace DialogueEditor
             else
             {
                 SetState(eState.TransitioningOptionsOn);
-            }            
+            }
         }
 
 
@@ -559,11 +564,13 @@ namespace DialogueEditor
 
         public void SpeechSelected(SpeechNode speech)
         {
+            PlaySelectSound(); // NUEVO: Sonido al elegir la opción "Continuar"
             SetupSpeech(speech);
         }
 
         public void OptionSelected(OptionNode option)
         {
+            PlaySelectSound(); // NUEVO: Sonido al elegir una respuesta de múltiple opción
             m_selectedOption = option;
             DoParamAction(option);
             if (option.Event != null)
@@ -573,6 +580,7 @@ namespace DialogueEditor
 
         public void EndButtonSelected()
         {
+            PlaySelectSound(); // NUEVO: Sonido al elegir la opción de terminar conversación
             m_selectedOption = null;
             SetState(eState.TransitioningOptionsOff);
         }
@@ -690,7 +698,7 @@ namespace DialogueEditor
                         {
                             uiOption.SetupButton(UIConversationButton.eButtonType.Speech, next, continueFont: m_conversation.ContinueFont);
                         }
-                        
+
                     }
                     else if (m_currentSpeech.ConnectionType == Connection.eConnectionType.None)
                     {
@@ -735,6 +743,12 @@ namespace DialogueEditor
                 index = 0;
             if (index > m_uiOptions.Count - 1)
                 index = m_uiOptions.Count - 1;
+
+            // NUEVO: Reproducir sonido de hover solo si estamos cambiando a una nueva opción
+            if (m_currentSelectedIndex != index)
+            {
+                PlayHoverSound();
+            }
 
             if (m_currentSelectedIndex >= 0)
                 m_uiOptions[m_currentSelectedIndex].SetHovering(false);
@@ -846,6 +860,25 @@ namespace DialogueEditor
 #if UNITY_EDITOR
             Debug.LogWarning("[Dialogue Editor]: " + warning);
 #endif
+        }
+
+        //--------------------------------------
+        // Audio Methods (NUEVO)
+        //--------------------------------------
+        private void PlayHoverSound()
+        {
+            if (AudioPlayer != null && HoverSound != null)
+            {
+                AudioPlayer.PlayOneShot(HoverSound);
+            }
+        }
+
+        private void PlaySelectSound()
+        {
+            if (AudioPlayer != null && SelectSound != null)
+            {
+                AudioPlayer.PlayOneShot(SelectSound);
+            }
         }
     }
 }

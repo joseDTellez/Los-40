@@ -16,6 +16,7 @@ public class ObjectController : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip openClip;
     public AudioClip closeClip;
+    public AudioClip soundHover; // NUEVO: Clip de audio para cuando se mira el objeto
 
     [Header("Door Settings")]
     public DoorController doorController;
@@ -23,7 +24,6 @@ public class ObjectController : MonoBehaviour
     private Outline _outline;
     private bool _isGazingAtObject = false;
     private bool _isGazingAtPanel = false;
-    private float _gazeTimer = 0f;
     private bool _interactionTriggered = false;
 
     // Corrutina para manejar el buffer de salida
@@ -42,7 +42,7 @@ public class ObjectController : MonoBehaviour
 
     void Update()
     {
-        //// GESTIÓN DE LA CARGA
+        //// GESTIÃ“N DE LA CARGA
         //if (_isGazingAtObject && !_interactionTriggered)
         //{
         //    _gazeTimer += Time.deltaTime;
@@ -58,8 +58,8 @@ public class ObjectController : MonoBehaviour
         //    }
         //}
 
-        //// GESTIÓN DEL CIERRE AUTOMÁTICO (Invoke)
-        //// Si no estamos mirando nada y ya se activó la información
+        //// GESTIÃ“N DEL CIERRE AUTOMÃ“TICO (Invoke)
+        //// Si no estamos mirando nada y ya se activÃ³ la informaciÃ³n
         //if (!_isGazingAtObject && !_isGazingAtPanel && _interactionTriggered)
         //{
         //    if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 5f);
@@ -75,11 +75,11 @@ public class ObjectController : MonoBehaviour
             //Entrada por teclado para pruebas
             if (Keyboard.current.kKey.wasPressedThisFrame)
             {
-                Debug.Log("Se presionó k");
+                Debug.Log("Se presiona k");
                 ShowInformation();
             }
 
-            // GAMEPAD (gatillo / botón)
+            // GAMEPAD (gatillo / botÃ³n)
             if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
             {
                 ShowInformation();
@@ -108,7 +108,7 @@ public class ObjectController : MonoBehaviour
 
     private void ClosePanel()
     {
-        // Doble verificación de que realmente no estamos mirando antes de cerrar
+        // Doble verificaciÃ³n de que realmente no estamos mirando antes de cerrar
         if (!_isGazingAtObject && !_isGazingAtPanel)
         {
             if (textToShow != null) textToShow.SetActive(false);
@@ -119,12 +119,21 @@ public class ObjectController : MonoBehaviour
             }
 
             _interactionTriggered = false;
-            _gazeTimer = 0f;
+  
             if (loadingCircle != null) loadingCircle.fillAmount = 0f;
         }
     }
 
-    // --- MÉTODOS DE ENTRADA CORREGIDOS ---
+    // NUEVO: MÃ©todo para reproducir el sonido sin interrumpir los demÃ¡s
+    private void PlayHoverSound()
+    {
+        if (audioSource != null && soundHover != null)
+        {
+            audioSource.PlayOneShot(soundHover);
+        }
+    }
+
+    // --- MÃ‰TODOS DE ENTRADA CORREGIDOS ---
 
     public void OnPointerEnter()
     {
@@ -135,6 +144,12 @@ public class ObjectController : MonoBehaviour
         if (_resetRoutine != null) StopCoroutine(_resetRoutine);
 
         if (_outline != null && !_interactionTriggered) _outline.enabled = true;
+
+        // NUEVO: Reproducimos el sonido al mirar el objeto, solo si no estÃ¡ ya activo
+        if (!_interactionTriggered)
+        {
+            PlayHoverSound();
+        }
     }
 
     public void OnPointerExit()
@@ -162,12 +177,12 @@ public class ObjectController : MonoBehaviour
     {
         yield return new WaitForSeconds(graceTime);
 
-        // Solo si después del tiempo de gracia seguimos sin mirar, reseteamos el progreso
+        // Solo si despuÃ©s del tiempo de gracia seguimos sin mirar, reseteamos el progreso
         if (!_isGazingAtObject)
         {
             if (!_interactionTriggered)
             {
-                _gazeTimer = 0f;
+          
                 if (loadingCircle != null) loadingCircle.fillAmount = 0f;
                 if (_outline != null) _outline.enabled = false;
             }
