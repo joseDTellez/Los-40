@@ -24,7 +24,6 @@ public class ObjectController : MonoBehaviour
     private Outline _outline;
     private bool _isGazingAtObject = false;
     private bool _isGazingAtPanel = false;
-    private float _gazeTimer = 0f;
     private bool _interactionTriggered = false;
 
     // Corrutina para manejar el buffer de salida
@@ -120,7 +119,7 @@ public class ObjectController : MonoBehaviour
             }
 
             _interactionTriggered = false;
-            _gazeTimer = 0f;
+  
             if (loadingCircle != null) loadingCircle.fillAmount = 0f;
         }
     }
@@ -183,7 +182,7 @@ public class ObjectController : MonoBehaviour
         {
             if (!_interactionTriggered)
             {
-                _gazeTimer = 0f;
+          
                 if (loadingCircle != null) loadingCircle.fillAmount = 0f;
                 if (_outline != null) _outline.enabled = false;
             }

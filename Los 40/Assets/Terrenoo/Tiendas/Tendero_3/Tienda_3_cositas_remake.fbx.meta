@@ -1,0 +1,350 @@
+fileFormatVersion: 2
+guid: 84f33fb37f0494d428ca96a9df23cd8c
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Barley.001
+    second: {fileID: 2100000, guid: eb464474d9ddd0342ac58f2921da6147, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_1
+    second: {fileID: 2100000, guid: ec95a87a61d0c8345ae82b719d0b44b7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_2
+    second: {fileID: 2100000, guid: 22e9bb515ce52494b9876210fbe0ed7a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_3
+    second: {fileID: 2100000, guid: 286cebacdb8d6994fb11c4dd2be9048c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_4
+    second: {fileID: 2100000, guid: 7fa8e1762c1112d4898958487d71fe56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_5
+    second: {fileID: 2100000, guid: 09e95813c8a7fdc409b7c8d0e7837782, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_Stick
+    second: {fileID: 2100000, guid: df40509f876e7344985792de1c73d8f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_Stick_2
+    second: {fileID: 2100000, guid: 9aa00603580ac984baafeb6a693e52e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_Stick_3
+    second: {fileID: 2100000, guid: 405e6c5abe6e5bf4fb01ec3d2fba24a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_Stick_4
+    second: {fileID: 2100000, guid: 28685003e43b494408d859dd23ecc3d6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bread_Stick_5
+    second: {fileID: 2100000, guid: 41843381ebdc51a4d995ea4957917aa4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Carrots
+    second: {fileID: 2100000, guid: f5f36e904c70e1e4a8c839c14d70d591, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Grain_2
+    second: {fileID: 2100000, guid: 08265dbfc26c12c40a85328fd44f16bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 0502a20d1e7e11c40b9be2a5148be6aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meat_1
+    second: {fileID: 2100000, guid: ebacd59199e40bb4d9d1a33d54c07ce1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meat_2
+    second: {fileID: 2100000, guid: a8719f8e79814944b93bd377daf68cd3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meat_3
+    second: {fileID: 2100000, guid: c53a17a1fcfe0aa4682595edfa75298d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meat_4
+    second: {fileID: 2100000, guid: e245edff002d64f47899283b1adfb588, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meat_5
+    second: {fileID: 2100000, guid: f0bba5bae43b33644bc349758e554ada, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meat_6
+    second: {fileID: 2100000, guid: f652acb8841b14043bff3dd17a19c3a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Meat_7
+    second: {fileID: 2100000, guid: 3e4350b00ab65fa46b0722fcb089ab2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medieval_Table_1
+    second: {fileID: 2100000, guid: 08b8af85d834c9e4ca0462ceb255f9c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Medieval_Table_3
+    second: {fileID: 2100000, guid: ab4a77a25ee9a5c43a6dd1cfa3a3e85b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oats
+    second: {fileID: 2100000, guid: 6bf4cbfed181a004bbc7ee459e7d231b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Oranges
+    second: {fileID: 2100000, guid: ef2cfcf26ba5e82429da38fee9ab4365, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Potatoes
+    second: {fileID: 2100000, guid: 35f6dc86fd438b548a680cf25e6d0f81, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pulse
+    second: {fileID: 2100000, guid: 3483245e4ad8eb247ba58b95c486b3ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wicker_Basket
+    second: {fileID: 2100000, guid: 5a7e902eda5775942b51823656052102, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wicker_Basket.001
+    second: {fileID: 2100000, guid: ab2d657d8d8a6344a850a8ddb2462627, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wicker_Basket.002
+    second: {fileID: 2100000, guid: f8cbb3d275eb7794ca952b1c5fe5d2c0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wicker_Basket_1
+    second: {fileID: 2100000, guid: cd1e5fc62be29744f82df6a6fa801e1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodenBox_1
+    second: {fileID: 2100000, guid: 4551d71781e3d6346beca55ff69c4746, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodenBox_2
+    second: {fileID: 2100000, guid: e828c2701f42ef547b189322ef925c1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Bowl_1
+    second: {fileID: 2100000, guid: 391bdadf054d22c408bff0208022670e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Bowl_2
+    second: {fileID: 2100000, guid: cf34bade2b7689a49bd86ba375c9e643, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Bowl_3
+    second: {fileID: 2100000, guid: 7b1c75ba22b79ff4aad896d244363095, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Bowl_4
+    second: {fileID: 2100000, guid: c756caa089e792a4384df5cd0c8e3d53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Cup
+    second: {fileID: 2100000, guid: c0c9c1071ca532e4aa467085cff1c088, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Cup_2
+    second: {fileID: 2100000, guid: 3146632ed7b142346af583a559ace098, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Cup_3
+    second: {fileID: 2100000, guid: a9823396d9964304c8d55e58712d6ae9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Cup_4
+    second: {fileID: 2100000, guid: 270a55d61d3dd6e468b033dc2dea9aab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Cup_5
+    second: {fileID: 2100000, guid: 4c68ea3544b617549a9d65c1387ac10f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Cup_Metal
+    second: {fileID: 2100000, guid: 693ce648303231b49b1724fd92ce14b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Plate_1
+    second: {fileID: 2100000, guid: 0b2f30daeeb4d8e4fb9b51a89a23dba0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Plate_2
+    second: {fileID: 2100000, guid: 2df78fc852b54a44eb15a8ea8e8e01cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Plate_3
+    second: {fileID: 2100000, guid: cf4b11980f6a79540a9c8fea9a61fca3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Plate_4
+    second: {fileID: 2100000, guid: 3251315b04516ee498e081cee746fd41, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wooden_Plate_5
+    second: {fileID: 2100000, guid: da32a9a627f9e2643b76782eea8e815b, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

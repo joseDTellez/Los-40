@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using DialogueEditor;
 
-public class DialogueInputController : MonoBehaviour
+public class DialogueTestingController : MonoBehaviour
 {
     void Update()
     {
