@@ -98,7 +98,7 @@ public class NewObjectController : MonoBehaviour
         if (Keyboard.current.kKey.wasPressedThisFrame)
             AlternarInspeccion();
 
-        if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+        if (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame)
             AlternarInspeccion();
     }
 
@@ -242,15 +242,21 @@ public class NewObjectController : MonoBehaviour
                 break;
 
             case UIState.ObjectiveInitial:
-                yield return StartCoroutine(FadeCanvasGroup(
-                    _objectiveCanvasGroup, _objectiveCanvasGroup.alpha, 0f,
-                    fadeDuration, objectivePanelRoot, true));
+                if (_objectiveCanvasGroup != null)
+                {
+                    yield return StartCoroutine(FadeCanvasGroup(
+                        _objectiveCanvasGroup, _objectiveCanvasGroup.alpha, 0f,
+                        fadeDuration, objectivePanelRoot, true));
+                }
                 break;
 
             case UIState.ObjectiveFinal:
-                yield return StartCoroutine(FadeCanvasGroup(
-                    _objectiveFinalCanvasGroup, _objectiveFinalCanvasGroup.alpha, 0f,
-                    fadeDurationFinal, objectiveFinalPanelRoot, true));
+                if (_objectiveFinalCanvasGroup != null)
+                {
+                    yield return StartCoroutine(FadeCanvasGroup(
+                        _objectiveFinalCanvasGroup, _objectiveFinalCanvasGroup.alpha, 0f,
+                        fadeDurationFinal, objectiveFinalPanelRoot, true));
+                }
                 break;
 
             case UIState.None:

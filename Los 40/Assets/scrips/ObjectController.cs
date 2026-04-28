@@ -80,7 +80,7 @@ public class ObjectController : MonoBehaviour
             }
 
             // GAMEPAD (gatillo / botón)
-            if (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame)
+            if (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame)
             {
                 ShowInformation();
             }

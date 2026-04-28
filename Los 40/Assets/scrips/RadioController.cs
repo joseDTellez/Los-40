@@ -61,7 +61,7 @@ public class RadioController : MonoBehaviour
         if (_isGazing)
         {
             bool interactPressed = (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame) ||
-                                   (Gamepad.current != null && Gamepad.current.buttonSouth.wasPressedThisFrame);
+                                   (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame);
 
             if (interactPressed)
             {

@@ -43,10 +43,10 @@ public class DialogueInputManager : MonoBehaviour
         if (Gamepad.current == null) return;
 
         if (Gamepad.current.dpad.up.wasPressedThisFrame ||
-            Gamepad.current.leftStick.up.wasPressedThisFrame)
+            Gamepad.current.leftStick.right.wasPressedThisFrame)
             ConversationManager.Instance.SelectPreviousOption();
         else if (Gamepad.current.dpad.down.wasPressedThisFrame ||
-                 Gamepad.current.leftStick.down.wasPressedThisFrame)
+                 Gamepad.current.leftStick.left.wasPressedThisFrame)
             ConversationManager.Instance.SelectNextOption();
         else if (Gamepad.current.buttonSouth.wasPressedThisFrame ||
                  Gamepad.current.rightShoulder.wasPressedThisFrame)
