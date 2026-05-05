@@ -13,41 +13,40 @@ public class RadioPart : MonoBehaviour
     void Start()
     {
         _brillo = GetComponent<OutlineVR>();
-
-        if (_brillo)
-        {
-            _brillo.SetState(OutlineVR.InteractionState.Idle);
-        }
+        if (_brillo) _brillo.enabled = false;
     }
 
-    // Al quitarle los parámetros a esta función, el SendMessage del Cardboard 
-    // Reticle la detectará perfectamente sin lanzar errores rojos.
     public void OnPointerEnter()
     {
-        // 1. Activa el brillo sutil (Outline)
+        // 1. Efecto visual de esta pieza
         if (_brillo)
         {
+            _brillo.enabled = true;
             _brillo.SetState(OutlineVR.InteractionState.Hover);
         }
 
-        // 2. Le avisa al cerebro principal (RadioController) qué estamos mirando
+        // 2. Comunicar al controlador exactamente qué estamos mirando
         if (mainController)
         {
-            if (parte == TipoParte.Cuerpo) mainController.MirarCuerpo();
-            else if (parte == TipoParte.PerillaIzquierda) mainController.MirarIzquierda();
-            else if (parte == TipoParte.PerillaDerecha) mainController.MirarDerecha();
+            switch (parte)
+            {
+                case TipoParte.Cuerpo:
+                    mainController.OnPointerEnter();
+                    break;
+                case TipoParte.PerillaIzquierda:
+                    mainController.OnPointerEnterLeft();
+                    break;
+                case TipoParte.PerillaDerecha:
+                    mainController.OnPointerEnterRight();
+                    break;
+            }
         }
     }
 
     public void OnPointerExit()
     {
-        // Apaga el brillo
-        if (_brillo)
-        {
-            _brillo.SetState(OutlineVR.InteractionState.Idle);
-        }
+        if (_brillo) _brillo.enabled = false;
 
-        // Le avisa al cerebro principal que dejamos de mirar
         if (mainController)
         {
             mainController.OnPointerExit();
