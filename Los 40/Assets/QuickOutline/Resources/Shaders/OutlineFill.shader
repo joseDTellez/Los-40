@@ -1,16 +1,6 @@
-﻿//
-//  OutlineFill.shader
-//  QuickOutline
-//
-//  Created by Chris Nolet on 2/21/18.
-//  Copyright © 2018 Chris Nolet. All rights reserved.
-//
-
-Shader "Custom/Outline Fill" {
+﻿Shader "Custom/Outline Fill" {
   Properties {
-    [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("ZTest", Float) = 0
-
-    _OutlineColor("Outline Color", Color) = (1, 1, 1, 1)
+    _OutlineColor("Outline Color", Color) = (1, 0.5, 0, 1)
     _OutlineWidth("Outline Width", Range(0, 10)) = 2
   }
 
@@ -23,16 +13,13 @@ Shader "Custom/Outline Fill" {
 
     Pass {
       Name "Fill"
-      Cull Off
-      ZTest [_ZTest]
+      Cull Front      // Dibuja solo la parte trasera expandida
+      ZTest LEqual    // Respeta la geometría del modelo para que quede detrás
       ZWrite Off
       Blend SrcAlpha OneMinusSrcAlpha
       ColorMask RGB
 
-      Stencil {
-        Ref 1
-        Comp NotEqual
-      }
+      // Se eliminó por completo el bloque "Stencil" conflictivo
 
       CGPROGRAM
       #include "UnityCG.cginc"
@@ -58,7 +45,6 @@ Shader "Custom/Outline Fill" {
 
       v2f vert(appdata input) {
         v2f output;
-
         UNITY_SETUP_INSTANCE_ID(input);
         UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(output);
 
@@ -66,6 +52,7 @@ Shader "Custom/Outline Fill" {
         float3 viewPosition = UnityObjectToViewPos(input.vertex);
         float3 viewNormal = normalize(mul((float3x3)UNITY_MATRIX_IT_MV, normal));
 
+        // Empuja los vértices hacia afuera
         output.position = UnityViewToClipPos(viewPosition + viewNormal * -viewPosition.z * _OutlineWidth / 1000.0);
         output.color = _OutlineColor;
 

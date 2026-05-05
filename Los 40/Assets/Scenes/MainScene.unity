@@ -24778,24 +24778,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f823c074597b549a05482216964632, type: 3}
---- !u!114 &1056744207
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148414156475}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
-  currentState: 0
-  pulseSpeed: 1.5
-  colorNaranja: {r: 1, g: 0.5, b: 0, a: 1}
-  minPulseWidth: 1.5
-  maxPulseWidth: 5
-  hoverWidth: 7
 --- !u!1001 &1058313398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31853,18 +31835,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::RadioController
   cameraTransform: {fileID: 0}
-  graceTime: 0.2
-  transitionSpeed: 5
   distanceInFront: 0.7
+  transitionSpeed: 5
   leftKnobMesh: {fileID: 348407622683456861}
   rightKnobMesh: {fileID: 5983287091163915459}
   knobSmoothSpeed: 10
+  commonAudioSource: {fileID: 513433202}
   stationSources:
   - {fileID: 1258714443}
-  commonAudioSource: {fileID: 513433202}
   soundON: {fileID: 8300000, guid: 113876060550706438c04a2a7b72d8ff, type: 3}
   soundOFF: {fileID: 8300000, guid: b1a537513f26a194a899e4291352faf8, type: 3}
   soundHover: {fileID: 8300000, guid: cb3786e35f1f40642a97372fa3f938c5, type: 3}
+  hoverPanelRoot: {fileID: 199712740}
+  objectivePanelRoot: {fileID: 0}
+  fadeDuration: 0.8
+  displayDuration: 3
 --- !u!65 &1406350327
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31902,8 +31887,8 @@ MonoBehaviour:
   pulseSpeed: 1.5
   colorNaranja: {r: 0, g: 1, b: 0.8, a: 1}
   minPulseWidth: 1.5
-  maxPulseWidth: 5
-  hoverWidth: 7
+  maxPulseWidth: 2
+  hoverWidth: 0.2
 --- !u!114 &1406350333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31920,8 +31905,8 @@ MonoBehaviour:
   pulseSpeed: 1.5
   colorNaranja: {r: 0, g: 1, b: 0.7999966, a: 1}
   minPulseWidth: 1.5
-  maxPulseWidth: 5
-  hoverWidth: 7
+  maxPulseWidth: 2
+  hoverWidth: 0.2
 --- !u!1001 &1408458734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48238,6 +48223,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fdf928da909cb4e4db3c2cdfea02ab65, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c98be346663df014fb8ffe6a9b227f7b, type: 2}
+    - target: {fileID: -7511558181221131132, guid: fdf928da909cb4e4db3c2cdfea02ab65, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c5d2f5ca68d7ad441908bb85c8913fcc, type: 2}
     - target: {fileID: 919132149155446097, guid: fdf928da909cb4e4db3c2cdfea02ab65, type: 3}
       propertyPath: m_Name
       value: CuadroT
@@ -50549,7 +50542,7 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.99998444, z: -0, w: 0.0055853687}
   m_LocalPosition: {x: 0.39039212, y: -0.34576702, z: 1.1565422}
   m_LocalScale: {x: 1.9930127, y: 1.9930129, z: 1.9930127}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5639405849864453638}
   - {fileID: 5983287091163915459}
@@ -50799,7 +50792,6 @@ GameObject:
   - component: {fileID: 543450652335821825}
   - component: {fileID: 1406350326}
   - component: {fileID: 1406350327}
-  - component: {fileID: 1056744207}
   m_Layer: 6
   m_Name: RadioT
   m_TagString: Untagged
@@ -53458,6 +53450,7 @@ GameObject:
   - component: {fileID: 4516168935436182571}
   - component: {fileID: 4253280568389067105}
   - component: {fileID: 542246529}
+  - component: {fileID: 7750397244389631455}
   m_Layer: 6
   m_Name: polySurface1
   m_TagString: Untagged
@@ -53465,6 +53458,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7750397244389631455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750397244389631454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  currentState: 0
+  pulseSpeed: 1.5
+  colorNaranja: {r: 1, g: 0.5, b: 0, a: 1}
+  minPulseWidth: 1.5
+  maxPulseWidth: 5
+  hoverWidth: 7
 --- !u!23 &7762067043891231419
 MeshRenderer:
   m_ObjectHideFlags: 0

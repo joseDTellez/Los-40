@@ -1,9 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
-public class OutlineVR : MonoBehaviour // <-- Ahora se llama OutlineVR para no chocar con Unity
+public class OutlineVR : MonoBehaviour
 {
     public enum InteractionState { Idle, Hover, Interacting }
 
@@ -11,58 +10,113 @@ public class OutlineVR : MonoBehaviour // <-- Ahora se llama OutlineVR para no c
     public InteractionState currentState = InteractionState.Idle;
     [Range(0.1f, 5f)] public float pulseSpeed = 1.5f;
 
-    [Header("Colores (Configúralos en el Inspector)")]
-    public Color colorNaranja = new Color(1f, 0.5f, 0f); // Naranja por defecto
+    [Header("Colores (Elige tu color aquí)")]
+    public Color colorNaranja = new Color(1f, 0.5f, 0f);
 
     [Header("Anchos del Borde")]
     public float minPulseWidth = 1.5f;
     public float maxPulseWidth = 4f;
     public float hoverWidth = 7f;
 
-    private Renderer[] renderers;
+    private Renderer[] originalRenderers;
+    private List<Renderer> outlineRenderers = new List<Renderer>();
     private MaterialPropertyBlock propBlock;
     private static HashSet<Mesh> registeredMeshes = new HashSet<Mesh>();
 
     private static readonly int WidthID = Shader.PropertyToID("_OutlineWidth");
     private static readonly int ColorID = Shader.PropertyToID("_OutlineColor");
 
-    // Métodos para Cardboard (SendMessage)
     public void SetState(InteractionState newState) => currentState = newState;
     public void OnPointerEnter() => SetState(InteractionState.Hover);
     public void OnPointerExit() => SetState(InteractionState.Idle);
 
     void Awake()
     {
-        renderers = GetComponentsInChildren<Renderer>();
+        originalRenderers = GetComponentsInChildren<Renderer>();
         propBlock = new MaterialPropertyBlock();
 
-        Material maskBase = Resources.Load<Material>("Materials/OutlineMask");
         Material fillBase = Resources.Load<Material>("Materials/OutlineFill");
-
-        if (maskBase == null || fillBase == null)
+        if (fillBase == null)
         {
-            Debug.LogError("Faltan materiales en Resources/Materials");
+            Debug.LogError("Falta el material OutlineFill en Resources/Materials");
             enabled = false;
             return;
         }
 
-        foreach (var r in renderers)
-        {
-            List<Material> mats = new List<Material>(r.sharedMaterials);
-            if (!mats.Contains(maskBase)) mats.Add(maskBase);
-            if (!mats.Contains(fillBase)) mats.Add(fillBase);
-            r.sharedMaterials = mats.ToArray();
-        }
-
-        // Esto es lo que hace que el borde rodee TODO el objeto (Smooth Normals)
         LoadSmoothNormals();
+
+        foreach (var r in originalRenderers)
+        {
+            // Evitamos clonar objetos que ya sean clones
+            if (r.gameObject.name.EndsWith("_OutlineClone")) continue;
+
+            GameObject outlineObj = new GameObject(r.gameObject.name + "_OutlineClone");
+            outlineObj.transform.SetParent(r.transform, false);
+            outlineObj.transform.localPosition = Vector3.zero;
+            outlineObj.transform.localRotation = Quaternion.identity;
+            outlineObj.transform.localScale = Vector3.one;
+
+            Renderer outlineRnd = null;
+
+            if (r is MeshRenderer meshRenderer)
+            {
+                var mf = r.GetComponent<MeshFilter>();
+                // Blindaje: Verificar que exista la malla antes de copiar
+                if (mf == null || mf.sharedMesh == null)
+                {
+                    Destroy(outlineObj);
+                    continue;
+                }
+
+                var newMf = outlineObj.AddComponent<MeshFilter>();
+                newMf.sharedMesh = mf.sharedMesh;
+                outlineRnd = outlineObj.AddComponent<MeshRenderer>();
+            }
+            else if (r is SkinnedMeshRenderer skinned)
+            {
+                // Blindaje: Verificar malla y arreglos internos
+                if (skinned.sharedMesh == null)
+                {
+                    Destroy(outlineObj);
+                    continue;
+                }
+
+                var newSkinned = outlineObj.AddComponent<SkinnedMeshRenderer>();
+                newSkinned.sharedMesh = skinned.sharedMesh;
+
+                if (skinned.rootBone != null) newSkinned.rootBone = skinned.rootBone;
+
+                // ¡AQUÍ OCURRÍA EL ERROR! Unity colapsa si le asignas un array de huesos nulo.
+                if (skinned.bones != null && skinned.bones.Length > 0)
+                {
+                    newSkinned.bones = skinned.bones;
+                }
+
+                outlineRnd = newSkinned;
+            }
+
+            if (outlineRnd != null && r.sharedMaterials != null)
+            {
+                // Asignamos el material base a todas las caras sin riesgo de nulls
+                Material[] outlineMats = new Material[r.sharedMaterials.Length];
+                for (int i = 0; i < outlineMats.Length; i++)
+                {
+                    outlineMats[i] = fillBase;
+                }
+                outlineRnd.sharedMaterials = outlineMats;
+
+                // Apagamos sombras para no saturar el rendimiento en el visor
+                outlineRnd.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                outlineRnd.receiveShadows = false;
+                outlineRenderers.Add(outlineRnd);
+            }
+        }
     }
 
     void Update()
     {
         float finalWidth = 0f;
 
-        // Siempre usamos colorNaranja para que no salga blanco
         if (currentState == InteractionState.Idle)
         {
             float lerp = (Mathf.Sin(Time.time * pulseSpeed) + 1f) * 0.5f;
@@ -73,44 +127,58 @@ public class OutlineVR : MonoBehaviour // <-- Ahora se llama OutlineVR para no c
             finalWidth = hoverWidth;
         }
 
-        ApplyProperties(finalWidth, colorNaranja);
-    }
-
-    private void ApplyProperties(float width, Color color)
-    {
-        foreach (var r in renderers)
+        foreach (var rnd in outlineRenderers)
         {
-            r.GetPropertyBlock(propBlock);
-            propBlock.SetFloat(WidthID, width);
-            propBlock.SetColor(ColorID, color);
-            r.SetPropertyBlock(propBlock);
+            if (rnd != null)
+            {
+                rnd.GetPropertyBlock(propBlock);
+                propBlock.SetFloat(WidthID, finalWidth);
+                propBlock.SetColor(ColorID, colorNaranja);
+                rnd.SetPropertyBlock(propBlock);
+            }
         }
     }
 
-    // --- TU MATEMÁTICA PARA EL ÁREA COMPLETA ---
     void LoadSmoothNormals()
     {
         foreach (var meshFilter in GetComponentsInChildren<MeshFilter>())
         {
-            if (!registeredMeshes.Add(meshFilter.sharedMesh)) continue;
-            meshFilter.sharedMesh.SetUVs(3, SmoothNormals(meshFilter.sharedMesh));
+            Mesh mesh = meshFilter.sharedMesh;
+            // Blindaje contra mallas vacías o sin normales
+            if (mesh == null || mesh.vertexCount == 0 || mesh.normals == null || mesh.normals.Length == 0 || !registeredMeshes.Add(mesh)) continue;
+
+            try { mesh.SetUVs(3, SmoothNormals(mesh)); }
+            catch { /* Ignoramos mallas rotas que no permiten UVs */ }
         }
+
         foreach (var skinnedMesh in GetComponentsInChildren<SkinnedMeshRenderer>())
         {
-            if (!registeredMeshes.Add(skinnedMesh.sharedMesh)) continue;
-            skinnedMesh.sharedMesh.SetUVs(3, SmoothNormals(skinnedMesh.sharedMesh));
+            Mesh mesh = skinnedMesh.sharedMesh;
+            // Blindaje contra mallas vacías o sin normales
+            if (mesh == null || mesh.vertexCount == 0 || mesh.normals == null || mesh.normals.Length == 0 || !registeredMeshes.Add(mesh)) continue;
+
+            try { mesh.SetUVs(3, SmoothNormals(mesh)); }
+            catch { /* Ignoramos mallas rotas que no permiten UVs */ }
         }
     }
 
     List<Vector3> SmoothNormals(Mesh mesh)
     {
         var dict = new Dictionary<Vector3, Vector3>();
-        foreach (var v in mesh.vertices) if (!dict.ContainsKey(v)) dict.Add(v, Vector3.zero);
-        var normals = mesh.normals;
         var vertices = mesh.vertices;
-        for (int i = 0; i < vertices.Length; i++) dict[vertices[i]] += normals[i];
-        var smoothNormals = new List<Vector3>(normals);
-        for (int i = 0; i < smoothNormals.Count; i++) smoothNormals[i] = dict[vertices[i]].normalized;
+        var normals = mesh.normals;
+
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            if (!dict.ContainsKey(vertices[i])) dict.Add(vertices[i], Vector3.zero);
+            dict[vertices[i]] += normals[i];
+        }
+
+        var smoothNormals = new List<Vector3>(vertices.Length);
+        for (int i = 0; i < vertices.Length; i++)
+        {
+            smoothNormals.Add(dict[vertices[i]].normalized);
+        }
         return smoothNormals;
     }
 }
