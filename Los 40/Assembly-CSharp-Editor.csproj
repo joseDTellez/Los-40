@@ -1610,6 +1610,10 @@
       <Project>{01E62CF3-80EB-270D-A61B-A53C3C71B486}</Project>
       <Name>Google.XR.Cardboard</Name>
     </ProjectReference>
+    <ProjectReference Include="UberWaterPlannerReflection.csproj">
+      <Project>{F31E60E9-541B-99A4-9B8F-47761BA35BA3}</Project>
+      <Name>UberWaterPlannerReflection</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
