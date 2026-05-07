@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using Unity.VectorGraphics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -7,15 +9,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Progreso")]
     public int interaccionesClave = 0;
-    public int interaccionesNecesarias = 2;
-
-    [Header("Referencias")]
-    [SerializeField] private GameObject barrera;
-    [SerializeField] private GameObject dialogoVecinosEstado1;
-    [SerializeField] private GameObject dialogoVecinosEstado2;
-
-    private bool vecinosActualizados = false;
-
+    public int interaccionesNecesarias = 3;
     // 🔑 Control de interacciones únicas
     private HashSet<string> interaccionesRegistradas = new HashSet<string>();
 
@@ -49,33 +43,7 @@ public class GameManager : MonoBehaviour
     {
         if (interaccionesClave >= interaccionesNecesarias)
         {
-            DesbloquearZona();
+            SceneManager.LoadScene("FinalScene");
         }
-        // 🔥 NUEVA lógica: cambiar diálogo de vecinos
-        if (!vecinosActualizados && interaccionesClave >= 4)
-        {
-            CambiarDialogoVecinos();
-        }
-    }
-
-    private void DesbloquearZona()
-    {
-        if (barrera != null)
-        {
-            barrera.SetActive(false);
-            Debug.Log("Zona desbloqueada");
-        }
-    }
-    private void CambiarDialogoVecinos()
-    {
-        vecinosActualizados = true;
-
-        Debug.Log("🟡 Vecinos cambian a diálogo estado 2");
-
-        if (dialogoVecinosEstado1 != null)
-            dialogoVecinosEstado1.SetActive(false);
-
-        if (dialogoVecinosEstado2 != null)
-            dialogoVecinosEstado2.SetActive(true);
     }
 }

@@ -12,8 +12,7 @@ public class VRMenuManager : MonoBehaviour
     {
         Main,
         Options,
-        Controls,
-        Accessibility
+        Controls
     }
 
     private MenuState currentState;
@@ -22,13 +21,11 @@ public class VRMenuManager : MonoBehaviour
     [SerializeField] private GameObject mainPanel;
     [SerializeField] private GameObject optionsPanel;
     [SerializeField] private GameObject optionsControlsPanel;
-    [SerializeField] private GameObject optionsAcsesibilityPanel;
 
     [Header("First Selected")]
     [SerializeField] private GameObject firstSelectedMain;
     [SerializeField] private GameObject firstSelectedOptions;
     [SerializeField] private GameObject firstControlsPanel;
-    [SerializeField] private GameObject firstAcsesibilityPanel;
 
     [Header("Menú")]
     [SerializeField] private GameObject menuCanvas;
@@ -154,7 +151,6 @@ public class VRMenuManager : MonoBehaviour
         mainPanel.SetActive(false);
         optionsPanel.SetActive(false);
         optionsControlsPanel.SetActive(false);
-        optionsAcsesibilityPanel.SetActive(false);
 
         // Limpiar selección
         EventSystem.current.SetSelectedGameObject(null);
@@ -176,11 +172,6 @@ public class VRMenuManager : MonoBehaviour
                 optionsControlsPanel.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(firstControlsPanel);
                 break;
-
-            case MenuState.Accessibility:
-                optionsAcsesibilityPanel.SetActive(true);
-                EventSystem.current.SetSelectedGameObject(firstAcsesibilityPanel);
-                break;
         }
     }
 
@@ -201,11 +192,6 @@ public class VRMenuManager : MonoBehaviour
     public void OnClickControls()
     {
         SetState(MenuState.Controls);
-    }
-
-    public void OnClickAccessibility()
-    {
-        SetState(MenuState.Accessibility);
     }
 
     public void OnClickBack()
