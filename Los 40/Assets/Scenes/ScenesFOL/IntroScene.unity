@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 826047482}
   - component: {fileID: 826047481}
   - component: {fileID: 826047480}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FadeImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1283,6 +1283,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1927384068}
+  - {fileID: 2047464138}
   m_Father: {fileID: 970415580}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1577425972
@@ -1584,7 +1585,7 @@ GameObject:
   - component: {fileID: 1653711339}
   - component: {fileID: 1653711338}
   - component: {fileID: 1653711337}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FadeCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1599,7 +1600,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653711335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -57.88754}
+  m_LocalPosition: {x: 0, y: 0, z: -0.047}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1608,8 +1609,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 440.47778, y: 321.2966}
-  m_SizeDelta: {x: 794, y: 609}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653711337
 MonoBehaviour:
@@ -1672,7 +1673,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 999
   m_TargetDisplay: 0
 --- !u!1 &1848951745
 GameObject:
@@ -2038,8 +2039,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee65b374110d1754aaba77a1aeacfb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::IntroController
-  introDuration: 36
-  nextScene: MainScene
+  introDuration: 5
+  nextScene: ArregloUI
 --- !u!4 &1990341620
 Transform:
   m_ObjectHideFlags: 0
@@ -2065,7 +2066,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2047464138}
   - component: {fileID: 2047464139}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FadeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2080,13 +2081,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047464136}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.4778, y: -16.79659, z: 57.88754}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalRotation: {x: -0, y: -0.013002144, z: -0, w: -0.9999155}
+  m_LocalPosition: {x: 0.043, y: 0, z: 1.667}
+  m_LocalScale: {x: 1.7, y: 1.7, z: 1.7}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1653711336}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1577425971}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2047464139
 MonoBehaviour:
@@ -2111,5 +2112,4 @@ SceneRoots:
   - {fileID: 970415580}
   - {fileID: 1877547178}
   - {fileID: 1934134821}
-  - {fileID: 2047464138}
   - {fileID: 1990341620}
