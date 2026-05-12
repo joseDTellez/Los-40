@@ -1623,7 +1623,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 543450653683059186}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 543450653683059185}
   m_SourcePrefab: {fileID: 100100000, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
 --- !u!1 &51675801
 GameObject:
@@ -2759,7 +2765,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.51454926
+      value: -0.546
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2767,23 +2773,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 48.859947
+      value: 48.892
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8070676
+      value: 0.8841737
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000000065744125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.5904591
+      value: -0.46715835
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000048098983
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2791,7 +2797,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -72.379
+      value: -55.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -3501,7 +3507,6 @@ Transform:
   - {fileID: 1220494053}
   - {fileID: 1146493065}
   - {fileID: 847422393}
-  - {fileID: 152405211}
   - {fileID: 1369161682}
   - {fileID: 966387584}
   - {fileID: 768027188}
@@ -4058,122 +4063,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 144905207}
   m_CullTransparentMesh: 1
---- !u!1 &145992789
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 145992793}
-  - component: {fileID: 145992792}
-  - component: {fileID: 145992791}
-  - component: {fileID: 145992790}
-  m_Layer: 0
-  m_Name: NPC_Vecinos
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!136 &145992790
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145992789}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &145992791
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145992789}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials: []
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &145992792
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145992789}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &145992793
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145992789}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.55774945, z: -0, w: -0.83000934}
-  m_LocalPosition: {x: -2.2935667, y: 0.75, z: -35.042114}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1869852057}
-  - {fileID: 1208986559}
-  - {fileID: 312187072}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -292.199, z: 0}
 --- !u!1001 &148818904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4363,27 +4252,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 23
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":392,\"yPos\":364},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHa
-    visto a mi ni\xF1a?\",\"parentUIDs\":[12],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":735,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Es
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-30,\"yPos\":-44},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHa
+    visto a mi ni\xF1a?\",\"parentUIDs\":[12],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":313,\"yPos\":-386},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Es
     que as\xED no se puede seguir!\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Heladio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":449,\"yPos\":67},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Es
+    Heladio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":27,\"yPos\":-341},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Es
     que los liberales no entienden! \xA1Siempre dicen lo mismo y nada cambia!\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Arnulfo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":726,\"yPos\":159},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Y
+    Arnulfo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":304,\"yPos\":-249},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Y
     los conservadores nos est\xE1n hundiendo!\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Heladio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":446,\"yPos\":223},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oiga\u2026
+    Heladio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":24,\"yPos\":-185},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oiga\u2026
     \xBFusted qu\xE9 busca aqu\xED?\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":683,\"yPos\":289},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
+    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":261,\"yPos\":-119},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
     no es lugar para quedarse mirando.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":123,\"yPos\":432},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFDijo
+    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-299,\"yPos\":24},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFDijo
     algo de una ni\xF1a\u2026?\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":409,\"yPos\":463},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Aqu\xED
+    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":18}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-13,\"yPos\":55},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Aqu\xED
     no vienen ni\xF1os. Aqu\xED la gente viene a discutir\u2026 y a olvidarse de
     lo dem\xE1s.\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":124,\"yPos\":563},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Aqu\xED
+    Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-298,\"yPos\":155},\"ID\":18,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Aqu\xED
     no hay ni\xF1os, aqu\xED solo hay hombres peleando por un pa\xEDs roto!\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Heladio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":383,\"yPos\":615},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1V\xE1yase
+    Heladio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-39,\"yPos\":207},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1V\xE1yase
     antes de que el ruido lo borre a usted tambi\xE9n!\\\"\\r\\n\",\"parentUIDs\":[18],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Arnulfo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":644,\"yPos\":634},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
+    Arnulfo\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":222,\"yPos\":226},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
     ambiente\u2026 no es para todo el mundo.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
     Fernando\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -4406,12 +4295,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls: []
---- !u!4 &152405211 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
-  m_PrefabInstance: {fileID: 766803427}
-  m_PrefabAsset: {fileID: 0}
+      m_Calls:
+      - m_Target: {fileID: 543450652489869658}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &155809632
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,6 +6012,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 079ca2e53df342749a37851de2ed00fc, type: 3}
   m_PrefabInstance: {fileID: 217694068}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &218702865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
+  m_PrefabInstance: {fileID: 1831406666}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &224760346
 GameObject:
   m_ObjectHideFlags: 0
@@ -7581,12 +7482,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275055305}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.117, y: -1.134, z: -0.024}
-  m_LocalScale: {x: 3.6698687, y: 1.0022411, z: 4.8628163}
+  m_LocalRotation: {x: -0, y: -0.68567055, z: -0, w: 0.72791207}
+  m_LocalPosition: {x: 0.047588933, y: -0.0074736825, z: 0.8657745}
+  m_LocalScale: {x: 0.094103746, y: 0.026374761, z: 0.1279624}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 617997850}
+  m_Father: {fileID: 652798318}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &275055307
 MonoBehaviour:
@@ -8670,119 +8571,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
---- !u!1 &312187071
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 312187072}
-  - component: {fileID: 312187075}
-  - component: {fileID: 312187074}
-  - component: {fileID: 312187073}
-  m_Layer: 0
-  m_Name: NPC_Vecinos2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &312187072
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312187071}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.2, y: 0, z: -2.05}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 145992793}
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
---- !u!136 &312187073
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312187071}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &312187074
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312187071}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials: []
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &312187075
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312187071}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &313677629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7235015103121818086, guid: bcaa96e2ee9c7d44a896d6d0cd64d95e, type: 3}
@@ -9099,7 +8887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0269
+      value: -0.00309
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -9133,6 +8921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Novia
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 12dc1e2f3e54f0645a911019085b42ce, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9620,9 +9412,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 617997845}
-        m_TargetAssemblyTypeName: EventoDialogo, CardboardSamples
-        m_MethodName: Registrar
+      - m_Target: {fileID: 543450652489869658}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9764,7 +9556,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450652489869658}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StartTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 11
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -10620,6 +10424,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
+--- !u!1 &386555346 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
+  m_PrefabInstance: {fileID: 50785819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &389160576 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: b51af6e7191f7964497fe991d5179c8b, type: 3}
@@ -14850,13 +14659,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592441144}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.33968464, z: -0, w: 0.9405394}
-  m_LocalPosition: {x: 0.32329488, y: 0.015621316, z: -1.1721526}
-  m_LocalScale: {x: 0.025641024, y: 0.026315788, z: 0.026315788}
+  m_LocalRotation: {x: -0, y: 0.5591939, z: 0, w: -0.82903683}
+  m_LocalPosition: {x: 14.399726, y: 0.32361004, z: -12.331732}
+  m_LocalScale: {x: 0.99368894, y: 1, z: 1.0062238}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1785270469}
-  m_Father: {fileID: 652798318}
+  m_Father: {fileID: 1174081664}
   m_LocalEulerAnglesHint: {x: 0, y: -39.715, z: 0}
 --- !u!114 &592441146
 MonoBehaviour:
@@ -14871,23 +14680,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 26
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-324,\"yPos\":148},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHabl\xF3
-    con usted?\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":288,\"yPos\":252},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dicen
-    que hablaba sola\u2026\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":951,\"yPos\":85},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFNot\xF3
-    algo diferente?\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":254,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
-    tardes, Do\xF1a Rita\u2026 \xBFvio a mi hija?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":252,\"yPos\":136},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"La
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1179,\"yPos\":-21},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHabl\xF3
+    con usted?\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-567,\"yPos\":83},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dicen
+    que hablaba sola\u2026\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":96,\"yPos\":-84},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFNot\xF3
+    algo diferente?\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-601,\"yPos\":-147},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
+    tardes, Do\xF1a Rita\u2026 \xBFvio a mi hija?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-603,\"yPos\":-33},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"La
     vi pasar, mijo\u2026 s\xED. Iba apurada.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-536,\"yPos\":271},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1391,\"yPos\":102},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
     se\xF1or\u2026 iba en lo suyo.\\n\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-519,\"yPos\":394},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ya
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1364,\"yPos\":230},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ya
     los muchachos andan muy metidos en la cabeza, \xBFve?\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":301,\"yPos\":347},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ay,
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-554,\"yPos\":178},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ay,
     mijo\u2026 los ni\xF1os siempre andan inventando cosas.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":382,\"yPos\":466},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-526,\"yPos\":294},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
     esa edad uno se imagina de todo.\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1095,\"yPos\":168},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Diferente\u2026
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":240,\"yPos\":-1},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Diferente\u2026
     no sabr\xEDa decirle. Solo que ya no se quedan quietos como antes.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1125,\"yPos\":286},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":270,\"yPos\":117},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
     barrio ha cambiado\u2026 los ni\xF1os tambi\xE9n.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
     Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -14910,7 +14719,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450651902110627}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &596804284 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
@@ -15495,14 +15316,10 @@ Transform:
   m_GameObject: {fileID: 617997844}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.6856705, z: -0, w: 0.72791207}
-  m_LocalPosition: {x: 0.0502, y: 0.022368418, z: 0.92}
+  m_LocalPosition: {x: 0.04965, y: 0.0099, z: 0.91018}
   m_LocalScale: {x: 0.025642268, y: 0.026315788, z: 0.026314462}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 275055306}
-  - {fileID: 1822863068}
-  - {fileID: 2026249719}
-  - {fileID: 1025730863}
   - {fileID: 60229664}
   m_Father: {fileID: 652798318}
   m_LocalEulerAnglesHint: {x: 0, y: -86.577, z: 0}
@@ -16340,13 +16157,17 @@ Transform:
   - {fileID: 1654981766}
   - {fileID: 543450651902110625}
   - {fileID: 1174081664}
-  - {fileID: 592441145}
   - {fileID: 543450653418545551}
   - {fileID: 543450652107105371}
   - {fileID: 1833298623}
   - {fileID: 889238820}
+  - {fileID: 1166972016}
+  - {fileID: 365989763}
   - {fileID: 543450652489869656}
   - {fileID: 617997850}
+  - {fileID: 1822863068}
+  - {fileID: 2026249719}
+  - {fileID: 275055306}
   - {fileID: 150584128}
   - {fileID: 543450652684044945}
   - {fileID: 1453601043}
@@ -17248,75 +17069,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 317d99f20b4da4345b8df32e90414e4f, type: 3}
   m_PrefabInstance: {fileID: 298798638}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &691622730
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 543450652622311093}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.82352
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.30841094
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9485173
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.31672537
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -24.68
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_Name
-      value: "Ni\xF1o #2"
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 15621894b02825a458c8cc858200696d, type: 3}
 --- !u!1 &693022957
 GameObject:
   m_ObjectHideFlags: 0
@@ -18201,6 +17953,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vecino#2
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 15621894b02825a458c8cc858200696d, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 15621894b02825a458c8cc858200696d, type: 3}
+    - target: {fileID: 5866666021909216657, guid: 15621894b02825a458c8cc858200696d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 144439c88b1cd6640b63a622495326be, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 15621894b02825a458c8cc858200696d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18752,7 +18516,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 121375462}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -18764,35 +18528,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalScale.z
-      value: 139.93228
+      value: 139.93225
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.0108795
+      value: 4.699121
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.5577837
+      value: -0.4099998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.6279087
+      value: -35.38794
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5706831
+      value: 0.5706832
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5706831
+      value: -0.5706832
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.41751736
+      value: -0.4175174
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.41751736
+      value: -0.4175174
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19016,11 +18780,6 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
   m_PrefabInstance: {fileID: 1669351424}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &793958289 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 15621894b02825a458c8cc858200696d, type: 3}
-  m_PrefabInstance: {fileID: 1680106839}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &795617237
 PrefabInstance:
@@ -19822,40 +19581,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 37
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":25,\"yPos\":-638},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlguna
-    noticia sobre ni\xF1os desaparecidos?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":521,\"yPos\":-379},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Deme
-    un peri\xF3dico.\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":906,\"yPos\":-568},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFC\xF3mo
-    ha estado el negocio?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-340,\"yPos\":-272},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHa
-    visto a mi ni\xF1a?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-57,\"yPos\":55},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHacia
-    d\xF3nde iba?\",\"parentUIDs\":[19],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":768,\"yPos\":-176},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlgo
-    importante hoy?\",\"parentUIDs\":[24],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":535,\"yPos\":-780},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Buenas,
-    Don Carlos! \xBFQu\xE9 dice la prensa hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":530,\"yPos\":-653},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-380,\"yPos\":-217},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlguna
+    noticia sobre ni\xF1os desaparecidos?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":116,\"yPos\":42},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Deme
+    un peri\xF3dico.\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":501,\"yPos\":-147},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFC\xF3mo
+    ha estado el negocio?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-745,\"yPos\":149},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHa
+    visto a mi ni\xF1a?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-462,\"yPos\":476},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHacia
+    d\xF3nde iba?\",\"parentUIDs\":[19],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":363,\"yPos\":245},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlgo
+    importante hoy?\",\"parentUIDs\":[24],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":129,\"yPos\":-359},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Buenas,
+    Don Carlos! \xBFQu\xE9 dice la prensa hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":125,\"yPos\":-232},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     de siempre, patr\xF3n\u2026 liberales y conservadores jal\xE1ndose de las mechas.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":524,\"yPos\":-533},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":119,\"yPos\":-112},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
     si los liberales, que si los conservadores... el mundo se va a acabar y nosotros
     aqu\xED vendiendo alpargatas.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-240,\"yPos\":-517},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-645,\"yPos\":-96},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
     se\xF1or\u2026 de eso no dicen nada.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-376,\"yPos\":-397},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Esos
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-781,\"yPos\":24},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Esos
     peri\xF3dicos hablan de lo grande\u2026 no de lo que le pasa a uno.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-189,\"yPos\":-181},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pues\u2026
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-594,\"yPos\":240},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pues\u2026
     ahora que lo dice\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-152,\"yPos\":-51},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ayer
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-557,\"yPos\":370},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ayer
     pas\xF3 una ni\xF1a que se le parec\xEDa. Pero iba de af\xE1n\u2026 ni se detuvo.\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-63,\"yPos\":152},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sigui\xF3
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-468,\"yPos\":573},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sigui\xF3
     derecho por el parque\u2026como cuando uno va pensando en otra cosa.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":156,\"yPos\":231},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ni
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-249,\"yPos\":652},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ni
     me salud\xF3\u2026 raro en ella, porque siempre era bien querida.\",\"parentUIDs\":[21],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":516,\"yPos\":-207},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Claro,
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":111,\"yPos\":214},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Claro,
     tenga. Reci\xE9n llegados.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":704,\"yPos\":-62},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":299,\"yPos\":359},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     mismo de estos d\xEDas\u2026 pol\xEDtica y promesas.\",\"parentUIDs\":[27],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":695,\"yPos\":86},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":290,\"yPos\":507},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
     vea\u2026 dicen que todo est\xE1 tranquilo. Aunque\u2026 no s\xE9\u2026 el parque
     ha estado como m\xE1s callado \xFAltimamente.\",\"parentUIDs\":[28],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1210,\"yPos\":-605},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah\xED
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":805,\"yPos\":-184},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah\xED
     va\u2026 d\xEDas buenos y otros no tanto.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1271,\"yPos\":-444},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Antes
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":866,\"yPos\":-23},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Antes
     vend\xEDa m\xE1s dulces que otra cosa\u2026 ahora la gente compra r\xE1pido y
     se va.\",\"parentUIDs\":[32],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
     Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
@@ -19889,33 +19648,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 28181806}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
-        m_MethodName: Registrar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 28181802}
-        m_TargetAssemblyTypeName: NPCIndicatorAndInteraction, Assembly-CSharp
-        m_MethodName: MarkAsVisited
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
-        m_MethodName: MostrarLetrero
+      - m_Target: {fileID: 543450653683059185}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StartTalking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -21449,21 +21184,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 21
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":605,\"yPos\":313},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Seguir
-    escuchando\",\"parentUIDs\":[12],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":621,\"yPos\":73},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":27,\"yPos\":7},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Seguir
+    escuchando\",\"parentUIDs\":[12],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":58,\"yPos\":-224},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
     podemos seguir esperando Ana Mar\xEDa\u2026 el pa\xEDs se est\xE1 poniendo tenso,
-    y uno lo siente.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Hombre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":899,\"yPos\":87},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hay
-    que pensar en lo que viene\u2026 en la familia, en lo que vamos a dejar.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Hombre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":614,\"yPos\":180},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFY
+    y uno lo siente.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Hombre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":336,\"yPos\":-210},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hay
+    que pensar en lo que viene\u2026 en la familia, en lo que vamos a dejar.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Hombre\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":51,\"yPos\":-117},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFY
     en qu\xE9 mundo, Jos\xE9? \xBFen qu\xE9 mundo van a crecer?\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Ana
-    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":895,\"yPos\":205},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ayer
+    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":332,\"yPos\":-92},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ayer
     vi una habitaci\xF3n vac\xEDa en la casa vecina... y sent\xED un fr\xEDo que
     no es de Bogot\xE1.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Ana
-    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":437,\"yPos\":397},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-126,\"yPos\":100},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
     veces la gente se va sin despedirse\u2026 como si no quisiera hacer ruido.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Ana
-    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":677,\"yPos\":411},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dicen
+    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":114,\"yPos\":114},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dicen
     que el aire se la llev\xF3. No es la primera vez que algo se pierde en este barrio
     cuando la pol\xEDtica se pone brava.\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Ana
-    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":610,\"yPos\":557},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"El
+    Mar\xEDa\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":46,\"yPos\":260},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"El
     barrio ya no es como antes.\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jos\xE9
     Luis\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":2,\"Volume\":0}]}"
   saveVersion: 110
@@ -21483,19 +21218,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1833298618}
-        m_TargetAssemblyTypeName: EventoDialogo, CardboardSamples
-        m_MethodName: Registrar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!4 &891945923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
@@ -22189,31 +21912,43 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 543450652489869656}
+    m_TransformParent: {fileID: 652798318}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.026294874
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.026315786
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.025663232
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7440009
+      value: 0.0012965812
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.41199982
+      value: -0.013684205
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.0200005
+      value: 0.8710353
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.08715578
+      value: 0.993147
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9961947
+      value: 0.1168718
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_LocalRotation.z
@@ -22469,6 +22204,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cec52e4959c157743b0dbea124ffccc4, type: 3}
   m_PrefabInstance: {fileID: 947234820}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &947595502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
+  m_PrefabInstance: {fileID: 1210158771}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &950620004
 GameObject:
   m_ObjectHideFlags: 0
@@ -22663,11 +22403,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 317d99f20b4da4345b8df32e90414e4f, type: 3}
---- !u!4 &955895233 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-  m_PrefabInstance: {fileID: 691622730}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &958575989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23961,6 +23696,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vecino #1
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 7e07be86d61cacd4c883f522e608f879, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -24194,118 +23937,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
---- !u!1 &1025730862
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1025730863}
-  - component: {fileID: 1025730866}
-  - component: {fileID: 1025730865}
-  - component: {fileID: 1025730864}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1025730863
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025730862}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0203, y: -1.138, z: -0.0037}
-  m_LocalScale: {x: 1.3956709, y: 0.41887993, z: 1.6734351}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 617997850}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1025730864
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025730862}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1025730865
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025730862}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1025730866
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1025730862}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1026062294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24392,6 +24023,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8513424388201257645, guid: d75fc391bae82304faa07120c2609916, type: 3}
+      propertyPath: m_Name
+      value: Exterior
+      objectReference: {fileID: 0}
+    - target: {fileID: -7235015103121818086, guid: d75fc391bae82304faa07120c2609916, type: 3}
+      propertyPath: m_Name
+      value: door
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bcaa96e2ee9c7d44a896d6d0cd64d95e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.706135
@@ -24462,30 +24117,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9043264698519129883, guid: bcaa96e2ee9c7d44a896d6d0cd64d95e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8513424388201257645, guid: d75fc391bae82304faa07120c2609916, type: 3}
-      propertyPath: m_Name
-      value: Exterior
-      objectReference: {fileID: 0}
-    - target: {fileID: -7235015103121818086, guid: d75fc391bae82304faa07120c2609916, type: 3}
-      propertyPath: m_Name
-      value: door
-      objectReference: {fileID: 0}
-    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9043264698519129883, guid: d75fc391bae82304faa07120c2609916, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25987,13 +25618,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 15621894b02825a458c8cc858200696d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 26d69d891c190a148b720b7166285fef, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 15621894b02825a458c8cc858200696d, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 15621894b02825a458c8cc858200696d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 955895233}
-    m_AddedComponents: []
+      addedObject: {fileID: 543450652622311095}
   m_SourcePrefab: {fileID: 100100000, guid: 15621894b02825a458c8cc858200696d, type: 3}
 --- !u!4 &1080524181 stripped
 Transform:
@@ -28357,12 +27996,13 @@ Transform:
   m_GameObject: {fileID: 1174081663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.24433288, z: -0, w: -0.96969146}
-  m_LocalPosition: {x: 0.13420002, y: 0.007105262, z: -0.69389975}
+  m_LocalPosition: {x: 0.14553, y: 0.007105262, z: -0.70931}
   m_LocalScale: {x: 0.026218968, y: 0.026315788, z: 0.025733618}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1917015424}
   - {fileID: 155809633}
+  - {fileID: 592441145}
   m_Father: {fileID: 652798318}
   m_LocalEulerAnglesHint: {x: 0, y: -331.715, z: 0}
 --- !u!136 &1174081665
@@ -29166,140 +28806,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44a46478311425046986e1618a1209a3, type: 3}
---- !u!1 &1208986558
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1208986559}
-  - component: {fileID: 1208986563}
-  - component: {fileID: 1208986562}
-  - component: {fileID: 1208986560}
-  - component: {fileID: 1208986564}
-  m_Layer: 0
-  m_Name: ConversationTrigger2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1208986559
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208986558}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.3229264, z: -0, w: 0.94642407}
-  m_LocalPosition: {x: -2.344, y: -0.635, z: 0.37799978}
-  m_LocalScale: {x: 3.1432996, y: 0.85843503, z: 4.1650777}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 145992793}
-  m_LocalEulerAnglesHint: {x: 0, y: 37.4, z: 0}
---- !u!114 &1208986560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208986558}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c06600b0b4f564a8e0afef3e5dfd48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
-  conversation: {fileID: 0}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
-  interactKey: 26
-  xrSimulator: {fileID: 0}
---- !u!23 &1208986562
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208986558}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1208986563
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208986558}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &1208986564
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208986558}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5919552, y: 0.44110653, z: 0.8510502}
-  m_Center: {x: 0.20402263, y: -0.27944747, z: 0.0070522195}
 --- !u!1001 &1209413104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29391,15 +28897,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0502
+      value: 0.0497
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0028421062
+      value: -0.0136
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.92
+      value: 0.9107
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29433,16 +28939,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lider
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 436c6cfbbeb940e4db6abfd16add7758, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1166972016}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 365989763}
-    m_AddedComponents: []
+      addedObject: {fileID: 543450652489869658}
   m_SourcePrefab: {fileID: 100100000, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
 --- !u!4 &1211256327 stripped
 Transform:
@@ -29476,27 +28983,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 31.745
+      value: -4.084
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.596
+      value: 0.648
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15.027
+      value: -40.178
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5938637
+      value: -0.15643433
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.80456567
+      value: 0.98768836
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalRotation.z
@@ -29508,7 +29015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 107.137
+      value: 198
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 63312d6e85665664fa67b79d1187b565, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -30234,6 +29741,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -0.001}
+--- !u!1 &1245041885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 15621894b02825a458c8cc858200696d, type: 3}
+  m_PrefabInstance: {fileID: 1077717342}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249441064
 GameObject:
   m_ObjectHideFlags: 0
@@ -31977,7 +31489,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 25
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -32034,7 +31558,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 21
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -32100,6 +31636,18 @@ MonoBehaviour:
       - m_Target: {fileID: 633008721}
         m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
         m_MethodName: MostrarLetrero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -32260,7 +31808,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StartTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -40269,7 +39829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.0264
+      value: -0.00259
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -40307,6 +39867,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 1.15
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 27029c3009c61aa42be923e2806465ea, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40716,6 +40280,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 121375462}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2762
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0508
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.211098
       objectReference: {fileID: 0}
@@ -40949,20 +40521,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 28
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":273,\"yPos\":-165},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFPor
-    qu\xE9 no quiso jugar?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":897,\"yPos\":23},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFLa
-    notaron rara?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":93,\"yPos\":189},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFIrse
-    a d\xF3nde?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1569,\"yPos\":-172},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHace
-    cu\xE1nto se fue?\",\"parentUIDs\":[11],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":823,\"yPos\":-381},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
-    muchachos\u2026 \xBFhan visto a mi hija hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":814,\"yPos\":-260},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026
-    estaba por aqu\xED hace rato.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":828,\"yPos\":-131},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
-    ya no quiso jugar con nosotros.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":125,\"yPos\":-60},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dijo
-    que ten\xEDa que irse\u2026 que ya no pod\xEDa quedarse.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":79,\"yPos\":79},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pens\xE9
-    que era porque estaba brava o algo.\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":126,\"yPos\":287},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mmm\u2026
-    no me acuerdo bien\u2026 algo de unas sillas\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":919,\"yPos\":142},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
-    rara\u2026 pero s\xED como distra\xEDda.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":939,\"yPos\":289},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Le
-    habl\xE1bamos y se quedaba mirando para otro lado.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1685,\"yPos\":-8},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
-    hace mucho\u2026 cuando el sol estaba m\xE1s arriba.\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1762,\"yPos\":149},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1403,\"yPos\":-167},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFPor
+    qu\xE9 no quiso jugar?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-779,\"yPos\":21},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFLa
+    notaron rara?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1583,\"yPos\":187},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFIrse
+    a d\xF3nde?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-107,\"yPos\":-174},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHace
+    cu\xE1nto se fue?\",\"parentUIDs\":[11],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-853,\"yPos\":-383},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
+    muchachos\u2026 \xBFhan visto a mi hija hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-862,\"yPos\":-262},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026
+    estaba por aqu\xED hace rato.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-848,\"yPos\":-133},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
+    ya no quiso jugar con nosotros.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1551,\"yPos\":-62},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dijo
+    que ten\xEDa que irse\u2026 que ya no pod\xEDa quedarse.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1597,\"yPos\":77},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pens\xE9
+    que era porque estaba brava o algo.\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1550,\"yPos\":285},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mmm\u2026
+    no me acuerdo bien\u2026 algo de unas sillas\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-757,\"yPos\":140},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+    rara\u2026 pero s\xED como distra\xEDda.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-737,\"yPos\":287},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Le
+    habl\xE1bamos y se quedaba mirando para otro lado.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":9,\"yPos\":-10},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+    hace mucho\u2026 cuando el sol estaba m\xE1s arriba.\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":86,\"yPos\":147},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se
     fue sola\u2026 ni esper\xF3 a nadie.\",\"parentUIDs\":[24],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: "Ni\xF1o jugando"
@@ -40988,33 +40560,9 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1140754013}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
-        m_MethodName: Registrar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1140754014}
-        m_TargetAssemblyTypeName: NPCIndicatorAndInteraction, Assembly-CSharp
-        m_MethodName: MarkAsVisited
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
-        m_MethodName: MostrarLetrero
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -41491,180 +41039,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 66.735374, y: 19.514683, z: 5.9787817}
   m_Center: {x: -0.34228134, y: -1.6029205, z: 0.06909764}
---- !u!1001 &1680106839
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1925990290}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.31507137
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00999999
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.3541353
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      propertyPath: m_Name
-      value: Vecino#2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 15621894b02825a458c8cc858200696d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1680106841}
-  m_SourcePrefab: {fileID: 100100000, guid: 15621894b02825a458c8cc858200696d, type: 3}
---- !u!4 &1680106840 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
-  m_PrefabInstance: {fileID: 1680106839}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1680106841
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 793958289}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: fc7ef94b74e097949a9d8660b330f518, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.3
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1.5
-  MaxDistance: 8
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!4 &1694526748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
@@ -42744,35 +42118,47 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 543450652489869656}
+    m_TransformParent: {fileID: 652798318}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.026314473
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.026315786
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.025642272
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.7669997
+      value: 0.0929844
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.41199997
+      value: -0.013684209
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.3710008
+      value: 0.8565342
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.99955386
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0.029868565
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6da554885ccca1a43b102d075016cf04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -43059,19 +42445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1833298618}
-        m_TargetAssemblyTypeName: EventoDialogo, CardboardSamples
-        m_MethodName: Registrar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NodeID: 17
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -44687,7 +44061,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450651902110627}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 21
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -44725,7 +44111,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450651902110627}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 16
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -44763,7 +44161,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450651902110627}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 13
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -44858,7 +44268,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450651902110627}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StartTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -46429,12 +45851,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822863067}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.991, y: -0.47, z: 1.739}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.68567055, z: -0, w: 0.72791207}
+  m_LocalPosition: {x: 0.0014722775, y: 0.009999996, z: 0.8717697}
+  m_LocalScale: {x: 0.025642276, y: 0.026315786, z: 0.026314475}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 617997850}
+  m_Father: {fileID: 652798318}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!136 &1822863069
 CapsuleCollider:
@@ -46649,7 +46071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.13568819
+      value: 0.14703
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -46657,7 +46079,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.6950946
+      value: -0.71051
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -46695,10 +46117,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mujer Mayor
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f386a1b8759ac2c45a77af2c681f0122, type: 2}
+    - target: {fileID: 5866666021909216657, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
+      propertyPath: m_WarningMessage
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 543450651902110627}
   m_SourcePrefab: {fileID: 100100000, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
 --- !u!1001 &1831566964
 PrefabInstance:
@@ -47057,7 +46490,7 @@ Transform:
   m_GameObject: {fileID: 1833298617}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: -1}
-  m_LocalPosition: {x: 0.7181, y: 0.010263157, z: -0.0271}
+  m_LocalPosition: {x: 0.7181, y: 0.010263157, z: -0.00329}
   m_LocalScale: {x: 0.025641024, y: 0.026315788, z: 0.026315788}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47665,7 +47098,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450653683059185}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 33
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -47703,7 +47148,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450653683059185}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 29
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -47807,6 +47264,18 @@ MonoBehaviour:
       - m_Target: {fileID: 633008721}
         m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
         m_MethodName: MostrarLetrero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 543450653683059185}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48043,7 +47512,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450653683059185}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StartTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -48152,140 +47633,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
   m_PrefabInstance: {fileID: 1558791313}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1869852056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1869852057}
-  - component: {fileID: 1869852061}
-  - component: {fileID: 1869852060}
-  - component: {fileID: 1869852059}
-  - component: {fileID: 1869852058}
-  m_Layer: 0
-  m_Name: ConversationTrigger1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1869852057
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869852056}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.32292643, z: 0, w: 0.9464241}
-  m_LocalPosition: {x: -2.344, y: -0.635, z: 0.378}
-  m_LocalScale: {x: 3.1432996, y: 0.85843503, z: 4.1650777}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 145992793}
-  m_LocalEulerAnglesHint: {x: 0, y: 37.68, z: 0}
---- !u!114 &1869852058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869852056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41c06600b0b4f564a8e0afef3e5dfd48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
-  conversation: {fileID: 0}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
-  interactKey: 26
-  xrSimulator: {fileID: 0}
---- !u!65 &1869852059
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869852056}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5919552, y: 0.44110653, z: 0.8510502}
-  m_Center: {x: 0.20402263, y: -0.27944747, z: 0.0070522195}
---- !u!23 &1869852060
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869852056}
-  m_Enabled: 0
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1869852061
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869852056}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1873314566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
@@ -49547,83 +48894,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
---- !u!1001 &1925990289
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.3050804
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.021999836
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -35.009895
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.800721
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.59903747
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -73.602
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      propertyPath: m_Name
-      value: Vecino #1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1680106840}
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
---- !u!4 &1925990290 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
-  m_PrefabInstance: {fileID: 1925990289}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1926264180 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 26ff892adc21761478a975e732ded3cd, type: 3}
@@ -51814,12 +51084,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026249718}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.343, y: -0.459, z: -1.76}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0.68567055, z: -0, w: 0.72791207}
+  m_LocalPosition: {x: 0.09284335, y: 0.010289468, z: 0.8572616}
+  m_LocalScale: {x: 0.025642276, y: 0.026315786, z: 0.026314475}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 617997850}
+  m_Father: {fileID: 652798318}
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!136 &2026249720
 CapsuleCollider:
@@ -54993,6 +54263,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
   m_PrefabInstance: {fileID: 1831406666}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &543450651902110627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218702865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22db637f9eb68494483b66df949d0b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimationTrigger
 --- !u!4 &543450652107105371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
@@ -55022,11 +54304,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
   m_PrefabInstance: {fileID: 1210158771}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &543450652489869658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947595502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22db637f9eb68494483b66df949d0b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimationTrigger
 --- !u!4 &543450652622311093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 15621894b02825a458c8cc858200696d, type: 3}
   m_PrefabInstance: {fileID: 1077717342}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &543450652622311095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245041885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22db637f9eb68494483b66df949d0b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimationTrigger
 --- !u!4 &543450652684044945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4650146d1fd60f34eb04800abc983a5b, type: 3}
@@ -55047,6 +54353,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
   m_PrefabInstance: {fileID: 50785819}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &543450653683059185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386555346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22db637f9eb68494483b66df949d0b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimationTrigger
+--- !u!95 &543450653683059186
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386555346}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 13dcc488382e0624dba2aee99e5143c3, type: 3}
+  m_Controller: {fileID: 9100000, guid: efcb2492734a44244adf2501941b20cc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &570712142538435513
 GameObject:
   m_ObjectHideFlags: 0
@@ -59112,7 +58452,6 @@ SceneRoots:
   - {fileID: 1925987805}
   - {fileID: 652483596}
   - {fileID: 1181724553}
-  - {fileID: 1925990289}
-  - {fileID: 145992793}
   - {fileID: 1217401976}
   - {fileID: 1292326180}
+  - {fileID: 766803427}
