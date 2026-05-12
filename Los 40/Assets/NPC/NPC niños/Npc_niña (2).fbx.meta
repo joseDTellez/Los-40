@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 01b4b5465076db84b9586526798d842d
+guid: 4cad5135d866dd94ab65f50e16f8cb13
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,8 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: M_Street_Lamp_7
-    second: {fileID: 2100000, guid: c1d223fa56cea6040b7df3775c64beb6, type: 2}
+      name: Cloths
+    second: {fileID: 2100000, guid: 668390b0755851444a60cd24a6a3d70a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Earrings
+    second: {fileID: 2100000, guid: c57081139ec4e7541a84f6211df4690b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Eyeball
+    second: {fileID: 2100000, guid: b071ef0a518afdf41ab94270254e41a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hairs
+    second: {fileID: 2100000, guid: e1c23c5cb54de8941ba6153d15e056bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sandel
+    second: {fileID: 2100000, guid: dd1ae99aa9b3ae544857cb52444c0c1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 58d4db31aecc8c4418c5168cb4ef781e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Teeth
+    second: {fileID: 2100000, guid: 74b84fe670f83ac40ae0eec2ce4cd604, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
