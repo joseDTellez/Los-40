@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 462e2919d45bd5146a8082cf1ea187f5
+guid: 4cad5135d866dd94ab65f50e16f8cb13
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
@@ -7,43 +7,38 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wolf3D_Body.006
-    second: {fileID: 2100000, guid: 8c66fce9cff1239449588e5deeb80cbd, type: 2}
+      name: Cloths
+    second: {fileID: 2100000, guid: 668390b0755851444a60cd24a6a3d70a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wolf3D_Eye.006
-    second: {fileID: 2100000, guid: 2f0f32fb1fe3d4e449c198303d642b23, type: 2}
+      name: Earrings
+    second: {fileID: 2100000, guid: c57081139ec4e7541a84f6211df4690b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wolf3D_Hair.004
-    second: {fileID: 2100000, guid: a8f0ed49152c8ee4488f8f9beac2d2d4, type: 2}
+      name: Eyeball
+    second: {fileID: 2100000, guid: b071ef0a518afdf41ab94270254e41a5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wolf3D_Outfit_Bottom.006
-    second: {fileID: 2100000, guid: b9c3bf2b4918f474cb7f9a1e73715b2c, type: 2}
+      name: Hairs
+    second: {fileID: 2100000, guid: e1c23c5cb54de8941ba6153d15e056bf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wolf3D_Outfit_Footwear.006
-    second: {fileID: 2100000, guid: 4422688f2c71e5d46add697c4aa136cc, type: 2}
+      name: Sandel
+    second: {fileID: 2100000, guid: dd1ae99aa9b3ae544857cb52444c0c1b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wolf3D_Outfit_Top.006
-    second: {fileID: 2100000, guid: 55c42d5cd1e23394db3281aec8fe01bb, type: 2}
+      name: Skin
+    second: {fileID: 2100000, guid: 58d4db31aecc8c4418c5168cb4ef781e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Wolf3D_Skin.006
-    second: {fileID: 2100000, guid: 46be75408eb5e6f469e98e1686aef463, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Wolf3D_Teeth.006
-    second: {fileID: 2100000, guid: 3ebe354b41a011f4d9d57c0f33cb3132, type: 2}
+      name: Teeth
+    second: {fileID: 2100000, guid: 74b84fe670f83ac40ae0eec2ce4cd604, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -62,7 +57,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -70,7 +65,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -134,13 +129,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 1
+    hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 3
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
