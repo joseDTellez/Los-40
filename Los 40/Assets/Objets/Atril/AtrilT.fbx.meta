@@ -1,0 +1,280 @@
+fileFormatVersion: 2
+guid: 63312d6e85665664fa67b79d1187b565
+ModelImporter:
+  serializedVersion: 24200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: deaskMainTeture
+    second: {fileID: 2100000, guid: c976471d24b4c5d4ea57794a877e2405, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sideLTexture
+    second: {fileID: 2100000, guid: 250d666a5f4f09040a9a595dd1cc5fc2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sideRTexture
+    second: {fileID: 2100000, guid: b2a5296bc4b80e14da1026d1ea23f531, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sideTTexture
+    second: {fileID: 2100000, guid: 1b3c9f8a87882fa41957b96b476f6aa5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standDownTexture
+    second: {fileID: 2100000, guid: 55a410f594e03f94b906e5a4affa900f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standMainTexture
+    second: {fileID: 2100000, guid: 0a1193a1705d71b4fade0a97e5fadeee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standMidleTexture
+    second: {fileID: 2100000, guid: 846a35d7d00f8bd409dc5ddd40a1fd55, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideL_BaseColor
+    second: {fileID: 2800000, guid: d5bfd0a60a134ad43a60841b22d51317, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideL_Emissive
+    second: {fileID: 2800000, guid: 700a10a76852dea4db823196edd128e9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideL_Normal
+    second: {fileID: 2800000, guid: 46bf855fb297873499051ce59c4bfc97, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideL_Roughness
+    second: {fileID: 2800000, guid: c8f4a9eda1a2618478957b03b7ae36ec, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideR_BaseColor
+    second: {fileID: 2800000, guid: 9573d8ea3ad1d03468599729c838db14, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideR_Emissive
+    second: {fileID: 2800000, guid: 438a39725f7e75d44b62658a5354d766, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideR_Normal
+    second: {fileID: 2800000, guid: 47dd74b31ca720d4ab849769edee514d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideR_Roughness
+    second: {fileID: 2800000, guid: 246e3034ab31daf4e9c20f9540ec6592, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideT_BaseColor
+    second: {fileID: 2800000, guid: b12825154edc7e448b9081ef83f7264d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideT_Emissive
+    second: {fileID: 2800000, guid: cda32a0200e0d8e408b0bf95f702f094, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideT_Normal
+    second: {fileID: 2800000, guid: 4299d65d89478da48ae82967524ae764, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_sideT_Roughness
+    second: {fileID: 2800000, guid: 72e9725b511d4c448acb4504deb76b6a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_standDownID_BaseColor
+    second: {fileID: 2800000, guid: 8e359f0f5b6062944b8bd001f37d6491, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_standDownID_Normal
+    second: {fileID: 2800000, guid: 0314071cbf55e1a4187260db95dd4b4a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_standDownID_Roughness
+    second: {fileID: 2800000, guid: 985d45ce23707e54e9793ff2b1c4aaba, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_standMainID_BaseColor
+    second: {fileID: 2800000, guid: ca71e80e956411b4d83feb8bbbb0a49e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_standMainID_Emissive
+    second: {fileID: 2800000, guid: a8e14a53a2b02e2488e6463a80d6bcf8, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_standMainID_Normal
+    second: {fileID: 2800000, guid: a2b8a0d6403b6c04a8bc132234abf905, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: REST2_standMainID_Roughness
+    second: {fileID: 2800000, guid: 93a299ed55c1259439ace810deef18a2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: desk_standMainID_BaseColor
+    second: {fileID: 2800000, guid: efa716f25be1152409fc0cd38ac40786, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: desk_standMainID_Emissive
+    second: {fileID: 2800000, guid: b832ff5b3e7856149b36b20a3b9d34a0, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: desk_standMainID_Normal
+    second: {fileID: 2800000, guid: a827b86733c54fb439adaa115ddd170a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: desk_standMainID_Roughness
+    second: {fileID: 2800000, guid: 9d88fd636158939479869ab1c2b79138, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: standMidle_standMainID_BaseColor
+    second: {fileID: 2800000, guid: e9fd7f8d461f96540bee1b1e904a4439, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: standMidle_standMainID_Emissive
+    second: {fileID: 2800000, guid: c0b89fdd19081c646a8268a5dbb8096a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: standMidle_standMainID_Normal
+    second: {fileID: 2800000, guid: 8b32bd919008f2b44b07fd4eb0e04240, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: standMidle_standMainID_Roughness
+    second: {fileID: 2800000, guid: 0b0ca98c20790cd488f5746f6c6986b8, type: 3}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
