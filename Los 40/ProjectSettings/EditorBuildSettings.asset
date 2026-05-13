@@ -8,9 +8,18 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/NPCfluje.unity
     guid: 3dcee34b4502572469e11a8192359c98
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Prototipo_Pruebas.unity
     guid: 5111bc9e69ad6a0448458ac73d0d6d2b
+  - enabled: 1
+    path: Assets/Scenes/ScenesFOL/IntroScene.unity
+    guid: 1770d3a9b277a0b4b8d51834f0b5e054
+  - enabled: 1
+    path: Assets/Scenes/ScenesFOL/ArregloUI.unity
+    guid: 6cad14716fd18114c8dd56ca09447fc4
+  - enabled: 1
+    path: Assets/Scenes/ScenesFOL/FinalScene.unity
+    guid: 6d8d5c4c3a3b58a40b95d3b53e471d94
   - enabled: 0
     path: Assets/Scenes/NPCflujeWTerrain.unity
     guid: 09f86ddb3529bcd479bbc94f6e27314f
