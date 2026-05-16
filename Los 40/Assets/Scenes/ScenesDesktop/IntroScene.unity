@@ -2043,7 +2043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::IntroController
   introDuration: 32
-  nextScene: ArregloUI
+  nextScene: MainScene
 --- !u!4 &1990341620
 Transform:
   m_ObjectHideFlags: 0

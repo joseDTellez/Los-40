@@ -57,11 +57,12 @@ public class RadioController : MonoBehaviour
         MoverRadioHaciaCamara();
         ActualizarRotacionFisicaPerillas();
 
-        // Interacción por Teclado o Gamepad
+        // Interacción por Teclado, Gamepad o Mouse
         if (_isGazing)
         {
             bool interactPressed = (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame) ||
-                                   (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame);
+                                   (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame) ||
+                                   (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame); // <-- Añadido para el clic izquierdo
 
             if (interactPressed)
             {

@@ -5,9 +5,6 @@ using DialogueEditor;
 
 public class VRMenuManager : MonoBehaviour
 {
-    // =========================
-    // ENUM DE ESTADOS
-    // =========================
     private enum MenuState
     {
         Main,
@@ -32,7 +29,7 @@ public class VRMenuManager : MonoBehaviour
     [SerializeField] private Transform cameraTransform;
 
     [Header("Jugador")]
-    [SerializeField] private VRBoxController playerMovementScript;
+    [SerializeField] private PCController playerMovementScript;
     [SerializeField] private Rigidbody playerRigidbody;
 
     [Header("Simulador")]
@@ -52,26 +49,19 @@ public class VRMenuManager : MonoBehaviour
             return;
         }
 
-        // Teclado
+        // Teclado (Escape)
         if (Keyboard.current != null && Keyboard.current[menuKey].wasPressedThisFrame)
         {
             ToggleMenu();
         }
 
-        // Gamepad
-        //if (Gamepad.current != null && Gamepad.current.startButton.wasPressedThisFrame || Gamepad.current.buttonNorth.wasPressedThisFrame)
-        //{
-        //    ToggleMenu();
-        //}
+        // Gamepad (Botón Norte / Triángulo / Y)
         if (Gamepad.current != null && Gamepad.current.buttonNorth.wasPressedThisFrame)
         {
             ToggleMenu();
         }
     }
 
-    // =========================
-    // TOGGLE
-    // =========================
     public void ToggleMenu()
     {
         if (isMenuOpen)
@@ -80,23 +70,21 @@ public class VRMenuManager : MonoBehaviour
             OpenMenu();
     }
 
-    // =========================
-    // OPEN
-    // =========================
     void OpenMenu()
     {
         isMenuOpen = true;
-
         menuCanvas.SetActive(true);
 
-        // Posicionar frente a la cámara
-        menuCanvas.transform.position =
-            cameraTransform.position + cameraTransform.forward * 1.1f;
+        // --- LÓGICA DEL MOUSE (PARA QUE FUNCIONE) ---
+        Cursor.visible = true;                          // Hace que el puntero se vea
+        Cursor.lockState = CursorLockMode.None;         // Desbloquea el mouse del centro de la pantalla
 
+        // Posicionar frente a la cámara
+        menuCanvas.transform.position = cameraTransform.position + cameraTransform.forward * 1.1f;
         menuCanvas.transform.LookAt(cameraTransform);
         menuCanvas.transform.Rotate(0, 180, 0);
 
-        // Bloquear jugador
+        // Bloquear movimiento del jugador
         if (playerMovementScript != null)
             playerMovementScript.enabled = false;
 
@@ -112,18 +100,17 @@ public class VRMenuManager : MonoBehaviour
             xrSimulator.SetActive(false);
 #endif
 
-        // Estado inicial
         SetState(MenuState.Main);
     }
 
-    // =========================
-    // CLOSE
-    // =========================
     public void CloseMenu()
     {
         isMenuOpen = false;
-
         menuCanvas.SetActive(false);
+
+        // --- LÓGICA DEL MOUSE (PARA VOLVER AL JUEGO) ---
+        Cursor.visible = false;                         // Oculta el puntero
+        Cursor.lockState = CursorLockMode.Locked;       // Bloquea el mouse para que controle la cámara
 
         // Restaurar jugador
         if (playerMovementScript != null)
@@ -140,22 +127,16 @@ public class VRMenuManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
     }
 
-    // =========================
-    // CORE: CAMBIO DE ESTADO
-    // =========================
     void SetState(MenuState newState)
     {
         currentState = newState;
 
-        // Apagar todos
         mainPanel.SetActive(false);
         optionsPanel.SetActive(false);
         optionsControlsPanel.SetActive(false);
 
-        // Limpiar selección
         EventSystem.current.SetSelectedGameObject(null);
 
-        // Activar según estado
         switch (newState)
         {
             case MenuState.Main:
@@ -175,35 +156,13 @@ public class VRMenuManager : MonoBehaviour
         }
     }
 
-    // =========================
-    // BOTONES
-    // =========================
+    // --- MÉTODOS DE BOTONES ---
+    public void OnClickContinue() { CloseMenu(); }
+    public void OnClickOptions() { SetState(MenuState.Options); }
+    public void OnClickControls() { SetState(MenuState.Controls); }
+    public void OnClickBack() { SetState(MenuState.Main); }
+    public void OnClickExit() { Application.Quit(); }
 
-    public void OnClickContinue()
-    {
-        CloseMenu();
-    }
-
-    public void OnClickOptions()
-    {
-        SetState(MenuState.Options);
-    }
-
-    public void OnClickControls()
-    {
-        SetState(MenuState.Controls);
-    }
-
-    public void OnClickBack()
-    {
-        SetState(MenuState.Main);
-    }
-
-    public void OnClickExit()
-    {
-        Debug.Log("Salir del juego");
-        Application.Quit();
-    }
     private void OnEnable()
     {
         ConversationManager.OnConversationStarted += OnConversationStart;
