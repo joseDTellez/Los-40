@@ -9,9 +9,14 @@ public class GameManagerNew : MonoBehaviour
     [Header("Progreso")]
     public int interaccionesClave = 0;
     public int interaccionesNecesarias = 3;  // ✅ configurable desde el Inspector
+    public GestorPistasUI gestorPistasUI;
     public string escenaDestino = "EscenaSiguiente"; // ✅ nombre de la escena destino
+
     [Header("Outro")]
     public OutroController outroController; // Arrastra el GameObject con OutroController
+
+    [Header("Eventos de Mapa")]
+    public AparicionNPC aparicionNPC; // Referencia al nuevo controlador del NPC
 
     private HashSet<string> interaccionesRegistradas = new HashSet<string>();
 
@@ -40,6 +45,18 @@ public class GameManagerNew : MonoBehaviour
         interaccionesRegistradas.Add(id);
         interaccionesClave++;
         Debug.Log($"[GameManager] ✅ Registrado: '{id}' | Progreso: {interaccionesClave}/{interaccionesNecesarias}");
+
+        // Avisamos al controlador del NPC para que revise si ya debe aparecer
+        if (aparicionNPC != null)
+        {
+            aparicionNPC.EvaluarEstadoNPC();
+        }
+
+        // ---> NUEVO: Le avisamos a los textos que actualicen su visibilidad
+        if (gestorPistasUI != null)
+        {
+            gestorPistasUI.ActualizarTextos();
+        }
 
         VerificarProgreso();
     }

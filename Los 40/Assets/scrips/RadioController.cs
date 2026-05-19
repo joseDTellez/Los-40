@@ -21,6 +21,7 @@ public class RadioController : MonoBehaviour
     [Header("Audio")]
     public AudioSource[] stationSources;
     public AudioSource commonAudioSource;
+    public AudioSource musicaFondoSource; // ---> NUEVO: Arrastra aquí el AudioSource de tu música de nivel
     public AudioClip soundON, soundOFF, soundHover;
 
     // Estados internos
@@ -99,6 +100,19 @@ public class RadioController : MonoBehaviour
         _leftTargetAngle = _radioIsOn ? 60f : 0f;
 
         ActualizarEmisoras();
+
+        // ---> NUEVO: Controlamos la música de fondo según el estado de la radio
+        if (musicaFondoSource != null)
+        {
+            if (_radioIsOn)
+            {
+                musicaFondoSource.Pause(); // Silencia el fondo cuando la radio se enciende
+            }
+            else
+            {
+                musicaFondoSource.UnPause(); // Reanuda el fondo cuando la radio se apaga
+            }
+        }
     }
 
     private void CambiarVolumen()
