@@ -3242,6 +3242,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 82.02939, y: 19.514685, z: 5.9787817}
   m_Center: {x: 7.304735, y: -1.6029208, z: 0.06921971}
+--- !u!1 &76486151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 76486152}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &76486152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76486151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 974431038}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &77851558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13730,6 +13761,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7494120eb876ff84a9423e1daf7be74b, type: 3}
   m_PrefabInstance: {fileID: 2085699347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &403859232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 403859233}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &403859233
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403859232}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2039227426}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &407758030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13926,6 +13988,37 @@ Transform:
   - {fileID: 391049757}
   - {fileID: 1974299743}
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &420443764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 420443765}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &420443765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420443764}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1144576104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &421271724
 GameObject:
@@ -14772,12 +14865,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 429242560}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5989906, y: 0.378902, z: -0.3845522, w: -0.59140784}
-  m_LocalPosition: {x: 13.271, y: -2310.801, z: 26.211}
-  m_LocalScale: {x: 0.6163578, y: 0.2828942, z: 0.6163578}
+  m_LocalRotation: {x: -0, y: -0, z: 0.22721393, w: 0.97384495}
+  m_LocalPosition: {x: 69.5032, y: -188.408, z: 3.186812}
+  m_LocalScale: {x: 1.6821319, y: 1.2218367, z: 1.5039005}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 1824751217}
+  m_Father: {fileID: 1448185185}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -184.017}
 --- !u!4 &430679573 stripped
 Transform:
@@ -27819,12 +27913,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 873471469}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.9885483, y: -0.000820177, z: -0.15080695, w: 0.005377418}
-  m_LocalPosition: {x: -19.447, y: 0.471, z: 53.874}
+  m_LocalRotation: {x: -0.7087799, y: -0.0038371086, z: -0.70540875, w: 0.0038556606}
+  m_LocalPosition: {x: 13.260338, y: -2310.7576, z: 26.21362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4398848397075457566}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -179.377, y: -17.348022, z: 0}
 --- !u!23 &873471471
 MeshRenderer:
@@ -28509,6 +28603,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 317d99f20b4da4345b8df32e90414e4f, type: 3}
+--- !u!1 &901055775
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 901055776}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &901055776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901055775}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1730358822}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &904459102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31169,12 +31294,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974431034}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.585211, y: 0.39985567, z: -0.40523407, w: -0.5774331}
-  m_LocalPosition: {x: 13.271, y: -2310.701, z: 26.211}
-  m_LocalScale: {x: 0.6163578, y: 0.2828942, z: 0.6163578}
+  m_LocalRotation: {x: -0.000000059604645, y: -0, z: 0.26152402, w: 0.965197}
+  m_LocalPosition: {x: 69.504845, y: -188.41415, z: 2.9425967}
+  m_LocalScale: {x: 1.7444396, y: 1.1564662, z: 1.5039003}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 76486152}
+  m_Father: {fileID: 1448185185}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -179.963}
 --- !u!1 &976104991
 GameObject:
@@ -37304,12 +37430,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144576100}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.63786733, y: 0.30900115, z: -0.31546974, w: -0.6309695}
-  m_LocalPosition: {x: 13.271, y: -2310.801, z: 26.211}
-  m_LocalScale: {x: 0.6163578, y: 0.2828942, z: 0.6163578}
+  m_LocalRotation: {x: -0.000000059604638, y: 0.000000029802319, z: 0.11604418, w: 0.99324405}
+  m_LocalPosition: {x: 69.5032, y: -188.408, z: 3.186812}
+  m_LocalScale: {x: 1.5484169, y: 1.4152505, z: 1.5039005}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 420443765}
+  m_Father: {fileID: 1448185185}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -196.956}
 --- !u!1001 &1144607505
 PrefabInstance:
@@ -42495,12 +42622,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279390550}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.54319423, y: 0.45529824, z: -0.45988825, w: -0.53492653}
-  m_LocalPosition: {x: 13.271, y: -2310.801, z: 26.211}
-  m_LocalScale: {x: 0.6163578, y: 0.2828942, z: 0.6163578}
+  m_LocalRotation: {x: -0.000000029802322, y: -0.000000029802322, z: 0.35488307, w: 0.9349107}
+  m_LocalPosition: {x: 69.5032, y: -188.408, z: 3.186812}
+  m_LocalScale: {x: 1.9742036, y: 0.99003756, z: 1.5039003}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 1721713623}
+  m_Father: {fileID: 1448185185}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -168.711}
 --- !u!4 &1280831619 stripped
 Transform:
@@ -42875,12 +43003,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298908875}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5884432, y: 0.39508346, z: -0.40052494, w: -0.5807094}
-  m_LocalPosition: {x: 13.297999, y: -2310.701, z: 26.168001}
-  m_LocalScale: {x: 0.6163578, y: 0.2828942, z: 0.6163578}
+  m_LocalRotation: {x: -0.00000008940697, y: 0.000000014901161, z: 0.25366634, w: 0.9672918}
+  m_LocalPosition: {x: 69.48984, y: -188.68205, z: 2.9439185}
+  m_LocalScale: {x: 1.7292002, y: 1.1713771, z: 1.5039002}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 1867883589}
+  m_Father: {fileID: 1448185185}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -180.895}
 --- !u!1 &1305735249
 GameObject:
@@ -48211,6 +48340,44 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 66.735374, y: 19.514685, z: 5.9787817}
   m_Center: {x: -0.3422737, y: -1.6029208, z: 0.06909764}
+--- !u!1 &1448185184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448185185}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1448185185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448185184}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.6694157, y: 0.23289274, z: -0.24011809, w: -0.66331506}
+  m_LocalPosition: {x: -31.196, y: -2310.0964, z: 35.769}
+  m_LocalScale: {x: 0.40983957, y: 0.18810704, z: 0.4098396}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1144576104}
+  - {fileID: 974431038}
+  - {fileID: 2039227426}
+  - {fileID: 1298908879}
+  - {fileID: 1730358822}
+  - {fileID: 1279390554}
+  - {fileID: 429242564}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1451351858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55422,20 +55589,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 28
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-998.5,\"yPos\":76},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFPor
-    qu\xE9 no quiso jugar?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-374.5,\"yPos\":264},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFLa
-    notaron rara?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1178.5,\"yPos\":430},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFIrse
-    a d\xF3nde?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":297.5,\"yPos\":69},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHace
-    cu\xE1nto se fue?\",\"parentUIDs\":[11],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-448.5,\"yPos\":-140},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
-    muchachos\u2026 \xBFhan visto a mi hija hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-457.5,\"yPos\":-19},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026
-    estaba por aqu\xED hace rato.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-443.5,\"yPos\":110},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
-    ya no quiso jugar con nosotros.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1146.5,\"yPos\":181},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dijo
-    que ten\xEDa que irse\u2026 que ya no pod\xEDa quedarse.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1192.5,\"yPos\":320},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pens\xE9
-    que era porque estaba brava o algo.\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1146.5,\"yPos\":527},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mmm\u2026
-    no me acuerdo bien\u2026 algo de unas sillas\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-352.5,\"yPos\":383},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
-    rara\u2026 pero s\xED como distra\xEDda.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-332.5,\"yPos\":530},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Le
-    habl\xE1bamos y se quedaba mirando para otro lado.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":413.5,\"yPos\":233},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
-    hace mucho\u2026\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":490.5,\"yPos\":390},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":259,\"yPos\":218},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFPor
+    qu\xE9 no quiso jugar?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":883,\"yPos\":406},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFLa
+    notaron rara?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":79,\"yPos\":572},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFIrse
+    a d\xF3nde?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1555,\"yPos\":211},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHace
+    cu\xE1nto se fue?\",\"parentUIDs\":[11],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":809,\"yPos\":2},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
+    muchachos\u2026 \xBFhan visto a mi hija hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":800,\"yPos\":123},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026
+    estaba por aqu\xED hace rato.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":814,\"yPos\":252},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
+    ya no quiso jugar con nosotros.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":111,\"yPos\":323},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dijo
+    que ten\xEDa que irse\u2026 que ya no pod\xEDa quedarse.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":65,\"yPos\":462},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pens\xE9
+    que era porque estaba brava o algo.\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":111,\"yPos\":669},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mmm\u2026
+    no me acuerdo bien\u2026 algo de unas sillas\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":905,\"yPos\":525},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+    rara\u2026 pero s\xED como distra\xEDda.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":925,\"yPos\":672},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Le
+    habl\xE1bamos y se quedaba mirando para otro lado.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1671,\"yPos\":375},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+    hace mucho\u2026\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1748,\"yPos\":532},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se
     fue sola\u2026 ni esper\xF3 a nadie.\",\"parentUIDs\":[24],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: "Ni\xF1o jugando"
@@ -57411,6 +57578,37 @@ RectTransform:
   m_AnchoredPosition: {x: 180.1, y: 2.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1721713622
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1721713623}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1721713623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721713622}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1279390554}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1725163675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58023,12 +58221,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1730358818}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.6373851, y: 0.30999467, z: -0.31645247, w: -0.63047713}
-  m_LocalPosition: {x: 13.298, y: -2310.672, z: 26.168}
-  m_LocalScale: {x: 0.6163578, y: 0.2828942, z: 0.6163578}
+  m_LocalRotation: {x: -0.000000059604645, y: -0.000000014901161, z: 0.11759168, w: 0.9930621}
+  m_LocalPosition: {x: 69.49031, y: -188.68384, z: 2.873633}
+  m_LocalScale: {x: 1.549631, y: 1.4130456, z: 1.5039002}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 901055776}
+  m_Father: {fileID: 1448185185}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -196.777}
 --- !u!1 &1735710073 stripped
 GameObject:
@@ -63193,6 +63392,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822863067}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1824751216
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824751217}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1824751217
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824751216}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 429242564}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1825472838
 GameObject:
   m_ObjectHideFlags: 0
@@ -65592,6 +65822,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863116836}
   m_CullTransparentMesh: 1
+--- !u!1 &1867883588
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1867883589}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1867883589
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1867883588}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1298908879}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1868973633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
@@ -70090,12 +70351,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039227422}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5172198, y: 0.48460302, z: -0.48872948, w: -0.5087113}
-  m_LocalPosition: {x: 13.271, y: -2310.701, z: 26.211}
-  m_LocalScale: {x: 0.6163578, y: 0.2828942, z: 0.6163578}
+  m_LocalRotation: {x: -0.00000008940697, y: 0.000000052154064, z: 0.40597498, w: 0.91388416}
+  m_LocalPosition: {x: 69.504845, y: -188.41415, z: 2.9425967}
+  m_LocalScale: {x: 2.141974, y: 0.9119904, z: 1.5039002}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
+  m_Children:
+  - {fileID: 403859233}
+  m_Father: {fileID: 1448185185}
   m_LocalEulerAnglesHint: {x: 89.234, y: 110.635, z: -162.38}
 --- !u!1 &2041300440
 GameObject:
@@ -73128,6 +73390,63 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3537709356157935800, guid: b51af6e7191f7964497fe991d5179c8b, type: 3}
+--- !u!1001 &2142222847
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_Name
+      value: XR Interaction Simulator
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.68362
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2308.357
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.33446
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8518324294302271954, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
 --- !u!4 &2142948246 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: eb57cd2ab3d8bfa4c8cf655bcce2dba1, type: 3}
@@ -75168,7 +75487,6 @@ Transform:
   - {fileID: 5105921581910068520}
   - {fileID: 830624605}
   - {fileID: 976104992}
-  - {fileID: 873471470}
   - {fileID: 6403794446790052038}
   - {fileID: 1553242992}
   - {fileID: 9135919641290128886}
@@ -77653,6 +77971,7 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2142222847}
   - {fileID: 1569259944}
   - {fileID: 647574750}
   - {fileID: 543450651864366913}
@@ -77702,13 +78021,8 @@ SceneRoots:
   - {fileID: 1522099158}
   - {fileID: 1169566263}
   - {fileID: 677654573}
-  - {fileID: 1144576104}
-  - {fileID: 974431038}
-  - {fileID: 2039227426}
-  - {fileID: 1298908879}
-  - {fileID: 1730358822}
-  - {fileID: 1279390554}
-  - {fileID: 429242564}
+  - {fileID: 873471470}
+  - {fileID: 1448185185}
   - {fileID: 1311134494}
   - {fileID: 1021777616}
   - {fileID: 652483596}
