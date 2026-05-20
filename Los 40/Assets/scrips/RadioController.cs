@@ -15,13 +15,13 @@ public class RadioController : MonoBehaviour
 
     [Header("Perillas (Solo el Mesh)")]
     public Transform leftKnobMesh;  // Perilla On/Off
-    public Transform rightKnobMesh; // Perilla Volumen
+    public Transform rightKnobMesh; // Perilla Emisoras (Anteriormente Volumen)
     public float knobSmoothSpeed = 10f;
 
     [Header("Audio")]
     public AudioSource[] stationSources;
     public AudioSource commonAudioSource;
-    public AudioSource musicaFondoSource; // ---> NUEVO: Arrastra aquí el AudioSource de tu música de nivel
+    public AudioSource musicaFondoSource;
     public AudioClip soundON, soundOFF, soundHover;
 
     // Estados internos
@@ -35,8 +35,6 @@ public class RadioController : MonoBehaviour
     private Quaternion _origRot, _inspectRot;
 
     private int _currentStation = 0;
-    private int _currentVolumeIndex = 0;
-    private float[] _volumeLevels = { 1.0f, 0.6f, 0.4f };
 
     // Variables de rotación para perillas
     private float _leftTargetAngle = 0f;
@@ -87,7 +85,7 @@ public class RadioController : MonoBehaviour
         {
             // Si ya está cerca, interactuamos con las partes específicas
             if (_gazedPart == "Left") AlternarOnOff();
-            else if (_gazedPart == "Right") CambiarVolumen();
+            else if (_gazedPart == "Right") CambiarEmisora(); // Actualizado a CambiarEmisora
         }
     }
 
@@ -101,7 +99,7 @@ public class RadioController : MonoBehaviour
 
         ActualizarEmisoras();
 
-        // ---> NUEVO: Controlamos la música de fondo según el estado de la radio
+        // Controlamos la música de fondo según el estado de la radio
         if (musicaFondoSource != null)
         {
             if (_radioIsOn)
@@ -115,13 +113,17 @@ public class RadioController : MonoBehaviour
         }
     }
 
-    private void CambiarVolumen()
+    private void CambiarEmisora()
     {
         if (!_radioIsOn) return;
 
-        _currentVolumeIndex = (_currentVolumeIndex + 1) % _volumeLevels.Length;
+        // Avanza a la siguiente emisora y vuelve a 0 si llega al final del arreglo
+        if (stationSources != null && stationSources.Length > 0)
+        {
+            _currentStation = (_currentStation + 1) % stationSources.Length;
+        }
 
-        // Gira -45 grados por cada nivel de volumen
+        // Gira -45 grados por cada cambio de emisora
         _rightTargetAngle -= 45f;
 
         if (commonAudioSource && soundHover) commonAudioSource.PlayOneShot(soundHover);
@@ -135,7 +137,8 @@ public class RadioController : MonoBehaviour
         {
             if (stationSources[i] != null)
             {
-                float targetVol = (_radioIsOn && i == _currentStation) ? _volumeLevels[_currentVolumeIndex] : 0f;
+                // Solo la emisora actual tiene volumen al 100% (1.0f), las demás en 0f
+                float targetVol = (_radioIsOn && i == _currentStation) ? 1.0f : 0f;
                 stationSources[i].volume = targetVol;
 
                 if (_radioIsOn && !stationSources[i].isPlaying) stationSources[i].Play();
@@ -152,7 +155,6 @@ public class RadioController : MonoBehaviour
     private void ActualizarRotacionFisicaPerillas()
     {
         // IMPORTANTE: Si la perilla gira en el eje equivocado, cambia el eje en Euler(0, 0, ángulo)
-
         if (leftKnobMesh)
         {
             Quaternion targetRot = Quaternion.Euler(0, 0, _leftTargetAngle);
