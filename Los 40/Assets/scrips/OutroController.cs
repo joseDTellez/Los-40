@@ -1,20 +1,35 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class OutroController : MonoBehaviour
 {
-    public float outroDuration = 5f;
-    public string nextScene = "CreditsScene";
+    public float outroDuration = 106f;
+    //public string nextScene = "CreditsScene";
+    public bool quitAfterOutro = true;
 
-    // ? Llama este método desde VerificarProgreso() en GameManagerNew
-    public void PlayOutro()
+    //  Llama este método desde VerificarProgreso() en GameManagerNew
+   void Start()
     {
-        StartCoroutine(OutroCoroutine());
+        StartCoroutine(PlayOutro());
     }
 
-    IEnumerator OutroCoroutine()
+    public IEnumerator PlayOutro()
     {
         yield return new WaitForSeconds(outroDuration);
-        SceneFadeTransition.Instance.LoadScene(nextScene);
+
+        if (quitAfterOutro)
+        {
+            QuitGame();
+        }
+    }
+
+    void QuitGame()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false; // Detiene el Play Mode en el Editor
+#else
+        Application.Quit(); // Cierra el juego en build
+#endif
     }
 }

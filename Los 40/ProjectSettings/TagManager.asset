@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - "Ni\xF1a"
   layers:
   - Default
   - TransparentFX

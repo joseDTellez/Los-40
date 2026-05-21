@@ -506,7 +506,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295538483}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b35f8b2a123208f41a9a5351cc38ce4b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 7633614530c00754c8429c7ab9a6424a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -2042,7 +2042,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee65b374110d1754aaba77a1aeacfb6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: CardboardSamples::IntroController
-  introDuration: 32
+  introDuration: 34
   nextScene: ArregloUI
 --- !u!4 &1990341620
 Transform:
