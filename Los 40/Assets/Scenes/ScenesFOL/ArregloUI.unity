@@ -285,20 +285,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 28
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":259,\"yPos\":218},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFPor
-    qu\xE9 no quiso jugar?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":883,\"yPos\":406},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFLa
-    notaron rara?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":79,\"yPos\":572},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFIrse
-    a d\xF3nde?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1555,\"yPos\":211},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHace
-    cu\xE1nto se fue?\",\"parentUIDs\":[11],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":809,\"yPos\":2},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
-    muchachos\u2026 \xBFhan visto a mi hija hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":800,\"yPos\":123},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026
-    estaba por aqu\xED hace rato.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":814,\"yPos\":252},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
-    ya no quiso jugar con nosotros.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":111,\"yPos\":323},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dijo
-    que ten\xEDa que irse\u2026 que ya no pod\xEDa quedarse.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":65,\"yPos\":462},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pens\xE9
-    que era porque estaba brava o algo.\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":111,\"yPos\":669},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mmm\u2026
-    no me acuerdo bien\u2026 algo de unas sillas\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":905,\"yPos\":525},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
-    rara\u2026 pero s\xED como distra\xEDda.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":925,\"yPos\":672},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Le
-    habl\xE1bamos y se quedaba mirando para otro lado.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1671,\"yPos\":375},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
-    hace mucho\u2026\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1748,\"yPos\":532},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":14}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":185,\"yPos\":173},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFPor
+    qu\xE9 no quiso jugar?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":809,\"yPos\":361},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFLa
+    notaron rara?\",\"parentUIDs\":[11],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":5,\"yPos\":527},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFIrse
+    a d\xF3nde?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1481,\"yPos\":166},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHace
+    cu\xE1nto se fue?\",\"parentUIDs\":[11],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":735,\"yPos\":-43},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Hola,
+    muchachos\u2026 \xBFhan visto a mi hija hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":726,\"yPos\":78},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026
+    estaba por aqu\xED hace rato.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":740,\"yPos\":207},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
+    ya no quiso jugar con nosotros.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":37,\"yPos\":278},\"ID\":14,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dijo
+    que ten\xEDa que irse\u2026 que ya no pod\xEDa quedarse.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-9,\"yPos\":417},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pens\xE9
+    que era porque estaba brava o algo.\",\"parentUIDs\":[14],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":46,\"yPos\":633},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Mmm\u2026
+    no me acuerdo bien\u2026 algo de unas sillas\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.8},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":831,\"yPos\":480},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+    rara\u2026 pero s\xED como distra\xEDda.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":851,\"yPos\":627},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Le
+    habl\xE1bamos y se quedaba mirando para otro lado.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1597,\"yPos\":330},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+    hace mucho\u2026\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1673,\"yPos\":487},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Se
     fue sola\u2026 ni esper\xF3 a nadie.\",\"parentUIDs\":[24],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Jero\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: "Ni\xF1o jugando"
@@ -324,7 +324,67 @@ MonoBehaviour:
   EndConversationFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1140754013}
+        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_MethodName: Registrar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1140754014}
+        m_TargetAssemblyTypeName: NPCIndicatorAndInteraction, Assembly-CSharp
+        m_MethodName: MarkAsVisited
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 633008721}
+        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_MethodName: MostrarLetrero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 286448958}
+        m_TargetAssemblyTypeName: ChangeScener, CardboardSamples
+        m_MethodName: TriggerOutro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &4520236
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6039,9 +6099,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 155809632}
-  m_LocalRotation: {x: -0, y: 0.8290374, z: -0, w: 0.55919325}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.009999996, y: 0.01, z: 0.009999996}
+  m_LocalRotation: {x: -0, y: 0.8290373, z: -0, w: 0.55919325}
+  m_LocalPosition: {x: 0, y: 0, z: 0.08835006}
+  m_LocalScale: {x: 0.010000002, y: 0.010000001, z: 0.009999999}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 843128911}
@@ -6050,7 +6110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.07871314, y: 0}
   m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155809634
@@ -6484,6 +6544,99 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
+--- !u!1001 &172194094
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 652798318}
+    m_Modifications:
+    - target: {fileID: -8854345305993846702, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.133
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.025647175
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.026315788
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.026309311
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.71654
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.0149
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0042
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.04842346
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9988269
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 20.068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6806996559416080670, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.146
+      objectReference: {fileID: 0}
+    - target: {fileID: -6806996559416080670, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.401
+      objectReference: {fileID: 0}
+    - target: {fileID: -6806996559416080670, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.397
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_Name
+      value: Mujer_2version2 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 12dc1e2f3e54f0645a911019085b42ce, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
 --- !u!1 &172671758
 GameObject:
   m_ObjectHideFlags: 0
@@ -11013,7 +11166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286448957}
-  - component: {fileID: 286448956}
+  - component: {fileID: 286448958}
   m_Layer: 0
   m_Name: OutroManager
   m_TagString: Untagged
@@ -11021,20 +11174,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &286448956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 286448955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e43496c8bd9d4644eb7c5f08acb401f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutroController
-  outroDuration: 5
-  nextScene: FinalScene
 --- !u!4 &286448957
 Transform:
   m_ObjectHideFlags: 0
@@ -11050,6 +11189,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286448958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286448955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cb0a9e9e8b9fee448de42846cea8851, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CardboardSamples::ChangeScener
+  sceneDuration: 5
+  nextScene: FinalScene
+  contact: 0
 --- !u!1 &287370255
 GameObject:
   m_ObjectHideFlags: 0
@@ -12422,6 +12576,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_Name
       value: Novia
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 462e2919d45bd5146a8082cf1ea187f5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16722,7 +16880,7 @@ Transform:
   m_GameObject: {fileID: 436871598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.4, y: -2309.3254, z: -18.33}
+  m_LocalPosition: {x: -1.78, y: -2309.3254, z: -34.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20840,9 +20998,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592441144}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.5591939, z: 0, w: -0.82903683}
-  m_LocalPosition: {x: 14.399726, y: 0.32361004, z: -12.331732}
-  m_LocalScale: {x: 0.99368894, y: 1, z: 1.0062238}
+  m_LocalRotation: {x: -0, y: 0.5591939, z: 0, w: -0.82903695}
+  m_LocalPosition: {x: 14.321014, y: 0.32350585, z: -12.243385}
+  m_LocalScale: {x: 0.9936887, y: 1, z: 1.0062237}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1785270469}
@@ -20861,23 +21019,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 26
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1179,\"yPos\":-21},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHabl\xF3
-    con usted?\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-567,\"yPos\":83},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dicen
-    que hablaba sola\u2026\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":96,\"yPos\":-84},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFNot\xF3
-    algo diferente?\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-601,\"yPos\":-147},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
-    tardes, Do\xF1a Rita\u2026 \xBFvio a mi hija?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-603,\"yPos\":-33},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"La
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1138,\"yPos\":199},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHabl\xF3
+    con usted?\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-526,\"yPos\":303},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Dicen
+    que hablaba sola\u2026\",\"parentUIDs\":[8],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":137,\"yPos\":136},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFNot\xF3
+    algo diferente?\",\"parentUIDs\":[8],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-560,\"yPos\":73},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Buenas
+    tardes, Do\xF1a Rita\u2026 \xBFvio a mi hija?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-562,\"yPos\":187},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"La
     vi pasar, mijo\u2026 s\xED. Iba apurada.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1391,\"yPos\":102},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1350,\"yPos\":322},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
     se\xF1or\u2026 iba en lo suyo.\\n\",\"parentUIDs\":[9],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1364,\"yPos\":230},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ya
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-1323,\"yPos\":450},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ya
     los muchachos andan muy metidos en la cabeza, \xBFve?\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-554,\"yPos\":178},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ay,
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-513,\"yPos\":398},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ay,
     mijo\u2026 los ni\xF1os siempre andan inventando cosas.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-526,\"yPos\":294},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-485,\"yPos\":514},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
     esa edad uno se imagina de todo.\",\"parentUIDs\":[15],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":240,\"yPos\":-1},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Diferente\u2026
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":281,\"yPos\":219},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Diferente\u2026
     no sabr\xEDa decirle. Solo que ya no se quedan quietos como antes.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Do\xF1a
-    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":270,\"yPos\":117},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
+    Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":311,\"yPos\":337},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Este
     barrio ha cambiado\u2026 los ni\xF1os tambi\xE9n.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Do\xF1a
     Rita\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
@@ -20901,7 +21059,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 543450651902110627}
+      - m_Target: {fileID: 2026840313}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
         m_MethodName: StopTalking
         m_Mode: 1
@@ -21657,6 +21815,94 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05bf63dfad25ef048bd8f2006c611e60, type: 3}
+--- !u!1001 &626647223
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 652798318}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.026237084
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.026315788
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.025716195
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.14604
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.01319002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.71302
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.85846335
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.51287484
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 298.289
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -2427309010048547937, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.108
+      objectReference: {fileID: 0}
+    - target: {fileID: -2427309010048547937, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.186
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_Name
+      value: Mujer_2version2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2829399725456357952, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 4009876c431bc3341b4751822c001a70, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f386a1b8759ac2c45a77af2c681f0122, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2026840313}
+  m_SourcePrefab: {fileID: 100100000, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
 --- !u!1001 &629351507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23361,9 +23607,11 @@ Transform:
   - {fileID: 387972960}
   - {fileID: 1983689}
   - {fileID: 543450651902110625}
+  - {fileID: 2026840311}
   - {fileID: 1174081664}
   - {fileID: 543450653418545551}
   - {fileID: 543450652107105371}
+  - {fileID: 1940091770}
   - {fileID: 1833298623}
   - {fileID: 889238820}
   - {fileID: 543450652489869656}
@@ -28251,40 +28499,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 37
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-380,\"yPos\":-217},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlguna
-    noticia sobre ni\xF1os desaparecidos?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":116,\"yPos\":42},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Deme
-    un peri\xF3dico.\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":501,\"yPos\":-147},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFC\xF3mo
-    ha estado el negocio?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-745,\"yPos\":149},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHa
-    visto a mi ni\xF1a?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-462,\"yPos\":476},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHacia
-    d\xF3nde iba?\",\"parentUIDs\":[19],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":363,\"yPos\":245},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlgo
-    importante hoy?\",\"parentUIDs\":[24],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":129,\"yPos\":-359},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Buenas,
-    Don Carlos! \xBFQu\xE9 dice la prensa hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":125,\"yPos\":-232},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-23,\"yPos\":-203},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlguna
+    noticia sobre ni\xF1os desaparecidos?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":24}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":473,\"yPos\":56},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Deme
+    un peri\xF3dico.\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":858,\"yPos\":-133},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFC\xF3mo
+    ha estado el negocio?\",\"parentUIDs\":[9],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":17}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-388,\"yPos\":163},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHa
+    visto a mi ni\xF1a?\",\"parentUIDs\":[15],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-105,\"yPos\":490},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFHacia
+    d\xF3nde iba?\",\"parentUIDs\":[19],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":28}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":720,\"yPos\":259},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFAlgo
+    importante hoy?\",\"parentUIDs\":[24],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":486,\"yPos\":-345},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xA1Buenas,
+    Don Carlos! \xBFQu\xE9 dice la prensa hoy?\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"T\xFA\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":482,\"yPos\":-218},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     de siempre, patr\xF3n\u2026 liberales y conservadores jal\xE1ndose de las mechas.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":119,\"yPos\":-112},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":12}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":476,\"yPos\":-98},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
     si los liberales, que si los conservadores... el mundo se va a acabar y nosotros
     aqu\xED vendiendo alpargatas.\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-645,\"yPos\":-96},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":15}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-288,\"yPos\":-82},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No,
     se\xF1or\u2026 de eso no dicen nada.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-781,\"yPos\":24},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Esos
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-424,\"yPos\":38},\"ID\":15,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Esos
     peri\xF3dicos hablan de lo grande\u2026 no de lo que le pasa a uno.\",\"parentUIDs\":[13],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-594,\"yPos\":240},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pues\u2026
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-237,\"yPos\":254},\"ID\":17,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pues\u2026
     ahora que lo dice\u2026\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-557,\"yPos\":370},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ayer
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-200,\"yPos\":384},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ayer
     pas\xF3 una ni\xF1a que se le parec\xEDa. Pero iba de af\xE1n\u2026 ni se detuvo.\",\"parentUIDs\":[17],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-468,\"yPos\":573},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sigui\xF3
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-111,\"yPos\":587},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Sigui\xF3
     derecho por el parque\u2026como cuando uno va pensando en otra cosa.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-249,\"yPos\":652},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ni
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":104,\"yPos\":668},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ni
     me salud\xF3\u2026 raro en ella, porque siempre era bien querida.\",\"parentUIDs\":[21],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":111,\"yPos\":214},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Claro,
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.8},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":468,\"yPos\":228},\"ID\":24,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Claro,
     tenga. Reci\xE9n llegados.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":299,\"yPos\":359},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":656,\"yPos\":373},\"ID\":28,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Lo
     mismo de estos d\xEDas\u2026 pol\xEDtica y promesas.\",\"parentUIDs\":[27],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":290,\"yPos\":507},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":647,\"yPos\":521},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
     vea\u2026 dicen que todo est\xE1 tranquilo. Aunque\u2026 no s\xE9\u2026 el parque
     ha estado como m\xE1s callado \xFAltimamente.\",\"parentUIDs\":[28],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":805,\"yPos\":-184},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah\xED
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1162,\"yPos\":-170},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah\xED
     va\u2026 d\xEDas buenos y otros no tanto.\",\"parentUIDs\":[12],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":866,\"yPos\":-23},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Antes
+    Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":1223,\"yPos\":-9},\"ID\":33,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Antes
     vend\xEDa m\xE1s dulces que otra cosa\u2026 ahora la gente compra r\xE1pido y
     se va.\",\"parentUIDs\":[32],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
     Carlos\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
@@ -28318,9 +28566,45 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 28181806}
+        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_MethodName: Registrar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 28181802}
+        m_TargetAssemblyTypeName: NPCIndicatorAndInteraction, Assembly-CSharp
+        m_MethodName: MarkAsVisited
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 633008721}
+        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_MethodName: MostrarLetrero
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 543450653683059185}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
-        m_MethodName: StartTalking
+        m_MethodName: StopTalking
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -36063,7 +36347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2311.2383
+      value: -2311.327
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bdfc02cd0a16f6b40a6122c12b4ebec2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37273,7 +37557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317d99f20b4da4345b8df32e90414e4f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.459
+      value: 0.353
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 317d99f20b4da4345b8df32e90414e4f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38974,6 +39258,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_TranslateXSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_TranslateYSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6900676903622151380, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
+      propertyPath: m_TranslateZSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 8135023674665499069, guid: 58d0a4ac86f2348deb02f3880c71378e, type: 3}
       propertyPath: m_Name
       value: XR Interaction Simulator
@@ -40119,7 +40415,7 @@ MonoBehaviour:
   NodeID: 32
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 4d9827af8ddb11f48b715bc4d7a43bfb, type: 3}
 --- !u!114 &1160269308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41256,7 +41552,7 @@ Transform:
   m_GameObject: {fileID: 1174081663}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.24433288, z: -0, w: -0.96969146}
-  m_LocalPosition: {x: 0.14526, y: 0.007105262, z: -0.70982}
+  m_LocalPosition: {x: 0.146, y: 0.007105262, z: -0.7128}
   m_LocalScale: {x: 0.026218968, y: 0.026315788, z: 0.025733618}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47785,7 +48081,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\xA1Por aqui no puedo pasar!, talvez es por otro camino."
+  m_text: "\xA1Por aqu\xED no puedo pasar!, tal vez es por otro camino."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   m_sharedMaterial: {fileID: 5095579657299101747, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
@@ -50869,7 +51165,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 543450652622311095}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
         m_MethodName: StopTalking
         m_Mode: 1
@@ -50938,7 +51234,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 543450652622311095}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
         m_MethodName: StopTalking
         m_Mode: 1
@@ -50988,7 +51284,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1140754013}
         m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
         m_MethodName: Registrar
         m_Mode: 1
@@ -51000,7 +51296,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StopTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1140754014}
         m_TargetAssemblyTypeName: NPCIndicatorAndInteraction, Assembly-CSharp
         m_MethodName: MarkAsVisited
         m_Mode: 1
@@ -51012,7 +51320,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 633008721}
         m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
         m_MethodName: MostrarLetrero
         m_Mode: 1
@@ -51024,9 +51332,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
-        m_MethodName: StopTalking
+      - m_Target: {fileID: 286448958}
+        m_TargetAssemblyTypeName: ChangeScener, CardboardSamples
+        m_MethodName: TriggerOutro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -51039,7 +51347,7 @@ MonoBehaviour:
   NodeID: 17
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 4d9827af8ddb11f48b715bc4d7a43bfb, type: 3}
 --- !u!114 &1460303729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51168,7 +51476,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 543450652622311095}
+        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
+        m_MethodName: StartTalking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -51187,19 +51507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NodeEventHolder
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
-        m_MethodName: StartTalking
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
@@ -56597,36 +56905,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueEditor.NPCConversation
   CurrentIDCounter: 35
-  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-650,\"yPos\":-162},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFSaben
-    donde esta?\",\"parentUIDs\":[19],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":31}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-375,\"yPos\":238},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muchas
-    gracias\",\"parentUIDs\":[27],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-652,\"yPos\":-489},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u2026vea,
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":21}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-553,\"yPos\":94},\"ID\":20,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\xBFSaben
+    donde esta?\",\"parentUIDs\":[19],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":31}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-278,\"yPos\":494},\"ID\":29,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Muchas
+    gracias\",\"parentUIDs\":[27],\"SpeechUID\":-1}],\"Parameters\":[],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":-555,\"yPos\":-233},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"\u2026vea,
     dejemos as\xED.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-392,\"yPos\":-473},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":10}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-295,\"yPos\":-217},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"No
     tiene sentido seguir peleando por esto.\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-662,\"yPos\":-388},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-397,\"yPos\":-369},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"la
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":11}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-565,\"yPos\":-132},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"S\xED\u2026\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
+    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":16}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-300,\"yPos\":-113},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"la
     cosa ya est\xE1 suficientemente pesada.\",\"parentUIDs\":[10],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-639,\"yPos\":-277},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Adem\xE1s\u2026
+    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":19}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-542,\"yPos\":-21},\"ID\":16,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Adem\xE1s\u2026
     no somos los \xFAnicos preocupados.\",\"parentUIDs\":[11],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-402,\"yPos\":-257},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"El
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":20}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-305,\"yPos\":-1},\"ID\":19,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"El
     vecino anda buscando a la hija desde hace rato.\",\"parentUIDs\":[16],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-383,\"yPos\":-136},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oiga\u2026
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-286,\"yPos\":120},\"ID\":21,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oiga\u2026
     s\xED escuch\xE9 algo.\",\"parentUIDs\":[20],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-649,\"yPos\":-71},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":23}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-552,\"yPos\":185},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Que
     vieron a una ni\xF1a\u2026 por la feria nueva. Por donde montaron esa rueda grande.\",\"parentUIDs\":[21],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-391,\"yPos\":-29},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":25}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-294,\"yPos\":227},\"ID\":23,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Pero
     ya sabe c\xF3mo es la gente\u2026\",\"parentUIDs\":[22],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-643,\"yPos\":64},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"uno
+    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":26}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-546,\"yPos\":320},\"ID\":25,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"uno
     oye cosas\u2026 y termina viendo m\xE1s de la cuenta.\",\"parentUIDs\":[23],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-380,\"yPos\":102},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Igual,
+    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":27}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-283,\"yPos\":358},\"ID\":26,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Igual,
     dese una vuelta por all\xE1.\",\"parentUIDs\":[25],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-650,\"yPos\":216},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":29}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-553,\"yPos\":472},\"ID\":27,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
     esta hora ya casi no queda nadie.\",\"parentUIDs\":[26],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-123,\"yPos\":229},\"ID\":31,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Y
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":32}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":-26,\"yPos\":485},\"ID\":31,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Y
     camine con calma\u2026\",\"parentUIDs\":[29],\"AdvanceDialogueAutomatically\":true,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":true,\"IconGUID\":null,\"Name\":\"Don
-    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":128,\"yPos\":225},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"que
+    Fabio\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":10,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":225,\"yPos\":481},\"ID\":32,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"que
     cuando uno anda apurado\u2026 se le escapan las cosas.\",\"parentUIDs\":[31],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Don
-    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
+    Hernan\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0.8}]}"
   saveVersion: 110
   DefaultName: Vecino 1
   DefaultSprite: {fileID: 0}
@@ -63491,7 +63799,7 @@ MonoBehaviour:
   interaccionesNecesarias: 3
   gestorPistasUI: {fileID: 11566797}
   escenaDestino: FinalScene
-  outroController: {fileID: 286448956}
+  ChangeScener: {fileID: 286448958}
   aparicionNPC: {fileID: 387972961}
 --- !u!1001 &1780663630
 PrefabInstance:
@@ -64017,7 +64325,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 543450651902110627}
+      - m_Target: {fileID: 2026840313}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
         m_MethodName: StopTalking
         m_Mode: 1
@@ -64067,7 +64375,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 543450651902110627}
+      - m_Target: {fileID: 2026840313}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
         m_MethodName: StopTalking
         m_Mode: 1
@@ -64117,7 +64425,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 543450651902110627}
+      - m_Target: {fileID: 2026840313}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
         m_MethodName: StopTalking
         m_Mode: 1
@@ -64224,7 +64532,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 543450651902110627}
+      - m_Target: {fileID: 2026840313}
         m_TargetAssemblyTypeName: NPCAnimationTrigger, Assembly-CSharp
         m_MethodName: StartTalking
         m_Mode: 1
@@ -66855,6 +67163,10 @@ PrefabInstance:
       value: Mujer Mayor
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -67924,7 +68236,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2311.166
+      value: -2311.285
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: db3d0f8ff5347f646bf71bb3234a2c6a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68258,7 +68570,7 @@ MonoBehaviour:
   NodeID: 22
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 0}
+  Audio: {fileID: 8300000, guid: 4d9827af8ddb11f48b715bc4d7a43bfb, type: 3}
 --- !u!114 &1862271197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69826,9 +70138,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1917015423}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.018, y: -0.635, z: 0.037}
-  m_LocalScale: {x: 1.5657, y: 0.42759266, z: 2.074655}
+  m_LocalRotation: {x: -0, y: -0.000000029802319, z: -0, w: 1}
+  m_LocalPosition: {x: -1.0967172, y: -0.6349901, z: 0.12535919}
+  m_LocalScale: {x: 1.5656998, y: 0.42759272, z: 2.074655}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1174081664}
@@ -70737,6 +71049,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7494120eb876ff84a9423e1daf7be74b, type: 3}
+--- !u!4 &1940091770 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7d859dbae2b2cf84fb7a7204d4548c2c, type: 3}
+  m_PrefabInstance: {fileID: 172194094}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1947444171
 GameObject:
   m_ObjectHideFlags: 0
@@ -73092,6 +73409,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026249718}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2026840310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+  m_PrefabInstance: {fileID: 626647223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2026840311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 10ff7677f26a45f44996173679a265a6, type: 3}
+  m_PrefabInstance: {fileID: 626647223}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2026840313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026840310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22db637f9eb68494483b66df949d0b5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCAnimationTrigger
 --- !u!4 &2026990923 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}

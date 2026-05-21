@@ -13,7 +13,7 @@ public class GameManagerNew : MonoBehaviour
     public string escenaDestino = "EscenaSiguiente"; // ✅ nombre de la escena destino
 
     [Header("Outro")]
-    public OutroController outroController; // Arrastra el GameObject con OutroController
+    public ChangeScener ChangeScener; // Arrastra el GameObject con OutroController
 
     [Header("Eventos de Mapa")]
     public AparicionNPC aparicionNPC; // Referencia al nuevo controlador del NPC
@@ -67,8 +67,8 @@ public class GameManagerNew : MonoBehaviour
         {
             Debug.Log("¡Progreso completo! Iniciando outro...");
 
-            if (outroController != null)
-                outroController.PlayOutro();
+            if (ChangeScener != null)
+                ChangeScener.PlayCredits();
             else
                 Debug.LogError("OutroController no asignado en el Inspector");
         }
