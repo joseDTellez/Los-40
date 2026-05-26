@@ -72,14 +72,20 @@ public class ObjectController : MonoBehaviour
 
         if (_isGazingAtObject)
         {
-            //Entrada por teclado para pruebas
-            if (Keyboard.current.kKey.wasPressedThisFrame)
+            // Soporte para MOUSE (Clic izquierdo)
+            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+            {
+                ShowInformation();
+            }
+
+            // Soporte para TECLADO (con validación de null)
+            if (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame)
             {
                 Debug.Log("Se presiona k");
                 ShowInformation();
             }
 
-            // GAMEPAD (gatillo / botón)
+            // Soporte para GAMEPAD (gatillo / botón)
             if (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame)
             {
                 ShowInformation();

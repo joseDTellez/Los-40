@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Standalone Settings
   m_EditorClassIdentifier: Unity.XR.Management::UnityEngine.XR.Management.XRGeneralSettings
   m_LoaderManagerInstance: {fileID: -6598353866093649099}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0
 --- !u!114 &-6598353866093649099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,8 +29,7 @@ MonoBehaviour:
   m_RequiresSettingsUpdate: 0
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
-  m_Loaders:
-  - {fileID: 11400000, guid: ffb65c33fa4cf1d4183ed427a8d1adcf, type: 2}
+  m_Loaders: []
 --- !u!114 &-701401998079596171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,8 +45,7 @@ MonoBehaviour:
   m_RequiresSettingsUpdate: 0
   m_AutomaticLoading: 0
   m_AutomaticRunning: 0
-  m_Loaders:
-  - {fileID: 11400000, guid: 3beef56f87ccfea428dffb0bcda85c05, type: 2}
+  m_Loaders: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,4 +75,4 @@ MonoBehaviour:
   m_Name: Android Settings
   m_EditorClassIdentifier: Unity.XR.Management::UnityEngine.XR.Management.XRGeneralSettings
   m_LoaderManagerInstance: {fileID: -701401998079596171}
-  m_InitManagerOnStart: 1
+  m_InitManagerOnStart: 0

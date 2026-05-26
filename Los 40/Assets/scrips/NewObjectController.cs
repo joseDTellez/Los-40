@@ -95,10 +95,16 @@ public class NewObjectController : MonoBehaviour
     {
         if (!_isGazing) return;
 
-        if (Keyboard.current.kKey.wasPressedThisFrame)
+        // Soporte para Teclado
+        if (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame)
             AlternarInspeccion();
 
+        // Soporte para Gamepad
         if (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame)
+            AlternarInspeccion();
+
+        // Soporte para Mouse (Clic Izquierdo)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             AlternarInspeccion();
     }
 
