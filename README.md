@@ -20,8 +20,8 @@ Bienvenidos al parque El Lago Gaitán es una aplicación de Realidad Virtual que
 3. Instala el archivo `.apk` 
 4. Asegúrate de otorgar los permisos necesarios en los ajustes de tu dispositivo si es requerido.
 
-## Version de PC para WIndows
-1. Descarga el archivo `.zip` en -> [APK Los años 40](https://github.com/joseDTellez/Los-40/releases/download/untagged-c6c0da02f431a40ff11d/Los40sPC.zip)).
+## Version de Escritorio para WIndows
+1. Descarga el archivo `.zip` en -> [Ejecutable Los años 40](https://github.com/joseDTellez/Los-40/releases/download/untagged-c6c0da02f431a40ff11d/Los40sPC.zip)).
 2. Descomprime el archivo.
 3. Ejecuta  el archivo `Los40s.exe` 
    
