@@ -506,7 +506,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295538483}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: b35f8b2a123208f41a9a5351cc38ce4b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: b46c7fd3d8e076645ba1523574211d67, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -714,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2301146, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 723926960, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_Enabled
@@ -2022,28 +2022,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1990341620}
-  - component: {fileID: 1990341619}
+  - component: {fileID: 1990341621}
   m_Layer: 0
-  m_Name: IntroManager
+  m_Name: OutroManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1990341619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990341618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee65b374110d1754aaba77a1aeacfb6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::IntroController
-  introDuration: 32
-  nextScene: MainScene
 --- !u!4 &1990341620
 Transform:
   m_ObjectHideFlags: 0
@@ -2059,6 +2045,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1990341621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990341618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e43496c8bd9d4644eb7c5f08acb401f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: CardboardSamples::OutroController
+  outroDuration: 106
+  quitAfterOutro: 1
 --- !u!1 &2047464136
 GameObject:
   m_ObjectHideFlags: 0
