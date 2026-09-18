@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\NPCIndicatorAndInteraction.cs" />
+    <Compile Include="Assets\Audios\Personaje\BreathingManager.cs" />
     <Compile Include="Assets\Idle\NPCRoutine.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableConversation.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Connection.cs" />
@@ -69,13 +70,16 @@
     <Compile Include="Assets\NPCData.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Parameter.cs" />
     <Compile Include="Assets\NPCProximityInputIcon.cs" />
+    <Compile Include="Assets\Audios\FootstepSynth.cs" />
     <Compile Include="Assets\DialogueEditor\Example\ExampleInputManager.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\NodeEventHolder.cs" />
+    <Compile Include="Assets\Audios\Radio\AudioEstaticaRadio.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableNode.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scenes\ScenesDesktop\PCController.cs" />
     <Compile Include="Assets\ConversationSelector.cs" />
     <Compile Include="Assets\Idle\NPCAnimationTrigger.cs" />
+    <Compile Include="Assets\Audios\RandomHojasAudioLoop.cs" />
     <Compile Include="Assets\DialogueControllerBridge.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\UI\ConversationManager.cs" />
     <Compile Include="Assets\DialogueUIFollower.cs" />
@@ -95,6 +99,7 @@
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\EditableParameter.cs" />
     <Compile Include="Assets\AudioSettingsUI.cs" />
     <Compile Include="Assets\DialogueEditor\Assets\Scripts\SetParamAction.cs" />
+    <Compile Include="Assets\Audios\Sonido de Sintesis Aditiva LLuvia.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
