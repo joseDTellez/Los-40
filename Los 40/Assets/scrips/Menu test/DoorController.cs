@@ -10,12 +10,15 @@ public class DoorController : MonoBehaviour
     [Tooltip("Diferencia angular (en grados) por debajo de la cual consideramos que la puerta ya llegó a su destino.")]
     public float umbralLlegada = 0.5f;
 
-    bool abrir = false;
-    Quaternion rotacionAbierta;
-    PuertaAudioProcedural audioProcedural;
+    private Quaternion rotacionCerrada;
+    private Quaternion rotacionAbierta;
+    private Quaternion rotacionDestino; // Hacia dónde debe girar actualmente
 
-    float anguloRestanteAnterior;
-    bool moviendoPrevio = false;
+    private bool enMovimiento = false; // Controla si el Update debe calcular la rotación
+    private PuertaAudioProcedural audioProcedural;
+
+    private float anguloRestanteAnterior;
+    private bool moviendoPrevio = false;
 
     void Awake()
     {
@@ -24,21 +27,26 @@ public class DoorController : MonoBehaviour
 
     void Start()
     {
+        // Guardamos las dos posiciones: la inicial (cerrada) y la calculada (abierta)
+        rotacionCerrada = door.rotation;
         rotacionAbierta = Quaternion.Euler(door.eulerAngles + new Vector3(0, openAngle, 0));
-        anguloRestanteAnterior = Quaternion.Angle(door.rotation, rotacionAbierta);
+
+        // El destino inicial es estar cerrada
+        rotacionDestino = rotacionCerrada;
     }
 
     void Update()
     {
-        if (!abrir) return;
+        // Si no hay orden de movimiento, no hacemos nada
+        if (!enMovimiento) return;
 
-        door.rotation = Quaternion.Slerp(door.rotation, rotacionAbierta, Time.deltaTime * speed);
+        // Rotamos suavemente hacia el destino actual (sea abierto o cerrado)
+        door.rotation = Quaternion.Slerp(door.rotation, rotacionDestino, Time.deltaTime * speed);
 
         // Cuánto le falta a la puerta para llegar a su rotación final
-        float anguloRestante = Quaternion.Angle(door.rotation, rotacionAbierta);
+        float anguloRestante = Quaternion.Angle(door.rotation, rotacionDestino);
 
-        // Velocidad angular real de este frame: cuánto se redujo la
-        // diferencia respecto al frame anterior, en grados/segundo.
+        // Velocidad angular real de este frame
         float velocidadAngular = (anguloRestanteAnterior - anguloRestante) / Time.deltaTime;
         anguloRestanteAnterior = anguloRestante;
 
@@ -50,16 +58,32 @@ public class DoorController : MonoBehaviour
         }
         else if (moviendoPrevio)
         {
-            // La puerta acaba de llegar a su ángulo final: apaga el
-            // chirrido y dispara el golpe grave, una sola vez.
+            // La puerta acaba de llegar a su ángulo final
+            // Aseguramos que quede exactamente en la rotación final
+            door.rotation = rotacionDestino;
+
             audioProcedural.DetenerChirridoYGolpear();
+
+            // Detenemos los cálculos del Update hasta que se dé una nueva orden
+            enMovimiento = false;
         }
 
         moviendoPrevio = sigueMoviendose;
     }
 
+    // --- NUEVOS MÉTODOS DE APERTURA Y CIERRE ---
+
     public void OpenDoor()
     {
-        abrir = true;
+        rotacionDestino = rotacionAbierta;
+        anguloRestanteAnterior = Quaternion.Angle(door.rotation, rotacionDestino);
+        enMovimiento = true;
+    }
+
+    public void CloseDoor()
+    {
+        rotacionDestino = rotacionCerrada;
+        anguloRestanteAnterior = Quaternion.Angle(door.rotation, rotacionDestino);
+        enMovimiento = true;
     }
 }

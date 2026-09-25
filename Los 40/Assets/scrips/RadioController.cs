@@ -14,7 +14,7 @@ public class RadioController : MonoBehaviour
     public float distanceInFront = 0.7f;
 
     [Header("Perillas (Solo el Mesh)")]
-    public Transform leftKnobMesh;  // Perilla On/Off
+    public Transform leftKnobMesh;  // Perilla Emisora
     public Transform rightKnobMesh; // Perilla Volumen
     public float knobSmoothSpeed = 10f;
 
@@ -62,7 +62,7 @@ public class RadioController : MonoBehaviour
         {
             bool interactPressed = (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame) ||
                                    (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame) ||
-                                   (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame); // <-- Añadido para el clic izquierdo
+                                   (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame);
 
             if (interactPressed)
             {
@@ -73,21 +73,26 @@ public class RadioController : MonoBehaviour
 
     private void Interactuar()
     {
+        // Si no está cerca, calculamos la posición para inspeccionarla y la marcamos como cercana
         if (!_isNear)
         {
-            // Acercar la radio para inspección
             _inspectPos = cameraTransform.position + (cameraTransform.forward * distanceInFront);
             _inspectRot = Quaternion.LookRotation(cameraTransform.position - _inspectPos);
             _isNear = true;
-
-            // Opcional: Encender al agarrar
-            if (!_radioIsOn) AlternarOnOff();
         }
-        else
+
+        // Ejecutamos la acción dependiendo de qué parte de la radio se está seleccionando
+        if (_gazedPart == "Radio")
         {
-            // Si ya está cerca, interactuamos con las partes específicas
-            if (_gazedPart == "Left") AlternarOnOff();
-            else if (_gazedPart == "Right") CambiarVolumen();
+            AlternarOnOff();
+        }
+        else if (_gazedPart == "Left")
+        {
+            CambiarEmisora();
+        }
+        else if (_gazedPart == "Right")
+        {
+            CambiarVolumen();
         }
     }
 
@@ -96,9 +101,20 @@ public class RadioController : MonoBehaviour
         _radioIsOn = !_radioIsOn;
         if (commonAudioSource) commonAudioSource.PlayOneShot(_radioIsOn ? soundON : soundOFF);
 
-        // Rotación: 0 grados si OFF, 60 grados si ON
-        _leftTargetAngle = _radioIsOn ? 60f : 0f;
+        ActualizarEmisoras();
+    }
 
+    private void CambiarEmisora()
+    {
+        // Solo cambia emisora si está encendido y hay emisoras configuradas
+        if (!_radioIsOn || stationSources == null || stationSources.Length == 0) return;
+
+        _currentStation = (_currentStation + 1) % stationSources.Length;
+
+        // Gira -30 grados por cada cambio de emisora (puedes ajustar el valor)
+        _leftTargetAngle -= 30f;
+
+        if (commonAudioSource && soundHover) commonAudioSource.PlayOneShot(soundHover);
         ActualizarEmisoras();
     }
 
@@ -108,7 +124,7 @@ public class RadioController : MonoBehaviour
 
         _currentVolumeIndex = (_currentVolumeIndex + 1) % _volumeLevels.Length;
 
-        // Gira -45 grados por cada nivel de volumen
+        // Gira -50 grados por cada nivel de volumen
         _rightTargetAngle -= 50f;
 
         if (commonAudioSource && soundHover) commonAudioSource.PlayOneShot(soundHover);
@@ -122,9 +138,11 @@ public class RadioController : MonoBehaviour
         {
             if (stationSources[i] != null)
             {
+                // Si la radio está prendida y es la estación actual, aplica el volumen. De lo contrario, volumen 0.
                 float targetVol = (_radioIsOn && i == _currentStation) ? _volumeLevels[_currentVolumeIndex] : 0f;
                 stationSources[i].volume = targetVol;
 
+                // Nos aseguramos de que estén reproduciéndose
                 if (_radioIsOn && !stationSources[i].isPlaying) stationSources[i].Play();
             }
         }
@@ -139,7 +157,6 @@ public class RadioController : MonoBehaviour
     private void ActualizarRotacionFisicaPerillas()
     {
         // IMPORTANTE: Si la perilla gira en el eje equivocado, cambia el eje en Euler(0, 0, ángulo)
-
         if (leftKnobMesh)
         {
             Quaternion targetRot = Quaternion.Euler(0, 0, _leftTargetAngle);
@@ -186,9 +203,11 @@ public class RadioController : MonoBehaviour
         yield return new WaitForSeconds(graceTime);
         _isExiting = false;
         _isGazing = false;
+
         if (_isNear)
         {
             yield return new WaitForSeconds(0.5f);
+            // Si el jugador realmente dejó de mirar la radio, la devolvemos a su posición original
             if (!_isGazing)
             {
                 _isNear = false;

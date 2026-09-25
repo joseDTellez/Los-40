@@ -26,6 +26,9 @@ public class ObjectController : MonoBehaviour
     private bool _isGazingAtPanel = false;
     private bool _interactionTriggered = false;
 
+    // NUEVO: Variable para controlar si la puerta está abierta o cerrada
+    private bool _isDoorOpen = false;
+
     // Corrutina para manejar el buffer de salida
     private Coroutine _resetRoutine;
 
@@ -42,73 +45,79 @@ public class ObjectController : MonoBehaviour
 
     void Update()
     {
-        //// GESTIÓN DE LA CARGA
-        //if (_isGazingAtObject && !_interactionTriggered)
-        //{
-        //    _gazeTimer += Time.deltaTime;
-        //    if (loadingCircle != null)
-        //        loadingCircle.fillAmount = Mathf.Clamp01(_gazeTimer / gazeTimeToInteract);
+        //// GESTIÓN DE LA CARGA (Comentado en tu código original)
+        // ...
 
-        //    if (_gazeTimer >= gazeTimeToInteract)
-        //    {
-        //        _interactionTriggered = true;
-        //        ShowInformation();
-        //        _gazeTimer = 0f;
-        //        if (loadingCircle != null) loadingCircle.fillAmount = 0f;
-        //    }
-        //}
-
-        //// GESTIÓN DEL CIERRE AUTOMÓTICO (Invoke)
-        //// Si no estamos mirando nada y ya se activó la información
-        //if (!_isGazingAtObject && !_isGazingAtPanel && _interactionTriggered)
-        //{
-        //    if (!IsInvoking("ClosePanel")) Invoke("ClosePanel", 5f);
-        //}
-        //else
-        //{
-        //    // Si volvemos a mirar, cancelamos el cierre
-        //    CancelInvoke("ClosePanel");
-        //}
+        //// GESTIÓN DEL CIERRE AUTOMÓTICO (Invoke) (Comentado en tu código original)
+        // ...
 
         if (_isGazingAtObject)
         {
             // Soporte para MOUSE (Clic izquierdo)
             if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
             {
-                ShowInformation();
+                ToggleDoorState();
             }
 
             // Soporte para TECLADO (con validación de null)
             if (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame)
             {
                 Debug.Log("Se presiona k");
-                ShowInformation();
+                ToggleDoorState();
             }
 
             // Soporte para GAMEPAD (gatillo / botón)
             if (Gamepad.current != null && Gamepad.current.rightShoulder.wasPressedThisFrame)
             {
-                ShowInformation();
+                ToggleDoorState();
             }
         }
-
     }
-    //Debug de abrir la puerta
-    private void ShowInformation()
+
+    // NUEVO: Método que alterna el estado de la puerta (Abrir/Cerrar)
+    private void ToggleDoorState()
     {
         if (_outline != null) _outline.enabled = false;
 
-        if (textToShow != null) textToShow.SetActive(true);
+        // Invertimos el estado actual
+        _isDoorOpen = !_isDoorOpen;
 
-        if (audioSource != null && openClip != null)
+        if (_isDoorOpen)
         {
-            audioSource.PlayOneShot(openClip);
+            // --- ACCIÓN DE ABRIR ---
+            if (textToShow != null) textToShow.SetActive(true);
+
+            if (audioSource != null && openClip != null)
+            {
+                audioSource.PlayOneShot(openClip);
+            }
+
+            if (doorController != null)
+            {
+                Debug.Log("Abriendo puerta");
+                doorController.OpenDoor();
+            }
+
+            _interactionTriggered = true; // Marca que ya se interactuó
         }
-
-        if (doorController != null)
+        else
         {
-            Debug.Log("Abriendo puerta");
-            doorController.OpenDoor();
+            // --- ACCIÓN DE CERRAR ---
+            if (textToShow != null) textToShow.SetActive(false);
+
+            if (audioSource != null && closeClip != null)
+            {
+                audioSource.PlayOneShot(closeClip);
+            }
+
+            if (doorController != null)
+            {
+                Debug.Log("Cerrando puerta");
+                // IMPORTANTE: Asegúrate de que tu DoorController tenga un método llamado CloseDoor()
+                doorController.CloseDoor();
+            }
+
+            _interactionTriggered = false; // Reinicia la interacción para que vuelva a aparecer el Outline al mirar
         }
     }
 
@@ -125,7 +134,7 @@ public class ObjectController : MonoBehaviour
             }
 
             _interactionTriggered = false;
-  
+
             if (loadingCircle != null) loadingCircle.fillAmount = 0f;
         }
     }
@@ -188,7 +197,6 @@ public class ObjectController : MonoBehaviour
         {
             if (!_interactionTriggered)
             {
-          
                 if (loadingCircle != null) loadingCircle.fillAmount = 0f;
                 if (_outline != null) _outline.enabled = false;
             }
