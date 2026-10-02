@@ -36,7 +36,7 @@ public class DialogueTestingController : MonoBehaviour
         // GAMEPAD
         if (Gamepad.current != null)
         {
-            // Navegación con stick o d-pad
+            // NavegaciÃ³n con stick o d-pad
             if (Gamepad.current.dpad.up.wasPressedThisFrame ||
                 Gamepad.current.leftStick.up.wasPressedThisFrame)
             {
@@ -49,7 +49,7 @@ public class DialogueTestingController : MonoBehaviour
                 ConversationManager.Instance.SelectNextOption();
             }
 
-            // Seleccionar opción (botón A o gatillo)
+            // Seleccionar opciÃ³n (botÃ³n A o gatillo)
             if (Gamepad.current.buttonSouth.wasPressedThisFrame ||
                 Gamepad.current.rightTrigger.wasPressedThisFrame)
             {

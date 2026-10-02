@@ -88,6 +88,12 @@ AudioMixerController:
     name: MusicVol
   - guid: 1e288f1c09026b641819229be74b13eb
     name: SFXVol
+  - guid: ff6b6eac603783244bc2e7e00e5e2330
+    name: VocesVol
+  - guid: d06d70c443677314d8f7f8f7f72e2e32
+    name: EfectosVol
+  - guid: 1da21a8d5a62fa2419c3bba2a1b6fd90
+    name: JugadorVol
   m_AudioMixerGroupViews:
   - guids:
     - edd2ae55a0edebd438bc6f71bb67c331

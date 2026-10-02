@@ -109,4 +109,20 @@ BurstDebugInformation_DoNotShip/
 *.dll
 *.app
 *.unitypackage
-Los 40/UserSettings/Layouts/default-6000.dwlt
+*_BurstDebugInformation_DoNotShip/
+compilaciones/
+
+############################
+# IDE / herramientas externas
+############################
+
+*.slnx
+UpgradeLog*.htm
+.mayaSwatches/
+*.pkf
+
+############################
+# Puente Claude (comandos para el editor abierto)
+############################
+
+ComandosClaude/
