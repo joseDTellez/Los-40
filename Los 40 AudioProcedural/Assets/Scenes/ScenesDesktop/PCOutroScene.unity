@@ -422,7 +422,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21c2db72a31629249804a72ed0d9fd4b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::PlayerCollision
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
   head: {fileID: 1577425971}
   florReference: {fileID: 1848951746}
 --- !u!1 &295538483
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54d8756749912494289c7a6493ad904d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::SimpleLookAt
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleLookAt
   playerCamera: {fileID: 1577425971}
   distance: 2
   followSpeed: 10
@@ -662,7 +662,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 171526, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_Name
-      value: CardboardReticlePointer
+      value: Reticula
       objectReference: {fileID: 0}
     - target: {fileID: 171526, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_IsActive
@@ -932,7 +932,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 970415580}
-  - component: {fileID: 970415582}
   - component: {fileID: 970415581}
   m_Layer: 0
   m_Name: Player
@@ -987,26 +986,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &970415582
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 970415579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c813724f6d3bc08418f86a709843eff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRBoxController
-  canMove: 0
-  canInteract: 1
-  speed: 2
-  cameraTransform: {fileID: 1577425971}
-  rayDistance: 10
-  interactLayer:
-    serializedVersion: 2
-    m_Bits: 64
 --- !u!1 &1119829313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1181,6 @@ GameObject:
   - component: {fileID: 1577425977}
   - component: {fileID: 1577425976}
   - component: {fileID: 1577425975}
-  - component: {fileID: 1577425974}
   - component: {fileID: 1577425973}
   - component: {fileID: 1577425972}
   m_Layer: 0
@@ -1289,91 +1267,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &1577425974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577425970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackingType: 0
-  m_UpdateType: 2
-  m_IgnoreTrackingState: 0
-  m_PositionInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Position Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: dc14070c-ed50-427c-b3fb-6e368afa597a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 23345476-ed2d-40ff-b608-e2f0191dd89b
-        m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position Input
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: -3599823989380923159, guid: b6d5c44ebe3244b7692e81ae8265eb22, type: 3}
-  m_RotationInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Rotation Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 13038951-d641-4b7a-8826-8d10fc43cbb4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 4160e9e6-cf01-4dbb-8572-30a400509798
-        m_Path: <XRHMD>/centerEyeRotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Rotation Input
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_TrackingStateInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Tracking State Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: fe0bb821-1b1e-40c1-a16d-72eab8d0db43
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PositionAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  m_RotationAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!81 &1577425975
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2056,7 +1949,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e43496c8bd9d4644eb7c5f08acb401f1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutroController
+  m_EditorClassIdentifier: Assembly-CSharp::OutroController
   outroDuration: 106
   quitAfterOutro: 1
 --- !u!1 &2047464136
@@ -2103,7 +1996,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79f0e2b43f6d147448015edab3a37308, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::SceneFadeTransition
+  m_EditorClassIdentifier: Assembly-CSharp::SceneFadeTransition
   fadeImage: {fileID: 826047480}
   fadeDuration: 2
 --- !u!1660057539 &9223372036854775807

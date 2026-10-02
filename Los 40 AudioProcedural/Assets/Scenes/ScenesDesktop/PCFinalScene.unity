@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: b2c76602e64e7e449b4a34128e625d16
-  m_OcclusionCullingData: {fileID: 36300000, guid: 06927a790d6139e46bfd9976860579bf, type: 2}
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67f063938dbf0e14795d274155c4c62b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::GestorPistasUI
+  m_EditorClassIdentifier: Assembly-CSharp::GestorPistasUI
   textoTendero: {fileID: 342253952}
   textoVecinos: {fileID: 634284636}
   textoNino: {fileID: 1265338415}
@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 0}
   indicatorRoot: {fileID: 250022139}
   indicatorImage: {fileID: 1173091778}
@@ -1943,7 +1943,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_tendero
 --- !u!4 &28181807
 Transform:
@@ -7734,7 +7734,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HAZ ENCONTRADO
+  m_text: HAS ENCONTRADO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   m_sharedMaterial: {fileID: 5095579657299101747, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
@@ -8846,7 +8846,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickBack
         m_Mode: 1
         m_Arguments:
@@ -9316,7 +9316,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21c2db72a31629249804a72ed0d9fd4b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::PlayerCollision
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
   head: {fileID: 1577425971}
   florReference: {fileID: 1848951746}
 --- !u!1001 &247148083
@@ -11177,7 +11177,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 296960149}
   inputIconRoot: {fileID: 60229664}
 --- !u!114 &275055308
@@ -11193,14 +11193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 150584129}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &275055309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12463,10 +12456,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adca1f819165c5945ae7b0f9f5ff84df, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::DoorController
+  m_EditorClassIdentifier: Assembly-CSharp::DoorController
   door: {fileID: 313677630}
   openAngle: 90
   speed: 2
+  umbralLlegada: 0.5
 --- !u!65 &313677634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12488,6 +12482,133 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7963983, y: 1.8689041, z: 0.12469306}
   m_Center: {x: -0.3981987, y: 0, z: -0.0011932997}
+--- !u!114 &313677635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313677629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c612024905f11a84b8600490155b1bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAudioProcedural
+  qFiltroBanda: 3.5
+  suavizadoFrecuenciaChirrido: 0.0008
+  frecuenciaPulsoMin: 40
+  frecuenciaPulsoMax: 200
+  intensidadRuidoFondo: 0.15
+  velocidadReferenciaGradosSeg: 90
+  suavizadoGanancia: 0.001
+  sendReverb: 0.18
+  roomSize: 0.2
+  damp: 0.7
+  proporcionesInarmonicas:
+  - 1
+  - 1.37
+  - 2.63
+  pesosParciales:
+  - 1
+  - 0.6
+  - 0.35
+--- !u!82 &313677636
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313677629}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &318269457
 GameObject:
   m_ObjectHideFlags: 0
@@ -12635,7 +12756,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4088a5b9cf626074a83026ea86a8ab6e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioPart
+  m_EditorClassIdentifier: Assembly-CSharp::RadioPart
   mainController: {fileID: 1406350326}
   parte: 1
 --- !u!65 &321896760
@@ -13604,7 +13725,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a96c8b76f75753409d9a9f7afa03a08, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRInteractiveMessage
+  m_EditorClassIdentifier: Assembly-CSharp::VRInteractiveMessage
   canvasGroup: {fileID: 1012568568}
   playerCamera: {fileID: 0}
   distance: 3
@@ -15195,7 +15316,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 1443408518}
   inputIconRoot: {fileID: 260813673}
 --- !u!114 &366577153
@@ -15211,14 +15332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1618700893}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &366577154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15566,7 +15680,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 171526, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_Name
-      value: CardboardReticlePointer
+      value: Reticula
       objectReference: {fileID: 0}
     - target: {fileID: 171526, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_IsActive
@@ -15850,7 +15964,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01233a5a890631a408c1a4fed70bafa6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::AparicionNPC
+  m_EditorClassIdentifier: Assembly-CSharp::AparicionNPC
   npcModel: {fileID: 1245041885}
   dialogosRequeridos: 2
 --- !u!1 &389160576 stripped
@@ -17151,7 +17265,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -8112214465193599599, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 08771a38af982d54f89b1f35c2271607, type: 3}
+  m_Resource: {fileID: 8300000, guid: 834f06217038cb249b502f09d29e10d2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -17434,7 +17548,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4088a5b9cf626074a83026ea86a8ab6e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioPart
+  m_EditorClassIdentifier: Assembly-CSharp::RadioPart
   mainController: {fileID: 1406350326}
   parte: 2
 --- !u!1001 &450943883
@@ -17881,7 +17995,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a96c8b76f75753409d9a9f7afa03a08, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRInteractiveMessage
+  m_EditorClassIdentifier: Assembly-CSharp::VRInteractiveMessage
   canvasGroup: {fileID: 1956632696}
   playerCamera: {fileID: 0}
   distance: 2
@@ -18658,7 +18772,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee65b374110d1754aaba77a1aeacfb6e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::IntroController
+  m_EditorClassIdentifier: Assembly-CSharp::IntroController
   introDuration: 25
   nextScene: PCOutroScene
 --- !u!4 &507465266
@@ -19483,7 +19597,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickOptions
         m_Mode: 1
         m_Arguments:
@@ -19604,7 +19718,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4088a5b9cf626074a83026ea86a8ab6e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioPart
+  m_EditorClassIdentifier: Assembly-CSharp::RadioPart
   mainController: {fileID: 1406350326}
   parte: 0
 --- !u!1001 &544118765
@@ -21900,7 +22014,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_lider
 --- !u!114 &617997846
 MonoBehaviour:
@@ -21913,7 +22027,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 0}
   indicatorRoot: {fileID: 60229664}
   indicatorImage: {fileID: 1173091778}
@@ -22502,7 +22616,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c334ac7a6d4bd0143a86f0bd0cf76e71, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::LetreroNotificacion
+  m_EditorClassIdentifier: Assembly-CSharp::LetreroNotificacion
   tiempoVisible: 5
   tiempoFade: 0.2
   textoLetrero: {fileID: 1718925275}
@@ -23319,8 +23433,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca431c0cc68bb0f489c9a63a9a2cf223, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::ChangeScenerTrigger
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScenerTrigger
   TriggerController: {fileID: 1208820272}
+  tagObjetivo: "Ni\xF1a"
 --- !u!1001 &652483596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23783,9 +23898,9 @@ AudioSource:
   m_GameObject: {fileID: 652483597}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3848878506427107533, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 53cc8929e6352d74586bfdb1ff35028f, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -30371,7 +30486,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickControls
         m_Mode: 1
         m_Arguments:
@@ -32934,7 +33049,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e4cc88028a60748b84fb0698ae1d78, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::ObjectiveTriggerUI
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveTriggerUI
   panelRoot: {fileID: 936393920}
   fadeDuration: 0.8
   displayDuration: 3
@@ -34241,9 +34356,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3165278949e7b9048a8638aa65aef85e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::DialogueControllerBridge
-  vrController: {fileID: 0}
-  xrSimulatorObject: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueControllerBridge
+  playerController: {fileID: 0}
 --- !u!1001 &971302287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36020,7 +36134,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickOptions
         m_Mode: 1
         m_Arguments:
@@ -36810,6 +36924,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -7235015103121818086, guid: bcaa96e2ee9c7d44a896d6d0cd64d95e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 313677634}
+    - targetCorrespondingSourceObject: {fileID: -7235015103121818086, guid: bcaa96e2ee9c7d44a896d6d0cd64d95e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 313677636}
+    - targetCorrespondingSourceObject: {fileID: -7235015103121818086, guid: bcaa96e2ee9c7d44a896d6d0cd64d95e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 313677635}
   m_SourcePrefab: {fileID: 100100000, guid: bcaa96e2ee9c7d44a896d6d0cd64d95e, type: 3}
 --- !u!1001 &1031317964
 PrefabInstance:
@@ -40485,7 +40605,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: "npc_ni\xF1o"
 --- !u!114 &1140754014
 MonoBehaviour:
@@ -40498,7 +40618,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 0}
   indicatorRoot: {fileID: 1440658437}
   indicatorImage: {fileID: 1648433530}
@@ -41078,7 +41198,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1453601048}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -41102,7 +41222,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -42043,7 +42163,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79f0e2b43f6d147448015edab3a37308, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::SceneFadeTransition
+  m_EditorClassIdentifier: Assembly-CSharp::SceneFadeTransition
   fadeImage: {fileID: 2107916415}
   fadeDuration: 2
 --- !u!1 &1173091777
@@ -42296,7 +42416,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 0}
   indicatorRoot: {fileID: 155809633}
   indicatorImage: {fileID: 1173091778}
@@ -43622,10 +43742,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cb0a9e9e8b9fee448de42846cea8851, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::ChangeScener
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScener
   sceneDuration: 2
-  nextScene: OutroScene
-  contact: 0
+  nextScene: PCOutroScene
 --- !u!1001 &1210158771
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49935,7 +50054,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adde68de01cd82d4f80bb78a86922b03, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioController
+  m_EditorClassIdentifier: Assembly-CSharp::RadioController
   cameraTransform: {fileID: 0}
   graceTime: 0.25
   transitionSpeed: 5
@@ -49953,7 +50072,6 @@ MonoBehaviour:
   - {fileID: 773401464}
   - {fileID: 194396409}
   commonAudioSource: {fileID: 513433202}
-  musicaFondoSource: {fileID: 567725811}
   soundON: {fileID: 8300000, guid: 113876060550706438c04a2a7b72d8ff, type: 3}
   soundOFF: {fileID: 8300000, guid: b1a537513f26a194a899e4291352faf8, type: 3}
   soundHover: {fileID: 8300000, guid: cb3786e35f1f40642a97372fa3f938c5, type: 3}
@@ -49989,7 +50107,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 1.5
   colorNaranja: {r: 0, g: 1, b: 0.8, a: 1}
@@ -50468,7 +50586,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1007abb5ee2f6834bac4ccbdf4d61476, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NewObjectController
+  m_EditorClassIdentifier: Assembly-CSharp::NewObjectController
   cameraTransform: {fileID: 1577425971}
   distanceInFront: 0.7
   transitionSpeed: 5
@@ -50532,7 +50650,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 1
   colorNaranja: {r: 1, g: 0.5490196, b: 0, a: 1}
@@ -51721,7 +51839,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 0}
   indicatorRoot: {fileID: 260813673}
   indicatorImage: {fileID: 868565590}
@@ -51825,7 +51943,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_vecinos
 --- !u!1 &1456613479
 GameObject:
@@ -52289,7 +52407,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -52313,7 +52431,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -53038,7 +53156,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickContinue
         m_Mode: 1
         m_Arguments:
@@ -53967,7 +54085,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 846728496}
   inputIconRoot: {fileID: 1440658437}
 --- !u!114 &1517861787
@@ -53983,14 +54101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1983690}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1517861788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -55016,7 +55127,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a96c8b76f75753409d9a9f7afa03a08, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRInteractiveMessage
+  m_EditorClassIdentifier: Assembly-CSharp::VRInteractiveMessage
   canvasGroup: {fileID: 565738612}
   playerCamera: {fileID: 0}
   distance: 3
@@ -56513,7 +56624,6 @@ GameObject:
   - component: {fileID: 1577425977}
   - component: {fileID: 1577425976}
   - component: {fileID: 1577425975}
-  - component: {fileID: 1577425974}
   - component: {fileID: 1577425973}
   - component: {fileID: 1577425972}
   m_Layer: 0
@@ -56607,91 +56717,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &1577425974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577425970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackingType: 0
-  m_UpdateType: 2
-  m_IgnoreTrackingState: 0
-  m_PositionInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Position Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: dc14070c-ed50-427c-b3fb-6e368afa597a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 23345476-ed2d-40ff-b608-e2f0191dd89b
-        m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position Input
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: -3599823989380923159, guid: b6d5c44ebe3244b7692e81ae8265eb22, type: 3}
-  m_RotationInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Rotation Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 13038951-d641-4b7a-8826-8d10fc43cbb4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 4160e9e6-cf01-4dbb-8572-30a400509798
-        m_Path: <XRHMD>/centerEyeRotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Rotation Input
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_TrackingStateInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Tracking State Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: fe0bb821-1b1e-40c1-a16d-72eab8d0db43
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PositionAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  m_RotationAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!81 &1577425975
 AudioListener:
   m_ObjectHideFlags: 0
@@ -57960,7 +57985,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1453601048}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -57984,7 +58009,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -64768,7 +64793,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 994680c34663486469315e6c77646b14, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRMenuManager
+  m_EditorClassIdentifier: Assembly-CSharp::VRMenuManager
   mainPanel: {fileID: 226415572}
   optionsPanel: {fileID: 1766614940}
   optionsControlsPanel: {fileID: 9459750}
@@ -64779,7 +64804,6 @@ MonoBehaviour:
   cameraTransform: {fileID: 1577425971}
   playerMovementScript: {fileID: 0}
   playerRigidbody: {fileID: 970415581}
-  xrSimulator: {fileID: 0}
   menuKey: 30
 --- !u!114 &1779966225
 MonoBehaviour:
@@ -64793,6 +64817,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7840cde80d8d14bb23c396e6f31de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueInputManager
+  deadzone: 0.5
+  scrollDelay: 0.3
 --- !u!1001 &1780663630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66124,7 +66150,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 1554374903}
   inputIconRoot: {fileID: 250022139}
 --- !u!114 &1792476998
@@ -66140,14 +66166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 830457200}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1792476999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68443,7 +68462,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_novios
 --- !u!114 &1833298619
 MonoBehaviour:
@@ -68456,7 +68475,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 0}
   indicatorRoot: {fileID: 2001897811}
   indicatorImage: {fileID: 1173091778}
@@ -69529,7 +69548,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 28181806}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -69553,7 +69572,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -70551,7 +70570,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickExit
         m_Mode: 1
         m_Arguments:
@@ -71165,7 +71184,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 843128912}
   inputIconRoot: {fileID: 155809633}
 --- !u!114 &1917015426
@@ -71181,14 +71200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 592441146}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1917015427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72109,7 +72121,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 1295936878}
   inputIconRoot: {fileID: 2001897811}
 --- !u!114 &1947444174
@@ -72125,14 +72137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 889238821}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1947444175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -74987,7 +74992,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickBack
         m_Mode: 1
         m_Arguments:
@@ -75594,13 +75599,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e1e5480b41f5384a973eba746b7e016, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::ObjectController
-  gazeTimeToInteract: 1.5
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectController
   loadingCircle: {fileID: 0}
   textToShow: {fileID: 0}
   graceTime: 0.2
   audioSource: {fileID: 259586270}
-  openClip: {fileID: 8300000, guid: 9a70aa7bae985e84a9828a5c6ce3131a, type: 3}
+  openClip: {fileID: 8300000, guid: cb3786e35f1f40642a97372fa3f938c5, type: 3}
   closeClip: {fileID: 0}
   soundHover: {fileID: 8300000, guid: cb3786e35f1f40642a97372fa3f938c5, type: 3}
   doorController: {fileID: 313677631}
@@ -75615,7 +75619,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1007abb5ee2f6834bac4ccbdf4d61476, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NewObjectController
+  m_EditorClassIdentifier: Assembly-CSharp::NewObjectController
   cameraTransform: {fileID: 1577425971}
   distanceInFront: 0.7
   transitionSpeed: 5
@@ -75663,7 +75667,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 0.5
   colorNaranja: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
@@ -78803,7 +78807,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 0.5
   colorNaranja: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
@@ -81080,7 +81084,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 1.5
   colorNaranja: {r: 0, g: 1, b: 0.8, a: 1}

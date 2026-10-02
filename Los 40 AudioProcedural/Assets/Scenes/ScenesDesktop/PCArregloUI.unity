@@ -9,7 +9,7 @@ OcclusionCullingSettings:
     smallestHole: 0.25
     backfaceThreshold: 100
   m_SceneGUID: 6cad14716fd18114c8dd56ca09447fc4
-  m_OcclusionCullingData: {fileID: 36300000, guid: 5f39f7f6aa829c548a42adcf18596ad0, type: 2}
+  m_OcclusionCullingData: {fileID: 0}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1140754013}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -362,7 +362,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -374,7 +374,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 286448958}
-        m_TargetAssemblyTypeName: ChangeScener, CardboardSamples
+        m_TargetAssemblyTypeName: ChangeScener, Assembly-CSharp
         m_MethodName: TriggerOutro
         m_Mode: 1
         m_Arguments:
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67f063938dbf0e14795d274155c4c62b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::GestorPistasUI
+  m_EditorClassIdentifier: Assembly-CSharp::GestorPistasUI
   textoTendero: {fileID: 342253952}
   textoVecinos: {fileID: 634284636}
   textoNino: {fileID: 1265338415}
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 830457200}
   indicatorRoot: {fileID: 250022139}
   indicatorImage: {fileID: 1173091778}
@@ -2003,7 +2003,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_tendero
 --- !u!4 &28181807
 Transform:
@@ -5627,7 +5627,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Hmmm, \xBFDonde estar\xE1 mi hija?"
+  m_text: "Hmmm, \xBFD\xF3nde estar\xE1 mi hija?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   m_sharedMaterial: {fileID: 5095579657299101747, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
@@ -7215,7 +7215,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HAZ ENCONTRADO
+  m_text: HAS ENCONTRADO
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   m_sharedMaterial: {fileID: 5095579657299101747, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
@@ -8323,7 +8323,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickBack
         m_Mode: 1
         m_Arguments:
@@ -8793,7 +8793,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21c2db72a31629249804a72ed0d9fd4b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::PlayerCollision
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCollision
   head: {fileID: 1577425971}
   florReference: {fileID: 1848951746}
 --- !u!1001 &247148083
@@ -10654,7 +10654,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 296960149}
   inputIconRoot: {fileID: 60229664}
 --- !u!114 &275055308
@@ -10670,14 +10670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 150584129}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &275055309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11086,10 +11079,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3cb0a9e9e8b9fee448de42846cea8851, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::ChangeScener
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScener
   sceneDuration: 5
   nextScene: PCFinalScene
-  contact: 0
 --- !u!1 &287370255
 GameObject:
   m_ObjectHideFlags: 0
@@ -11983,7 +11975,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adca1f819165c5945ae7b0f9f5ff84df, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::DoorController
+  m_EditorClassIdentifier: Assembly-CSharp::DoorController
   door: {fileID: 313677630}
   openAngle: 90
   speed: 2
@@ -12117,7 +12109,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c612024905f11a84b8600490155b1bca, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::PuertaAudioProcedural
+  m_EditorClassIdentifier: Assembly-CSharp::PuertaAudioProcedural
   qFiltroBanda: 3.5
   suavizadoFrecuenciaChirrido: 0.0008
   frecuenciaPulsoMin: 40
@@ -12125,12 +12117,6 @@ MonoBehaviour:
   intensidadRuidoFondo: 0.15
   velocidadReferenciaGradosSeg: 90
   suavizadoGanancia: 0.001
-  frecuenciaBase: 65
-  attackSeg: 0.001
-  decaySeg: 0.3
-  sustainNivel: 0.03
-  releaseSeg: 0.1
-  sostenerSeg: 0.02
   sendReverb: 0.18
   roomSize: 0.2
   damp: 0.7
@@ -12289,7 +12275,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4088a5b9cf626074a83026ea86a8ab6e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioPart
+  m_EditorClassIdentifier: Assembly-CSharp::RadioPart
   mainController: {fileID: 1406350326}
   parte: 1
 --- !u!65 &321896760
@@ -13262,7 +13248,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a96c8b76f75753409d9a9f7afa03a08, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRInteractiveMessage
+  m_EditorClassIdentifier: Assembly-CSharp::VRInteractiveMessage
   canvasGroup: {fileID: 1012568568}
   playerCamera: {fileID: 0}
   distance: 3
@@ -13856,7 +13842,7 @@ MonoBehaviour:
   NodeID: 22
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 02173df534ab30744abe4ab8f6e2b117, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13875,7 +13861,7 @@ MonoBehaviour:
   NodeID: 20
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: db2eceb638866214c8aaaf6eb0c86d81, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13894,7 +13880,7 @@ MonoBehaviour:
   NodeID: 18
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1e5b56ee50bf9e24a8923e243d7c0574, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13913,7 +13899,7 @@ MonoBehaviour:
   NodeID: 17
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: fc83b21b296720942a1b6a165577c002, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13932,7 +13918,7 @@ MonoBehaviour:
   NodeID: 15
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: db2eceb638866214c8aaaf6eb0c86d81, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13970,7 +13956,7 @@ MonoBehaviour:
   NodeID: 12
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 02173df534ab30744abe4ab8f6e2b117, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14001,7 +13987,7 @@ MonoBehaviour:
   NodeID: 11
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 7ca616e46af6c5f43a49721a9ac676c5, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14020,7 +14006,7 @@ MonoBehaviour:
   NodeID: 10
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ad16e22588e28234caf1537be5c1374c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14039,7 +14025,7 @@ MonoBehaviour:
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 745c828dc0825c34aab20983fa224137, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &349232354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14058,7 +14044,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: c0613ef85cd333649ad1d8a34b23186c, type: 3}
+  Audio: {fileID: 0}
 --- !u!1 &349541138
 GameObject:
   m_ObjectHideFlags: 0
@@ -14853,7 +14839,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 1443408518}
   inputIconRoot: {fileID: 260813673}
 --- !u!114 &366577153
@@ -14869,14 +14855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1618700893}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &366577154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15220,7 +15199,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 171526, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_Name
-      value: CardboardReticlePointer
+      value: Reticula
       objectReference: {fileID: 0}
     - target: {fileID: 171526, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: m_IsActive
@@ -15505,7 +15484,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01233a5a890631a408c1a4fed70bafa6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::AparicionNPC
+  m_EditorClassIdentifier: Assembly-CSharp::AparicionNPC
   npcModel: {fileID: 597277212}
   dialogosRequeridos: 2
 --- !u!1 &389160576 stripped
@@ -17089,7 +17068,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4088a5b9cf626074a83026ea86a8ab6e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioPart
+  m_EditorClassIdentifier: Assembly-CSharp::RadioPart
   mainController: {fileID: 1406350326}
   parte: 2
 --- !u!1001 &450943883
@@ -17610,7 +17589,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a96c8b76f75753409d9a9f7afa03a08, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRInteractiveMessage
+  m_EditorClassIdentifier: Assembly-CSharp::VRInteractiveMessage
   canvasGroup: {fileID: 1956632696}
   playerCamera: {fileID: 0}
   distance: 2
@@ -19041,7 +19020,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickOptions
         m_Mode: 1
         m_Arguments:
@@ -19162,7 +19141,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4088a5b9cf626074a83026ea86a8ab6e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioPart
+  m_EditorClassIdentifier: Assembly-CSharp::RadioPart
   mainController: {fileID: 1406350326}
   parte: 0
 --- !u!1001 &544118765
@@ -21316,6 +21295,73 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7494120eb876ff84a9423e1daf7be74b, type: 3}
   m_PrefabInstance: {fileID: 738048329}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &614837322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 614837324}
+  - component: {fileID: 614837323}
+  m_Layer: 0
+  m_Name: Musica
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &614837323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614837322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5f8d5d88c28d496f87af84a9eaaa67c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicaAdaptiva
+  etapas:
+  - desdeInteracciones: 0
+    pista: {fileID: 8300000, guid: a9bb2c17413844e9cbc3ae5f9e0c5dcf, type: 3}
+    silencioInicial: 0.05
+    silencioFinal: 1
+    volumen: 0.35
+  - desdeInteracciones: 1
+    pista: {fileID: 8300000, guid: fd6b7fb87ae768642a74f309d32a9546, type: 3}
+    silencioInicial: 0.5
+    silencioFinal: 7.9
+    volumen: 1
+  - desdeInteracciones: 2
+    pista: {fileID: 8300000, guid: 7f4665bdcefb35f488f6e375603b8c10, type: 3}
+    silencioInicial: 0.6
+    silencioFinal: 7.5
+    volumen: 1
+  grupoMixer: {fileID: -438471503169814597, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
+  volumenGeneral: 0.25
+  fundido: 4
+  duckingDialogoDb: -6
+  duckingRadioDb: -15
+  distanciaRadio: 8
+  tiempoDucking: 0.6
+--- !u!4 &614837324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614837322}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &614902652
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21435,7 +21481,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_lider
 --- !u!114 &617997846
 MonoBehaviour:
@@ -21448,7 +21494,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 150584129}
   indicatorRoot: {fileID: 60229664}
   indicatorImage: {fileID: 1173091778}
@@ -22125,7 +22171,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c334ac7a6d4bd0143a86f0bd0cf76e71, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::LetreroNotificacion
+  m_EditorClassIdentifier: Assembly-CSharp::LetreroNotificacion
   tiempoVisible: 5
   tiempoFade: 0.2
   textoLetrero: {fileID: 1718925275}
@@ -23220,9 +23266,9 @@ AudioSource:
   m_GameObject: {fileID: 652483597}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3848878506427107533, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 53cc8929e6352d74586bfdb1ff35028f, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -28813,6 +28859,111 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b93b437ff9b830142ae89ad3e6aae99e, type: 3}
+--- !u!1 &834586807
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 834586810}
+  - component: {fileID: 834586809}
+  - component: {fileID: 834586808}
+  m_Layer: 0
+  m_Name: AreaClima
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &834586808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834586807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35242cf9e495d4d77a97f1a2914d4f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AreaClima
+  lluvia: {fileID: 897837160}
+  viento: {fileID: 2104617243}
+  estadoInicial: 1
+  cicloAutomatico: 1
+  tiempoTransicion: 12
+  variacionInterna: 0.08
+  perfiles:
+  - estado: 0
+    viento: 0
+    lluvia: 0
+    duracion: {x: 40, y: 80}
+  - estado: 1
+    viento: 0.4
+    lluvia: 0
+    duracion: {x: 40, y: 80}
+  - estado: 2
+    viento: 0.85
+    lluvia: 0
+    duracion: {x: 30, y: 60}
+  - estado: 3
+    viento: 0.25
+    lluvia: 0.4
+    duracion: {x: 40, y: 90}
+  - estado: 4
+    viento: 0.35
+    lluvia: 0.85
+    duracion: {x: 30, y: 70}
+  - estado: 5
+    viento: 1
+    lluvia: 1
+    duracion: {x: 25, y: 50}
+  tiempoEntradaZona: 3
+  atajosDePrueba: 1
+  estadoActual: 0
+  vientoActual: 0
+  lluviaActual: 0
+  presenciaActual: 0
+--- !u!65 &834586809
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834586807}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 288.9723, y: 44.79785, z: 237.0546}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &834586810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834586807}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.705902, y: -2309.5796, z: -9.598755}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 897837163}
+  - {fileID: 2104617246}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &840094173
 GameObject:
   m_ObjectHideFlags: 0
@@ -29636,7 +29787,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickControls
         m_Mode: 1
         m_Arguments:
@@ -30683,6 +30834,203 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 317d99f20b4da4345b8df32e90414e4f, type: 3}
+--- !u!1 &897837159
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 897837163}
+  - component: {fileID: 897837162}
+  - component: {fileID: 897837161}
+  - component: {fileID: 897837160}
+  m_Layer: 0
+  m_Name: Lluvia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &897837160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897837159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 089bbf11d94264a39ac40c9234052ee3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SistemaLluvia
+  intensidad: 0
+  presencia: 1
+  viento: {x: 0, y: 0, z: 0}
+  volumen: 0.8
+  lluviaSuave:
+    dropDensity: 6
+    baseFrequency: 1000
+    dropletAmplitude: 0.03
+    modulationProbability: 0.002
+    startFreqOffsetMin: -400
+    startFreqOffsetMax: 600
+    modFreqOffsetMin: -500
+    modFreqOffsetMax: 800
+    filterSpeed: 0.12
+    noiseWeight: 0.6
+    additiveWeight: 0.25
+  lluviaFuerte:
+    dropDensity: 16
+    baseFrequency: 800
+    dropletAmplitude: 0.04
+    modulationProbability: 0.005
+    startFreqOffsetMin: -400
+    startFreqOffsetMax: 600
+    modFreqOffsetMin: -500
+    modFreqOffsetMax: 800
+    filterSpeed: 0.2
+    noiseWeight: 0.9
+    additiveWeight: 0.2
+  tablasPorCapa: 3
+  segundosPorTabla: 5
+  materialGota: {fileID: 2100000, guid: f381bd5f13c5f449c984ace25ad27210, type: 2}
+  gotasPorSegundoMax: 4000
+  alturaEmisor: 14
+  radioLluvia: 20
+  velocidadCaida: 18
+--- !u!114 &897837161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897837159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54211b22e1ad4d56a504db6461d5206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReproductorWavetable
+  variacionPitch: 0.04
+  velocidadPitch: 0.1
+  variacionVolumen: 0.25
+  velocidadVolumen: 0.15
+  intervaloCruce: {x: 4, y: 9}
+  duracionCruce: {x: 1.5, y: 3.5}
+  suavizado: 0.5
+--- !u!82 &897837162
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897837159}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8112214465193599599, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &897837163
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897837159}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 834586810}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &904459102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32196,7 +32544,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78e4cc88028a60748b84fb0698ae1d78, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::ObjectiveTriggerUI
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveTriggerUI
   panelRoot: {fileID: 936393920}
   fadeDuration: 0.8
   displayDuration: 3
@@ -33507,9 +33855,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3165278949e7b9048a8638aa65aef85e, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::DialogueControllerBridge
-  vrController: {fileID: 0}
-  xrSimulatorObject: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueControllerBridge
+  playerController: {fileID: 0}
 --- !u!114 &970415584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33528,13 +33875,18 @@ MonoBehaviour:
   cameraTransform: {fileID: 1577425971}
   aceleracion: 8
   desaceleracion: 4
-  MouseSensitivity: 100
-  rayDistance: 10
-  interactLayer:
+  capsulaJugador: {fileID: 0}
+  capasBloqueo:
     serializedVersion: 2
     m_Bits: 4294967295
-  footstepSynth: {fileID: 0}
-  stepDistance: 1.3
+  normalMinimaSuelo: 0.6
+  margenColision: 0.05
+  sensibilidadMouse: 0.12
+  limiteVertical: 85
+  pasos: {fileID: 1608796200}
+  capasSuelo:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &970415585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33668,6 +34020,7 @@ MonoBehaviour:
   tiempoParaCalmarse: 4
   volumenMaximo: 1
   velocidadFade: 2
+  grupoMixer: {fileID: 8251762831118297329, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
 --- !u!1001 &971302287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35449,7 +35802,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickOptions
         m_Mode: 1
         m_Arguments:
@@ -39866,7 +40219,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: "npc_ni\xF1o"
 --- !u!114 &1140754014
 MonoBehaviour:
@@ -39879,7 +40232,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 1983690}
   indicatorRoot: {fileID: 1440658437}
   indicatorImage: {fileID: 1648433530}
@@ -40459,7 +40812,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1453601048}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -40483,7 +40836,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -40497,7 +40850,7 @@ MonoBehaviour:
   NodeID: 32
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 745c828dc0825c34aab20983fa224137, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40516,7 +40869,7 @@ MonoBehaviour:
   NodeID: 31
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1e5b56ee50bf9e24a8923e243d7c0574, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40554,7 +40907,7 @@ MonoBehaviour:
   NodeID: 27
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 745c828dc0825c34aab20983fa224137, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40573,7 +40926,7 @@ MonoBehaviour:
   NodeID: 26
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 7ca616e46af6c5f43a49721a9ac676c5, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40592,7 +40945,7 @@ MonoBehaviour:
   NodeID: 25
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 02f046b0a98f16540be343b0ca03f6f7, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40611,7 +40964,7 @@ MonoBehaviour:
   NodeID: 23
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1e5b56ee50bf9e24a8923e243d7c0574, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40630,7 +40983,7 @@ MonoBehaviour:
   NodeID: 22
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 745c828dc0825c34aab20983fa224137, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40649,7 +41002,7 @@ MonoBehaviour:
   NodeID: 21
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ca6d7c194c19ced43b738d08a34244b9, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40687,7 +41040,7 @@ MonoBehaviour:
   NodeID: 19
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 7ca616e46af6c5f43a49721a9ac676c5, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40706,7 +41059,7 @@ MonoBehaviour:
   NodeID: 16
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 02173df534ab30744abe4ab8f6e2b117, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40725,7 +41078,7 @@ MonoBehaviour:
   NodeID: 11
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: c0613ef85cd333649ad1d8a34b23186c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40744,7 +41097,7 @@ MonoBehaviour:
   NodeID: 10
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: c0613ef85cd333649ad1d8a34b23186c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40763,7 +41116,7 @@ MonoBehaviour:
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: fc83b21b296720942a1b6a165577c002, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1160269322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40782,7 +41135,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 745c828dc0825c34aab20983fa224137, type: 3}
+  Audio: {fileID: 0}
 --- !u!1001 &1160590839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41424,7 +41777,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79f0e2b43f6d147448015edab3a37308, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::SceneFadeTransition
+  m_EditorClassIdentifier: Assembly-CSharp::SceneFadeTransition
   fadeImage: {fileID: 2107916415}
   fadeDuration: 2
 --- !u!1 &1173091777
@@ -41677,7 +42030,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 592441146}
   indicatorRoot: {fileID: 155809633}
   indicatorImage: {fileID: 1173091778}
@@ -49252,7 +49605,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: adde68de01cd82d4f80bb78a86922b03, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::RadioController
+  m_EditorClassIdentifier: Assembly-CSharp::RadioController
   cameraTransform: {fileID: 0}
   graceTime: 0.25
   transitionSpeed: 5
@@ -49305,7 +49658,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 1.5
   colorNaranja: {r: 0, g: 1, b: 0.8, a: 1}
@@ -49784,7 +50137,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1007abb5ee2f6834bac4ccbdf4d61476, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NewObjectController
+  m_EditorClassIdentifier: Assembly-CSharp::NewObjectController
   cameraTransform: {fileID: 1577425971}
   distanceInFront: 0.7
   transitionSpeed: 5
@@ -49848,7 +50201,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 1
   colorNaranja: {r: 1, g: 0.5490196, b: 0, a: 1}
@@ -51212,7 +51565,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 1618700893}
   indicatorRoot: {fileID: 260813673}
   indicatorImage: {fileID: 868565590}
@@ -51316,7 +51669,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_vecinos
 --- !u!1 &1456613479
 GameObject:
@@ -51675,7 +52028,7 @@ MonoBehaviour:
   NodeID: 25
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1fdabc975e82a314988bf3cb7255045b, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51694,7 +52047,7 @@ MonoBehaviour:
   NodeID: 24
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: d0153b14a5c56d64dbf8fd70b953b4d9, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303725
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51744,7 +52097,7 @@ MonoBehaviour:
   NodeID: 21
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 91ee263a51a98b948b623552d2355161, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51763,7 +52116,7 @@ MonoBehaviour:
   NodeID: 20
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1fdabc975e82a314988bf3cb7255045b, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51780,7 +52133,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1140754013}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -51816,7 +52169,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -51828,7 +52181,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 286448958}
-        m_TargetAssemblyTypeName: ChangeScener, CardboardSamples
+        m_TargetAssemblyTypeName: ChangeScener, Assembly-CSharp
         m_MethodName: TriggerOutro
         m_Mode: 1
         m_Arguments:
@@ -51842,7 +52195,7 @@ MonoBehaviour:
   NodeID: 17
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1fdabc975e82a314988bf3cb7255045b, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51880,7 +52233,7 @@ MonoBehaviour:
   NodeID: 15
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ee59179d2fd6a0242bf01e5cddb8c817, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51899,7 +52252,7 @@ MonoBehaviour:
   NodeID: 14
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1fdabc975e82a314988bf3cb7255045b, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51956,7 +52309,7 @@ MonoBehaviour:
   NodeID: 11
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: e28adc57066f83a4c9b414f822619405, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51987,7 +52340,7 @@ MonoBehaviour:
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ee59179d2fd6a0242bf01e5cddb8c817, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1460303736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52006,7 +52359,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ee59179d2fd6a0242bf01e5cddb8c817, type: 3}
+  Audio: {fileID: 0}
 --- !u!4 &1460875558 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b5bdc87e405523c46ab5f75acbcc38d1, type: 3}
@@ -52541,7 +52894,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickContinue
         m_Mode: 1
         m_Arguments:
@@ -53722,7 +54075,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 846728496}
   inputIconRoot: {fileID: 1440658437}
 --- !u!114 &1517861787
@@ -53738,14 +54091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 1983690}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1517861788
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -54767,7 +55113,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a96c8b76f75753409d9a9f7afa03a08, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRInteractiveMessage
+  m_EditorClassIdentifier: Assembly-CSharp::VRInteractiveMessage
   canvasGroup: {fileID: 565738612}
   playerCamera: {fileID: 0}
   distance: 3
@@ -56264,7 +56610,6 @@ GameObject:
   - component: {fileID: 1577425977}
   - component: {fileID: 1577425976}
   - component: {fileID: 1577425975}
-  - component: {fileID: 1577425974}
   - component: {fileID: 1577425973}
   - component: {fileID: 1577425972}
   m_Layer: 0
@@ -56362,91 +56707,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!114 &1577425974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577425970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2fadf230d1919748a9aa21d40f74619, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackingType: 0
-  m_UpdateType: 2
-  m_IgnoreTrackingState: 0
-  m_PositionInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Position Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: dc14070c-ed50-427c-b3fb-6e368afa597a
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 23345476-ed2d-40ff-b608-e2f0191dd89b
-        m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position Input
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: -3599823989380923159, guid: b6d5c44ebe3244b7692e81ae8265eb22, type: 3}
-  m_RotationInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Rotation Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 13038951-d641-4b7a-8826-8d10fc43cbb4
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 4160e9e6-cf01-4dbb-8572-30a400509798
-        m_Path: <XRHMD>/centerEyeRotation
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Rotation Input
-        m_Flags: 0
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_TrackingStateInput:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Tracking State Input
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: fe0bb821-1b1e-40c1-a16d-72eab8d0db43
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  m_PositionAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
-  m_RotationAction:
-    m_Name: 
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings: []
-    m_Flags: 0
 --- !u!81 &1577425975
 AudioListener:
   m_ObjectHideFlags: 0
@@ -57457,7 +57717,7 @@ AudioSource:
   m_GameObject: {fileID: 1608796197}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 8251762831118297329, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
@@ -57556,30 +57816,19 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a4168047474feb04aa425a5589974169, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FootstepSynth
-  baseFrequency: 90
-  partialRatios:
-  - 1
-  - 1.8
-  - 2.6
-  - 3.9
-  - 5.3
-  partialAmplitudes:
-  - 1
-  - 0.6
-  - 0.35
-  - 0.2
-  - 0.1
-  partialDecayTimes:
-  - 0.18
-  - 0.09
-  - 0.06
-  - 0.04
-  - 0.03
-  pitchVariation: 0.12
-  amplitudeVariation: 0.15
-  ratioJitter: 0.05
-  masterGain: 0.8
+  m_EditorClassIdentifier: Assembly-CSharp::PasosBucle
+  clipPasos: {fileID: 8300000, guid: 7dbcd412a3b5341d7a6ce462724bc789, type: 3}
+  volumen: 0.8
+  tiempoEntrada: 0.12
+  tiempoSalida: 0.35
+  fundidoBucleMs: 40
+  pitchLento: 0.9
+  pitchNormal: 1
+  variacionPitch: 0.03
+  tiempoCambioSuperficie: 0.15
+  frecuenciaMadera: 190
+  mezclaOriginalMadera: 0.45
+  volumenMadera: 1
 --- !u!1001 &1611432886
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57768,6 +58017,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b51af6e7191f7964497fe991d5179c8b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1611432889}
     - targetCorrespondingSourceObject: {fileID: -8391222552659086748, guid: b51af6e7191f7964497fe991d5179c8b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 389160580}
@@ -57846,6 +58098,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b51af6e7191f7964497fe991d5179c8b, type: 3}
   m_PrefabInstance: {fileID: 1611432886}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1611432888 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b51af6e7191f7964497fe991d5179c8b, type: 3}
+  m_PrefabInstance: {fileID: 1611432886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1611432889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611432888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c15262f10ea064e81af97a447ecc5213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SuperficieSonora
+  tipo: 1
 --- !u!1 &1618700891
 GameObject:
   m_ObjectHideFlags: 0
@@ -61937,7 +62207,7 @@ MonoBehaviour:
   NodeID: 17
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 02173df534ab30744abe4ab8f6e2b117, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1728822197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61956,7 +62226,7 @@ MonoBehaviour:
   NodeID: 15
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: de4abe5c72441b2448eba266ce82051b, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1728822198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61975,7 +62245,7 @@ MonoBehaviour:
   NodeID: 14
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 14c68f66981e219499b4a2c11d761f72, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1728822199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62013,7 +62283,7 @@ MonoBehaviour:
   NodeID: 12
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 14c68f66981e219499b4a2c11d761f72, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1728822201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62032,7 +62302,7 @@ MonoBehaviour:
   NodeID: 11
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 095732f7d2f688545bc5f9f2e305f619, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1728822202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62051,7 +62321,7 @@ MonoBehaviour:
   NodeID: 10
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: fc83b21b296720942a1b6a165577c002, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1728822203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62070,7 +62340,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 745c828dc0825c34aab20983fa224137, type: 3}
+  Audio: {fileID: 0}
 --- !u!1001 &1733576483
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64709,7 +64979,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 994680c34663486469315e6c77646b14, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::VRMenuManager
+  m_EditorClassIdentifier: Assembly-CSharp::VRMenuManager
   mainPanel: {fileID: 226415572}
   optionsPanel: {fileID: 1766614940}
   optionsControlsPanel: {fileID: 9459750}
@@ -64718,9 +64988,8 @@ MonoBehaviour:
   firstControlsPanel: {fileID: 215538371}
   menuCanvas: {fileID: 1305735249}
   cameraTransform: {fileID: 1577425971}
-  playerMovementScript: {fileID: 0}
+  playerMovementScript: {fileID: 970415584}
   playerRigidbody: {fileID: 970415581}
-  xrSimulator: {fileID: 0}
   menuKey: 30
 --- !u!114 &1779966225
 MonoBehaviour:
@@ -64734,6 +65003,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de7840cde80d8d14bb23c396e6f31de6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueInputManager
+  deadzone: 0.5
+  scrollDelay: 0.3
 --- !u!114 &1779966226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64745,12 +65016,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3eb4b7824ea6244ba336bfacba67ac3, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::GameManager
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
   interaccionesClave: 0
   interaccionesNecesarias: 3
   gestorPistasUI: {fileID: 11566797}
-  escenaDestino: PCFinalScene
-  ChangeScener: {fileID: 286448958}
+  changeScener: {fileID: 286448958}
   aparicionNPC: {fileID: 387972961}
 --- !u!1001 &1780663630
 PrefabInstance:
@@ -65291,7 +65561,7 @@ MonoBehaviour:
   NodeID: 21
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 50885f78667e83446876fa3c625a0af9, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1785270471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65310,7 +65580,7 @@ MonoBehaviour:
   NodeID: 20
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: bbbc2172765df5c42addbf362868bf70, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1785270472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65341,7 +65611,7 @@ MonoBehaviour:
   NodeID: 16
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: a43f8f06304f2a442a351e31baf7ab40, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1785270473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65360,7 +65630,7 @@ MonoBehaviour:
   NodeID: 15
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 9ef787b72484af34ea0c631d673b6b54, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1785270474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65391,7 +65661,7 @@ MonoBehaviour:
   NodeID: 13
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 50885f78667e83446876fa3c625a0af9, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1785270475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65410,7 +65680,7 @@ MonoBehaviour:
   NodeID: 12
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: e848e0d8ea32117468be7a0e99e73bca, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1785270476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65498,7 +65768,7 @@ MonoBehaviour:
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: bbbc2172765df5c42addbf362868bf70, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1785270480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65517,7 +65787,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 9ef787b72484af34ea0c631d673b6b54, type: 3}
+  Audio: {fileID: 0}
 --- !u!1001 &1786629628
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66075,7 +66345,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 1554374903}
   inputIconRoot: {fileID: 250022139}
 --- !u!114 &1792476998
@@ -66091,14 +66361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 830457200}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1792476999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -68467,7 +68730,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 01e442b5458efaa45a7d5f87c2451391, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::EventoDialogo
+  m_EditorClassIdentifier: Assembly-CSharp::EventoDialogo
   idInteraccion: npc_novios
 --- !u!114 &1833298619
 MonoBehaviour:
@@ -68480,7 +68743,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d7e7be4a40498a44aac5cfa24fc35d22, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCIndicatorAndInteraction
+  m_EditorClassIdentifier: Assembly-CSharp::NPCIndicatorAndInteraction
   myConversation: {fileID: 889238821}
   indicatorRoot: {fileID: 2001897811}
   indicatorImage: {fileID: 1173091778}
@@ -69421,7 +69684,7 @@ MonoBehaviour:
   NodeID: 33
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1e5b56ee50bf9e24a8923e243d7c0574, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69440,7 +69703,7 @@ MonoBehaviour:
   NodeID: 32
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: c0613ef85cd333649ad1d8a34b23186c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69471,7 +69734,7 @@ MonoBehaviour:
   NodeID: 29
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ad16e22588e28234caf1537be5c1374c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69490,7 +69753,7 @@ MonoBehaviour:
   NodeID: 28
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1e5b56ee50bf9e24a8923e243d7c0574, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69528,7 +69791,7 @@ MonoBehaviour:
   NodeID: 24
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: f13a2fe656e68494fb76b42dd07c1a11, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69545,7 +69808,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 28181806}
-        m_TargetAssemblyTypeName: EventoDialogoNew, CardboardSamples
+        m_TargetAssemblyTypeName: EventoDialogoNew, Assembly-CSharp
         m_MethodName: Registrar
         m_Mode: 1
         m_Arguments:
@@ -69569,7 +69832,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 633008721}
-        m_TargetAssemblyTypeName: LetreroNotificacion, CardboardSamples
+        m_TargetAssemblyTypeName: LetreroNotificacion, Assembly-CSharp
         m_MethodName: MostrarLetrero
         m_Mode: 1
         m_Arguments:
@@ -69595,7 +69858,7 @@ MonoBehaviour:
   NodeID: 22
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: c0613ef85cd333649ad1d8a34b23186c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69614,7 +69877,7 @@ MonoBehaviour:
   NodeID: 21
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 02f046b0a98f16540be343b0ca03f6f7, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69652,7 +69915,7 @@ MonoBehaviour:
   NodeID: 19
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 1e5b56ee50bf9e24a8923e243d7c0574, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69671,7 +69934,7 @@ MonoBehaviour:
   NodeID: 17
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: f13a2fe656e68494fb76b42dd07c1a11, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69709,7 +69972,7 @@ MonoBehaviour:
   NodeID: 15
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ad16e22588e28234caf1537be5c1374c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69728,7 +69991,7 @@ MonoBehaviour:
   NodeID: 13
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ad16e22588e28234caf1537be5c1374c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69804,7 +70067,7 @@ MonoBehaviour:
   NodeID: 9
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: 8a44caf72f4b5a54daea56ab224aae2c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69835,7 +70098,7 @@ MonoBehaviour:
   NodeID: 8
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: c0613ef85cd333649ad1d8a34b23186c, type: 3}
+  Audio: {fileID: 0}
 --- !u!114 &1862271209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69854,7 +70117,7 @@ MonoBehaviour:
   NodeID: 0
   TMPFont: {fileID: 11400000, guid: 22cba0b6376ff79449696f9686a549cf, type: 2}
   Icon: {fileID: 0}
-  Audio: {fileID: 8300000, guid: ad16e22588e28234caf1537be5c1374c, type: 3}
+  Audio: {fileID: 0}
 --- !u!4 &1862673625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 317d99f20b4da4345b8df32e90414e4f, type: 3}
@@ -70567,7 +70830,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickExit
         m_Mode: 1
         m_Arguments:
@@ -71181,7 +71444,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 843128912}
   inputIconRoot: {fileID: 155809633}
 --- !u!114 &1917015426
@@ -71197,14 +71460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 592441146}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1917015427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -72126,7 +72382,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3db648ff65aa27646ab89e3561acbb0b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NPCProximityInputIcon
+  m_EditorClassIdentifier: Assembly-CSharp::NPCProximityInputIcon
   inputIconImage: {fileID: 1295936878}
   inputIconRoot: {fileID: 2001897811}
 --- !u!114 &1947444174
@@ -72142,14 +72398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConversationStarter
   conversation: {fileID: 889238821}
-  playerMovementScript: {fileID: 0}
-  playerRigidbody: {fileID: 0}
-  orientation: 1
-  invertSelection: 0
-  deadzone: 0.5
-  scrollDelay: 0.3
   interactKey: 26
-  xrSimulator: {fileID: 0}
 --- !u!65 &1947444175
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -75111,7 +75360,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1779966224}
-        m_TargetAssemblyTypeName: VRMenuManager, CardboardSamples
+        m_TargetAssemblyTypeName: VRMenuManager, Assembly-CSharp
         m_MethodName: OnClickBack
         m_Mode: 1
         m_Arguments:
@@ -75718,13 +75967,12 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e1e5480b41f5384a973eba746b7e016, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::ObjectController
-  gazeTimeToInteract: 1.5
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectController
   loadingCircle: {fileID: 0}
   textToShow: {fileID: 0}
   graceTime: 0.2
   audioSource: {fileID: 259586270}
-  openClip: {fileID: 8300000, guid: 9a70aa7bae985e84a9828a5c6ce3131a, type: 3}
+  openClip: {fileID: 8300000, guid: cb3786e35f1f40642a97372fa3f938c5, type: 3}
   closeClip: {fileID: 0}
   soundHover: {fileID: 8300000, guid: cb3786e35f1f40642a97372fa3f938c5, type: 3}
   doorController: {fileID: 313677631}
@@ -75739,7 +75987,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1007abb5ee2f6834bac4ccbdf4d61476, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::NewObjectController
+  m_EditorClassIdentifier: Assembly-CSharp::NewObjectController
   cameraTransform: {fileID: 1577425971}
   distanceInFront: 0.7
   transitionSpeed: 5
@@ -75787,7 +76035,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 0.5
   colorNaranja: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
@@ -76865,6 +77113,188 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 216003534}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2104617242
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104617246}
+  - component: {fileID: 2104617245}
+  - component: {fileID: 2104617244}
+  - component: {fileID: 2104617243}
+  m_Layer: 0
+  m_Name: Viento
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2104617243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104617242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37d7c13f954ff484fa6114785a399d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProceduralWind
+  intensidad: 0
+  presencia: 1
+  direccion: {x: 1, y: 0, z: 0.35}
+  velocidadMaxima: 9
+  frecuenciaRafagas: 0.12
+  profundidadRafagas: 0.5
+  volumen: 0.7
+  vientoSuave:
+    windIntensity: 0.35
+    baseFrequency: 300
+    gustRange: 150
+    gustSpeed: 0.25
+  vientoFuerte:
+    windIntensity: 1
+    baseFrequency: 420
+    gustRange: 450
+    gustSpeed: 0.6
+  tablasPorCapa: 3
+  segundosPorTabla: 10
+  usarWindZone: 1
+--- !u!114 &2104617244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104617242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f54211b22e1ad4d56a504db6461d5206, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReproductorWavetable
+  variacionPitch: 0.08
+  velocidadPitch: 0.1
+  variacionVolumen: 0.2
+  velocidadVolumen: 0.15
+  intervaloCruce: {x: 4, y: 9}
+  duracionCruce: {x: 1.5, y: 3.5}
+  suavizado: 0.5
+--- !u!82 &2104617245
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104617242}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8112214465193599599, guid: 0f91cf091a4d57b4cb47e1c9a958e1c9, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2104617246
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104617242}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 834586810}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2105718124
 PrefabInstance:
@@ -78982,7 +79412,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 0.5
   colorNaranja: {r: 0.70980394, g: 0.70980394, b: 0.70980394, a: 1}
@@ -81295,7 +81725,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: CardboardSamples::OutlineVR
+  m_EditorClassIdentifier: Assembly-CSharp::OutlineVR
   currentState: 0
   pulseSpeed: 1.5
   colorNaranja: {r: 0, g: 1, b: 0.8, a: 1}
@@ -82865,3 +83295,5 @@ SceneRoots:
   - {fileID: 629351507}
   - {fileID: 624834212}
   - {fileID: 1553130126}
+  - {fileID: 614837324}
+  - {fileID: 834586810}
