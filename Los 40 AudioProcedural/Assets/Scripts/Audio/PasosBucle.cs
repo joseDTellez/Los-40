@@ -2,16 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Pasos del jugador a partir de un audio en bucle (Assets/Audios/Audio Pasos Bucle.wav).
-//
-// Al iniciar:
-//  - Suaviza la unión del bucle con un fundido cruzado: el archivo termina en silencio y empieza
-//    con ruido de fondo, así que sin esto se oye un "clic" en cada vuelta.
-//  - Genera por síntesis una versión "madera" del mismo bucle: el paso original filtrado (sin el
-//    crujido agudo del pasto) más, en cada pisada detectada, el golpe de un tablón hueco hecho con
-//    una suma de senos inarmónicos amortiguados (síntesis modal) y un pequeño eco de la caja del puente.
-//
-// En juego, PCController informa la velocidad real y la superficie que pisa el jugador: las dos
-// versiones suenan sincronizadas y se mezclan con un fundido de igual potencia.
 [RequireComponent(typeof(AudioSource))]
 public class PasosBucle : MonoBehaviour
 {
@@ -46,10 +36,6 @@ public class PasosBucle : MonoBehaviour
     [Tooltip("Volumen de los pasos sobre madera respecto a los normales")]
     [Range(0f, 2f)] public float volumenMadera = 1f;
 
-    // Modos del tablón: proporción respecto a frecuenciaMadera, decaimiento (s) y ganancia.
-    // El primero (0.6) es una resonancia grave y corta del hueco bajo el puente; los demás,
-    // inarmónicos, dan el "toc" de la madera (no son múltiplos enteros: no suena a nota musical).
-    // Los decaimientos son cortos a propósito: con colas largas el golpe suena a tambor.
     static readonly float[] ProporcionModos = { 0.6f, 1f, 2.3f, 3.9f, 6.4f, 10.7f };
     static readonly float[] DecaimientoModos = { 0.08f, 0.06f, 0.04f, 0.03f, 0.02f, 0.012f };
     static readonly float[] GananciaModos = { 0.25f, 1f, 0.9f, 0.75f, 0.55f, 0.35f };
@@ -59,9 +45,9 @@ public class PasosBucle : MonoBehaviour
     private AudioClip clipNormalGenerado;
     private AudioClip clipMaderaGenerado;
 
-    private float velocidadObjetivo;   // 0 = quieto, 1 = velocidad máxima del jugador
+    private float velocidadObjetivo;   // Ahora puede superar 1.0 cuando corre
     private float intensidad;
-    private float objetivoMadera;      // 0 = suelo normal, 1 = madera
+    private float objetivoMadera;
     private float mezclaMadera;
     private float variacionActual;
     private int muestraAnterior;
@@ -75,18 +61,11 @@ public class PasosBucle : MonoBehaviour
         Configurar(fuenteNormal);
 
         if (clipPasos == null)
-        {
-            Debug.LogWarning("PasosBucle: no hay clip de pasos asignado.", this);
             return;
-        }
 
         fuenteNormal.clip = clipPasos;
         if (!PrepararClips(clipPasos))
-        {
-            Debug.LogWarning("PasosBucle: no se pudieron leer las muestras del clip (¿está en Streaming?). " +
-                             "Se usa el audio sin procesar y sin versión de madera.", this);
             return;
-        }
 
         fuenteNormal.clip = clipNormalGenerado;
         fuenteMadera = gameObject.AddComponent<AudioSource>();
@@ -99,20 +78,20 @@ public class PasosBucle : MonoBehaviour
     {
         fuente.playOnAwake = false;
         fuente.loop = true;
-        fuente.spatialBlend = 0f; // son los pasos del propio jugador: sonido 2D
+        fuente.spatialBlend = 0f;
         fuente.dopplerLevel = 0f;
         fuente.volume = 0f;
     }
 
-    // Lo llama PCController cada frame con la velocidad real normalizada (0..1)
+    // MODIFICADO: Cambiamos Clamp01 por Max para permitir valores > 1 al correr
     public void ActualizarMovimiento(float velocidadNormalizada)
     {
-        velocidadObjetivo = Mathf.Clamp01(velocidadNormalizada);
+        velocidadObjetivo = Mathf.Max(0f, velocidadNormalizada);
     }
 
     public void ActualizarMovimiento(float velocidadNormalizada, TipoSuperficie superficie)
     {
-        velocidadObjetivo = Mathf.Clamp01(velocidadNormalizada);
+        velocidadObjetivo = Mathf.Max(0f, velocidadNormalizada);
         objetivoMadera = superficie == TipoSuperficie.Madera ? 1f : 0f;
     }
 
@@ -120,7 +99,6 @@ public class PasosBucle : MonoBehaviour
     {
         if (fuenteNormal.clip == null) return;
 
-        // Entrada rápida y salida más lenta, para que al parar no se corte el paso en seco
         float tiempo = velocidadObjetivo > intensidad ? tiempoEntrada : tiempoSalida;
         intensidad = Mathf.MoveTowards(intensidad, velocidadObjetivo, Time.deltaTime / Mathf.Max(tiempo, 0.01f));
         mezclaMadera = Mathf.MoveTowards(mezclaMadera, objetivoMadera, Time.deltaTime / Mathf.Max(tiempoCambioSuperficie, 0.01f));
@@ -132,15 +110,26 @@ public class PasosBucle : MonoBehaviour
         }
         Reanudar();
 
-        // Nueva vuelta del bucle: elegimos otra pequeña variación de tono
         int muestra = fuenteNormal.timeSamples;
         if (muestra < muestraAnterior)
             variacionActual = Random.Range(-variacionPitch, variacionPitch);
         muestraAnterior = muestra;
 
-        float pitch = Mathf.Lerp(pitchLento, pitchNormal, velocidadObjetivo) + variacionActual;
-        // Curva suave (smoothstep): el volumen entra y sale sin escalones audibles
-        float v = volumen * intensidad * intensidad * (3f - 2f * intensidad);
+        // MODIFICADO: Cálculo de Pitch que soporta correr
+        // Si caminamos (<=1), interpolamos suavemente desde lento a normal.
+        // Si corremos (>1), multiplicamos el pitch para sincronizar la velocidad del audio con los pasos reales.
+        float pitchBase = intensidad <= 1f
+            ? Mathf.Lerp(pitchLento, pitchNormal, intensidad)
+            : pitchNormal * intensidad;
+
+        // El AudioSource de Unity permite un pitch máximo de 3.0, lo limitamos por seguridad.
+        float pitch = Mathf.Clamp(pitchBase + variacionActual, 0.1f, 3f);
+
+        // MODIFICADO: Curva de volumen protegida
+        // Limitamos el valor a 1.0 exclusivamente para el cálculo del volumen, 
+        // así la matemática del smoothstep no se rompe cuando corremos.
+        float intVol = Mathf.Clamp01(intensidad);
+        float v = volumen * intVol * intVol * (3f - 2f * intVol);
 
         if (fuenteMadera == null)
         {
@@ -149,7 +138,6 @@ public class PasosBucle : MonoBehaviour
             return;
         }
 
-        // Fundido de igual potencia entre superficies (las dos fuentes van sincronizadas)
         float angulo = mezclaMadera * Mathf.PI * 0.5f;
         fuenteNormal.volume = v * Mathf.Cos(angulo);
         fuenteMadera.volume = v * Mathf.Sin(angulo) * volumenMadera;
@@ -177,7 +165,6 @@ public class PasosBucle : MonoBehaviour
         }
         else
         {
-            // Arranque programado en el mismo instante DSP para que ambas versiones vayan a la par
             double inicio = AudioSettings.dspTime + 0.05;
             fuenteNormal.PlayScheduled(inicio);
             if (fuenteMadera != null) fuenteMadera.PlayScheduled(inicio);
@@ -201,8 +188,7 @@ public class PasosBucle : MonoBehaviour
         if (clipMaderaGenerado != null) Destroy(clipMaderaGenerado);
     }
 
-    // ─── PREPARACIÓN DE LOS CLIPS ─────────────────────────────
-
+    // ─── PREPARACIÓN DE LOS CLIPS (Se mantiene igual) ─────────────────────────────
     bool PrepararClips(AudioClip origen)
     {
         if (!GenerarDatos(out float[] bucle, out float[] madera, out int canales, out int frecuencia)) return false;
@@ -212,8 +198,6 @@ public class PasosBucle : MonoBehaviour
         return true;
     }
 
-    // Genera las muestras de los dos bucles. También lo usa la herramienta de editor que los
-    // exporta a WAV (menú Los 40 > Audio) para escucharlos o analizarlos fuera del juego.
     public bool GenerarDatos(out float[] bucleNormal, out float[] bucleMadera, out int canales, out int frecuencia)
     {
         bucleNormal = bucleMadera = null;
@@ -232,8 +216,6 @@ public class PasosBucle : MonoBehaviour
         return true;
     }
 
-    // Fundido cruzado de igual potencia: los últimos milisegundos se mezclan con los primeros,
-    // así la última muestra del bucle continúa sin salto en la primera.
     float[] FundirUnion(float[] d, int canales, int frecuencia)
     {
         int n = d.Length / canales;
@@ -263,8 +245,6 @@ public class PasosBucle : MonoBehaviour
     float[] SintetizarMadera(float[] d, int canales, int frecuencia)
     {
         int n = d.Length / canales;
-
-        // 1) Pisadas: buscamos los golpes en la envolvente del audio original
         var mono = new float[n];
         for (int i = 0; i < n; i++)
         {
@@ -274,8 +254,6 @@ public class PasosBucle : MonoBehaviour
         }
         List<int> pisadas = DetectarPisadas(mono, frecuencia, out List<float> fuerzas);
 
-        // 2) Paso original filtrado (pasa-bajos): conserva el cuerpo del paso sin el crujido del pasto.
-        //    Se pasa dos veces para que el filtro empiece con el estado del final y el bucle no salte.
         var salida = new float[d.Length];
         for (int c = 0; c < canales; c++)
         {
@@ -289,7 +267,6 @@ public class PasosBucle : MonoBehaviour
                 }
         }
 
-        // 3) Golpe del tablón en cada pisada (síntesis modal), con pequeñas variaciones
         var azar = new System.Random(40);
         var golpe = new float[n];
         int largo = Mathf.Min(n, (int)(frecuencia * 0.25f));
@@ -311,19 +288,16 @@ public class PasosBucle : MonoBehaviour
                     s += GananciaModos[p] * Mathf.Exp(-t / DecaimientoModos[p]) * Mathf.Sin(2f * Mathf.PI * f * t);
                 }
 
-                // Chasquido corto de ruido: el "toc" del zapato contra la tabla
                 if (j < muestrasChasquido)
                     s += (float)(azar.NextDouble() * 2.0 - 1.0) * 0.6f * (1f - (float)j / muestrasChasquido);
 
-                // Ataque de 1.5 ms (coseno) para que el golpe no haga clic
                 if (j < muestrasAtaque)
                     s *= 0.5f - 0.5f * Mathf.Cos(Mathf.PI * j / muestrasAtaque);
 
-                golpe[(pisadas[k] + j) % n] += s * fuerza; // si cae al final, sigue al principio del bucle
+                golpe[(pisadas[k] + j) % n] += s * fuerza;
             }
         }
 
-        // 4) Eco muy corto de la caja hueca del puente, y mezcla en todos los canales
         int retardo = (int)(frecuencia * 0.011f);
         for (int i = 0; i < n; i++)
         {
@@ -331,7 +305,6 @@ public class PasosBucle : MonoBehaviour
             for (int c = 0; c < canales; c++) salida[i * canales + c] += g;
         }
 
-        // 5) Misma sonoridad percibida que el paso normal, para que al pisar el puente no salte el volumen
         float sonoridadNormal = Sonoridad(d, canales, frecuencia), sonoridadMadera = Sonoridad(salida, canales, frecuencia);
         if (sonoridadMadera > 1e-7f)
         {
@@ -339,13 +312,9 @@ public class PasosBucle : MonoBehaviour
             for (int i = 0; i < salida.Length; i++) salida[i] *= escala;
         }
 
-        if (pisadas.Count == 0)
-            Debug.LogWarning("PasosBucle: no se detectaron pisadas en el audio; la versión de madera solo lleva el filtro.", this);
         return salida;
     }
 
-    // Busca los máximos de energía (ventanas de 5 ms) que superan el 35 % del máximo y están
-    // separados al menos 0.25 s; devuelve el inicio de cada golpe y su intensidad.
     static List<int> DetectarPisadas(float[] mono, int frecuencia, out List<float> fuerzas)
     {
         int ventana = Mathf.Max(1, frecuencia / 200);
@@ -370,7 +339,6 @@ public class PasosBucle : MonoBehaviour
             if (energia[k] < 0.35f * maximo || energia[k] < energia[k - 1] || energia[k] < energia[k + 1]) continue;
             if (k - ultima < separacion) continue;
 
-            // El golpe empieza un poco antes del máximo: retrocedemos mientras la energía siga alta
             int inicio = k;
             while (inicio > 0 && k - inicio < 6 && energia[inicio - 1] > energia[k] * 0.5f) inicio--;
 
@@ -381,11 +349,6 @@ public class PasosBucle : MonoBehaviour
         return pisadas;
     }
 
-    // Sonoridad aproximada: máximo RMS en ventanas de 50 ms de la señal con ponderación A.
-    // El oído es menos sensible a los graves; comparando picos o RMS sin ponderar, la madera
-    // (más grave y con más cuerpo) sonaría unos 5 dB más fuerte que el paso normal.
-    // La curva A se construye con sus polos reales: pasa-altos en 20.6 (x2), 107.7 y 737.9 Hz
-    // y pasa-bajos en 12194 Hz (x2), cada uno como filtro de primer orden.
     static float Sonoridad(float[] datos, int canales, int frecuencia)
     {
         int n = datos.Length / canales;
@@ -397,7 +360,6 @@ public class PasosBucle : MonoBehaviour
             x[i] = s / canales;
         }
 
-        // Filtros de primer orden por transformada bilineal (K = tan(pi*fc/fs))
         foreach (float fc in new[] { 20.6f, 20.6f, 107.7f, 737.9f })
             PrimerOrden(x, fc, frecuencia, pasaAltos: true);
         foreach (float fc in new[] { 12194f, 12194f })

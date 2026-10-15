@@ -9,7 +9,11 @@ public class PCController : MonoBehaviour
     public bool canInteract = true;  // Controla si el jugador puede interactuar con la mirada
 
     [Header("Movimiento")]
-    public float speed = 2f;
+    [Tooltip("Velocidad al caminar")]
+    [FormerlySerializedAs("speed")]
+    public float walkSpeed = 2f;
+    [Tooltip("Velocidad al correr (manteniendo Shift)")]
+    public float runSpeed = 5f;
     public Transform cameraTransform;
 
     [Header("Movimiento gradual (aceleracion/desaceleracion)")]
@@ -84,10 +88,15 @@ public class PCController : MonoBehaviour
             currentSpeed = Mathf.MoveTowards(currentSpeed, 0f, desaceleracion * Time.deltaTime);
 
         // Los pasos siguen la velocidad real (contra una pared no suenan) y la superficie pisada
-        if (pasos != null && speed > 0f && Time.deltaTime > 0f)
+        if (pasos != null && walkSpeed > 0f && Time.deltaTime > 0f)
         {
             if (distanciaRecorrida > 0f) superficieActual = DetectarSuperficie();
-            pasos.ActualizarMovimiento(distanciaRecorrida / Time.deltaTime / speed, superficieActual);
+
+            // Calculamos la intensidad basándonos en walkSpeed.
+            // Si el jugador corre, este valor será mayor a 1 (ej: 5/2 = 2.5), 
+            // lo que permite que el script PasosBucle acelere el sonido.
+            float velocidadReal = distanciaRecorrida / Time.deltaTime;
+            pasos.ActualizarMovimiento(velocidadReal / walkSpeed, superficieActual);
         }
 
         MouseLook();
@@ -108,8 +117,14 @@ public class PCController : MonoBehaviour
                 currentDirection = targetDirection.normalized;
         }
 
+        // Detectar si el jugador está presionando Shift para correr
+        bool isRunning = Keyboard.current != null && Keyboard.current.shiftKey.isPressed;
+
+        // Asignar la velocidad objetivo (corriendo o caminando)
+        float maxSpeedForState = isRunning ? runSpeed : walkSpeed;
+        float targetSpeed = hayInput ? maxSpeedForState : 0f;
+
         // Elegimos la tasa de cambio segun si estamos acelerando o frenando
-        float targetSpeed = hayInput ? speed : 0f;
         float tasa = (targetSpeed > currentSpeed) ? aceleracion : desaceleracion;
         currentSpeed = Mathf.MoveTowards(currentSpeed, targetSpeed, tasa * Time.deltaTime);
 
@@ -136,7 +151,6 @@ public class PCController : MonoBehaviour
     }
 
     // Recorta el desplazamiento si una pared se interpone y desliza el resto a lo largo de ella.
-    // El suelo y las rampas no bloquean: de eso se sigue encargando la fisica del Rigidbody.
     Vector3 LimitarPorColisiones(Vector3 delta)
     {
         if (capsulaJugador == null) return delta;
@@ -169,13 +183,10 @@ public class PCController : MonoBehaviour
 
         if (!golpe || hit.normal.y >= normalMinimaSuelo) return false;
 
-        // Ignoramos los colliders que pertenecen al propio jugador
         Rigidbody otro = hit.collider.attachedRigidbody;
         return otro == null || otro.transform != transform;
     }
 
-    // Lanza un rayo hacia abajo desde el centro del jugador y mira si lo que pisa (o alguno de
-    // sus padres) tiene SuperficieSonora, por ejemplo el puente de madera.
     TipoSuperficie DetectarSuperficie()
     {
         if (capsulaJugador == null) return TipoSuperficie.Normal;
@@ -185,7 +196,7 @@ public class PCController : MonoBehaviour
         float mitad = capsulaJugador.height * Mathf.Abs(t.lossyScale.y) * 0.5f;
 
         if (!Physics.Raycast(centro, Vector3.down, out RaycastHit hit, mitad + 0.6f, capasSuelo, QueryTriggerInteraction.Ignore))
-            return superficieActual; // sin suelo debajo (p. ej. un pequeño salto): se mantiene la última
+            return superficieActual;
 
         SuperficieSonora superficie = hit.collider.GetComponentInParent<SuperficieSonora>();
         return superficie != null ? superficie.tipo : TipoSuperficie.Normal;
@@ -195,7 +206,6 @@ public class PCController : MonoBehaviour
     {
         if (Mouse.current == null) return;
 
-        // El delta del mouse ya es "por frame": no se multiplica por deltaTime
         Vector2 mouseDelta = Mouse.current.delta.ReadValue() * sensibilidadMouse;
 
         xRotation = Mathf.Clamp(xRotation - mouseDelta.y, -limiteVertical, limiteVertical);
